@@ -19,6 +19,17 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+.body-wrapper{
+	padding: 0 60px;
+}
+.noselect{
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; 
+}
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;

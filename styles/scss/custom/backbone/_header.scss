@@ -1,0 +1,171 @@
+.header{
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    &-web{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        padding: 20px 0;
+        &-left{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            .head-logo{
+                a{
+                    display: inline-block;
+                    img{
+                       height: 70px;
+                       width: 182.2px;
+                    }
+                }
+            }
+            nav{
+                display: flex;
+                gap: 30px;
+                & a{
+                    color: #000;      
+                    &:hover:not(:first-child){
+                        color: #ff6000 ;
+                    }
+                }
+                & a:first-child{
+                    font-weight: bold;
+                }
+            }
+        }
+        &-right{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;   
+                   
+            .search-bar,.user-section{
+                display: flex;              
+                
+            }
+            .search-bar{
+                flex-grow: 1;
+                align-items: stretch;
+                justify-content: flex-end;
+                margin-right: 40px;
+                label,.categiroies{
+                    background-color: white;
+                }
+                label svg,input::placeholder,.categiroies{
+                    color: #c9d0d1;
+                    font-weight: 600;                    
+                }
+                label{
+                    width: 32%;
+                    position: relative;
+                    input{
+                        padding: 10px 30px;
+                        color: #000;
+                        border: 1px solid #dadada;
+                        border-top-left-radius: 6px;
+                        border-bottom-left-radius: 6px;
+                        width: 100%;
+                    }
+                    & svg{
+                        position: absolute;
+                        top: calc(50% - 8px);
+                        left: 10px;
+                        & path{
+                            color: rgb(119, 136, 153);
+                            opacity: 0.6;
+                        }
+                    }
+                }
+                .categiroies{
+                    border-top: 1px solid #dadada;
+                    border-bottom: 1px solid #dadada;
+                    position: relative;
+                    padding: 0 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 5px;
+                    svg{
+                        position: relative;
+                        top: 1px;
+                        color: grey;
+                        opacity: .75;
+                    }
+                }
+                .search{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: black;
+                    color: #fff;
+                    padding: 0 20px;
+                    border: 1px solid #000;
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                    
+                }
+            }
+            .user-section{
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    color: black;
+                    .info{
+                        span{
+                            font-size: 0.75rem;
+                            font-weight: normal;
+                        }
+                        p{
+                            font-weight: 600;
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
