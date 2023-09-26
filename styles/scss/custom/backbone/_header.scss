@@ -43,23 +43,22 @@
             align-items: center;
             justify-content: flex-end;                   
             .search-bar,.user-section{
-                display: flex;              
-                
+                display: flex;                           
             }
             .search-bar{
                 flex-grow: 1;
                 align-items: stretch;
                 justify-content: flex-end;
                 margin-right: 40px;
-                label,.categiroies{
+                label,.categories{
                     background-color: white;
                 }
-                label svg,input::placeholder,.categiroies{
+                label svg,input::placeholder,.categories{
                     color: #c9d0d1;
                     font-weight: 600;                    
                 }
                 label{
-                    width: 32%;
+                    width: 40%;
                     position: relative;
                     input{
                         padding: 10px 30px;
@@ -79,22 +78,6 @@
                         }
                     }
                 }
-                .categiroies{
-                    border-top: 1px solid #dadada;
-                    border-bottom: 1px solid #dadada;
-                    position: relative;
-                    padding: 0 25px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: 5px;
-                    svg{
-                        position: relative;
-                        top: 1px;
-                        color: grey;
-                        opacity: .75;
-                    }
-                }
                 .search{
                     display: flex;
                     align-items: center;
@@ -106,6 +89,60 @@
                     border-top-right-radius: 6px;
                     border-bottom-right-radius: 6px;
                     
+                }
+                .categories-wrapper{
+                    position: relative;
+                    .categories{
+                        height: 100%;
+                        border-top: 1px solid #dadada;
+                        border-bottom: 1px solid #dadada;
+                        position: relative;
+                        padding: 0 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 5px;
+                        svg{
+                            position: relative;
+                            top: 1px;
+                            color: grey;
+                            opacity: .75;
+                        }
+                    }
+                    .categories-list{
+                        height: 0px;
+                        max-height: 0px;
+                        overflow: hidden;
+                        width: 100%;
+                        position: absolute;
+                        top: 50px;
+                        left: 0;
+                        background-color: #fff;
+                        box-shadow: 0px 36px 70px -3px rgba(0,0,0,0.75);
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        border-radius: 6px;
+                        text-align: center;
+                        transition: 1s all;
+                        li{
+                            width: 100%;
+                            a{
+                                color: black;
+                                display: block;
+                                padding: 8px 0;
+                                &:hover{
+                                    background-color: black;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    &:focus-within .categories-list{
+                        height: 468px;
+                        max-height: 468px;
+                        transition: 1s all;
+                    }
                 }
             }
             .user-section{
@@ -132,6 +169,25 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+#close_btn{
+    position: absolute;
+    left: -99999px;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+  
+
 
 
 

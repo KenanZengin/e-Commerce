@@ -40,10 +40,79 @@ const Header = () => {
                     <BiSearch size={18} />
                     <input type="text" id="search" placeholder='Search Products' />
                 </label>
-                <button className='categiroies'>
-                    <span>All Categories</span>
-                    <BsChevronDown size={12} />
-                </button>
+                <div className='categories-wrapper'>
+                    <button className='categories'>
+                        <span>All Categories</span>
+                        <BsChevronDown size={12} />
+                    </button>
+                    <ul className='categories-list' tabIndex={1} >
+                        <li>
+                            <Link href={"/"}>
+                                Electronics
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Books
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Jewelry
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Toys
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Sports
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Watches
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Games
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Fine arts
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Software
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Furniture
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Cosmetic
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/"}>
+                                Fashion
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
                 <Link href={"/"} className='search'>
                     <BiSearch size={22} />
                 </Link>
@@ -73,9 +142,13 @@ const Header = () => {
                     </div>
                 </Link>
             </div>
-
         </div>
      </div>
+    
+  
+   
+    <button id="close_btn"></button>
+     
    </header>
   )
 }
