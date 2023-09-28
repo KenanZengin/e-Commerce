@@ -1,9 +1,9 @@
-import CarouselHomePage from "@/components/carousel"
+import CarouselHomePage from "@/components/section1"
 
 const HomePage = () => {
   return (
   <div className="sections">
-    <CarouselHomePage />
+   
   </div>
   )
 }

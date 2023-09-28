@@ -6,7 +6,7 @@ import {BiSearch} from "react-icons/bi"
 import {FaRegUser} from "react-icons/fa6"
 import {SlBasket} from "react-icons/sl"
 import {BsChevronDown} from "react-icons/bs"
-import mainLogo from 'public/img/mainLogo.png'
+import mainLogo from 'public/img/mainLogo2.png'
 
 
 const Header = () => {
