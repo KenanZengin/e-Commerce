@@ -2,11 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import {AiOutlineHeart} from "react-icons/ai"
-import {BiSearch} from "react-icons/bi"
 import {FaRegUser} from "react-icons/fa6"
 import {SlBasket} from "react-icons/sl"
-import {BsChevronDown,BsFillArrowRightCircleFill} from "react-icons/bs"
-import {RiSearch2Line} from "react-icons/ri"
+import {BsFillArrowRightCircleFill} from "react-icons/bs"
 import {FiSearch} from "react-icons/fi"
 import mainLogo from 'public/img/mainLogo.png'
 import head1 from 'public/img/head1.jpg'
@@ -105,7 +103,6 @@ const Header = () => {
             </div>
         </div>
     <button id="close_btn"></button>
-     
    </header>
   )
 }
