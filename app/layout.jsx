@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/global.scss"
-import { Inter } from 'next/font/google'
+import { Red_Hat_Display } from 'next/font/google'
 import Header from '@/backbones/Header';
 
-const inter = Inter({ subsets: ['latin'] })
+const Red_HAT = Red_Hat_Display({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={Red_HAT.className}>
        <div className="body-wrapper">
           <Header/>
           {children}
