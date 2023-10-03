@@ -680,12 +680,13 @@
         text-align: center;
         margin: auto;
         height: 100vh;
-        padding-top: 40px;
+        padding: 40px 25px 0 25px;
         &_content{
             .title{
                 font-size: 3rem;
                 font-weight: bold;
                 color: #000;
+                margin-bottom: 100px;
             }
             .comments{
                 display: flex;
@@ -695,11 +696,13 @@
                     flex-direction: column;
                     background-color: white;
                     border-radius: 30px;
-                    padding: 20px;
+                    padding: 20px 30px;
                     .date{
                         color: #dbdadb;
                         font-weight: bold;
                         font-size: 0.875rem;
+                        text-align: start;
+                        padding-bottom: 50px;
                     }
                     .stars{
                         display: flex;
@@ -711,17 +714,21 @@
                     & > p{
                         color: #000;
                         font-weight: bold;
-
+                        text-align: left;
+                        margin: 25px 0;
                     }
                     .user{
                         display: flex;
+                        gap: 20px;
+                        margin-top: 50px;
                         img{
-                            height: 30px;
-                            width: 30px;
+                            height: 45px;
+                            width: 45px;
                             border-radius: 50%;
                             object-fit: cover;
                         }
                         .user-name{
+                            text-align: start;
                             p{
                                 font-weight: bold;
                                 color: #000;
@@ -730,6 +737,21 @@
                                 color: #dbdadb;
                                 font-weight: 600;
                             }
+                        }
+                    }
+                    .commas{
+                        position: relative;
+                        margin-top: 20px;
+                        padding-right: 34px;
+                        text-align: end;                    
+                        img:last-child{
+                           position: absolute;
+                           top: 0;
+                           right: 0;
+                        }
+                        img{
+                            width: 75px;
+                            height: 75px;
                         }
                     }
                 }

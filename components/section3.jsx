@@ -2,6 +2,8 @@ import {BsFillStarFill} from "react-icons/bs"
 import user_1 from "public/img/random_user1.jpg"
 import user_2 from "public/img/random_user2.jpg"
 import user_3 from "public/img/random_user4.jpg"
+import comma from "public/img/comma.png"
+import comma2 from "public/img/comma2.png"
 import Image from "next/image"
 
 const Section_3 = () => {
@@ -23,10 +25,14 @@ const Section_3 = () => {
                         <BsFillStarFill size={20} />
                         <BsFillStarFill size={20} />
                         <BsFillStarFill size={20} />
-                    </div>
+                    </div>                  
                     <p>
                         The most comfortable Nike's I've wom in the past couple of years has been the 32s. These have surpassed that.
                     </p>
+                    <div className="commas">
+                        <Image src={comma2} alt="comma" />
+                        <Image src={comma2} alt="comma" />
+                    </div>
                     <div className="user">
                         <Image src={user_1} alt="user" />
                         <div className="user-name">
@@ -45,10 +51,40 @@ const Section_3 = () => {
                         <BsFillStarFill size={20} />
                         <BsFillStarFill size={20} />
                         <BsFillStarFill size={20} />
-                    </div>
+                    </div>                  
                     <p>
                         The most comfortable Nike's I've wom in the past couple of years has been the 32s. These have surpassed that.
                     </p>
+                    <div className="commas">
+                        <Image src={comma2} alt="comma" />
+                        <Image src={comma2} alt="comma" />
+                    </div>
+                    <div className="user">
+                        <Image src={user_2} alt="user" />
+                        <div className="user-name">
+                            <p>Rachel Jules</p>
+                            <span>28 Years</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="comment">
+                    <span className="date">
+                        15 Apr 2023
+                    </span>
+                    <div className="stars">
+                        <BsFillStarFill size={20} />
+                        <BsFillStarFill size={20} />
+                        <BsFillStarFill size={20} />
+                        <BsFillStarFill size={20} />
+                        <BsFillStarFill size={20} />
+                    </div>                  
+                    <p>
+                        The most comfortable Nike's I've wom in the past couple of years has been the 32s. These have surpassed that.
+                    </p>
+                    <div className="commas">
+                        <Image src={comma2} alt="comma" />
+                        <Image src={comma2} alt="comma" />
+                    </div>
                     <div className="user">
                         <Image src={user_3} alt="user" />
                         <div className="user-name">
@@ -67,10 +103,14 @@ const Section_3 = () => {
                         <BsFillStarFill size={20} />
                         <BsFillStarFill size={20} />
                         <BsFillStarFill size={20} />
-                    </div>
+                    </div>                  
                     <p>
                         The most comfortable Nike's I've wom in the past couple of years has been the 32s. These have surpassed that.
                     </p>
+                    <div className="commas">
+                        <Image src={comma2} alt="comma" />
+                        <Image src={comma2} alt="comma" />
+                    </div>
                     <div className="user">
                         <Image src={user_1} alt="user" />
                         <div className="user-name">
@@ -79,28 +119,7 @@ const Section_3 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="comment">
-                    <span className="date">
-                        15 Apr 2023
-                    </span>
-                    <div className="stars">
-                        <BsFillStarFill size={20} />
-                        <BsFillStarFill size={20} />
-                        <BsFillStarFill size={20} />
-                        <BsFillStarFill size={20} />
-                        <BsFillStarFill size={20} />
-                    </div>
-                    <p>
-                        The most comfortable Nike's I've wom in the past couple of years has been the 32s. These have surpassed that.
-                    </p>
-                    <div className="user">
-                        <Image src={user_2} alt="user" />
-                        <div className="user-name">
-                            <p>Rachel Jules</p>
-                            <span>28 Years</span>
-                        </div>
-                    </div>
-                </div>
+               
            
                 
             </div>
