@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/global.scss"
 import { Red_Hat_Display } from 'next/font/google'
 import Header from '@/backbones/Header';
+import Footer from '@/backbones/Footer';
 
 const Red_HAT = Red_Hat_Display({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
        <div className="body-wrapper">
           <Header/>
           {children}
+          <Footer />
        </div>
       </body>
     </html>

@@ -1,0 +1,91 @@
+.footer{
+    background-color: #383565;
+    padding: 100px 65px 50px 65px;
+    .title{
+        h4{
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+    }
+    .info{
+        display: flex;
+        margin-top: 100px;
+        .left{
+            width: 25%;
+            .memberMail{
+                display: flex;
+                align-items: center;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #9290b4;
+                label{
+                    width: 100%;
+                    background-color: #383564;
+                    input{
+                        background-color: #383564;
+                        &::placeholder{
+                            color: #9290b4;
+                        }
+                    }
+                }
+                button{
+                    background-color: #645dfa;
+                    padding: 8px 20px;
+                    border-radius: 25px;
+                    color: #fff;
+                }
+            }
+            p{
+                color: #9290b4;
+                padding-top: 25px;
+                a{
+                    color: #9290b4;
+                    border-bottom: 1px solid #9290b4;
+                }
+            }
+        }
+        .right{
+            width: 75%;
+            padding-left: 200px;
+            .links_group{
+                display: flex;
+                justify-content: space-between;
+                .item{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    gap: 10px;
+                    width: 15%;
+                    span{
+                        font-size: 0.875rem;
+                        color: #5f5c87;
+                        font-weight: bold;
+                    }
+                    ul{
+                        li{ 
+                            margin-bottom: 10px;
+                            a{
+                                color: #c3c1e4;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .rights{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 120px;
+        
+        img{
+            width: 76.8px;
+            height: 33px;
+        }
+        p{
+            color: #8481ad;
+            font-weight: 500;
+        }
+    }
+}
