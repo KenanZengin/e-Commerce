@@ -17,7 +17,7 @@ const Section_1 = () => {
         
         <div className="title">
             <div className="video">
-              <Image src={videoImg} />
+              <Image src={videoImg} alt="videoImg" placeholder="blur" />
               <BsPlayCircle size={40} />
               <p>
                 <span>Why shop</span> <br />

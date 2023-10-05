@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+
 import mainLogo from 'public/img/mainLogo.png'
 
 const Footer = () => {

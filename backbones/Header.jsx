@@ -20,15 +20,15 @@ const Header = () => {
                 <div className="header-web-top-left">
                     <div className="head-logo noselect">
                         <Link href={"/"} rel="bookmark" title="Skullcandy">
-                            <Image src={mainLogo} alt="Logo" />
+                            <Image src={mainLogo} alt="Logo" placeholder='data:image/mainLogo.png' width={77} height={33} property={"true"} />
                         </Link>
                     </div>
                     <div className="departmans">
                         <div className="left">
-                            <Image src={head1} alt="img1" />
-                            <Image src={head2} alt="img1" />
-                            <Image src={head3} alt="img1" />
-                            <Image src={head4} alt="img1" />
+                            <Image src={head1} alt="img1" placeholder='data:image/head1.jpg' />
+                            <Image src={head2} alt="img1" placeholder='data:image/head2.jpg' />
+                            <Image src={head3} alt="img1" placeholder='data:image/head3.jpg' />
+                            <Image src={head4} alt="img1" placeholder='data:image/head4.jpg' />
                         </div>
                         <div className="right">
                             <p>DEPARTMENTS</p>
