@@ -1,15 +1,15 @@
 .product{
     margin: 0 65px;
     background-color: #fff;
-    margin-top: 100px;
+    margin-top: 20px;
     &-wrapper{
         display: flex;
         justify-content: space-between;
         align-items: stretch;
         .product-imgs{
-            width: 55%;
+            
             display: flex;
-            gap: 10px;
+            gap: 25px;
             & * img{
                 border-radius: 25px;
             }
@@ -20,23 +20,159 @@
                 gap: 20px;
                 img{
                     width: 90px;
-                    height: 100px;
+                    height: 135px;
                     object-fit: contain;
-                    border-radius: 25px;
+                    border-radius: 14px;
+                    cursor: pointer;
+                    &:hover{
+                        outline: 2px solid #6e62ef;
+                        outline-offset: 4px;
+                    }
                 }
+                .active{
+                    outline: 2px solid #6e62ef;
+                    outline-offset: 4px;
+                }
+
             }   
             .img-right{
-                width: 85%;
+                width: 100%;
                 img{
                     width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    height: 750px;
+                    object-fit: contain;
                 }
             }
         }
         .product-info{
-            width: 45%;
+            flex-grow: 1;
             padding-left: 50px;
+            .product{
+                &-title{
+                    h3{
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                        color: #000;
+                    }
+                    a{
+                        display: block;
+                        padding-top: 5px;
+                        color: #000;
+                        font-weight: bold;
+                        span{
+                            border-bottom: 2px solid black;
+                             
+                        }
+                        svg{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                &-stars{
+                    display: flex;
+                    align-items: center;
+                    padding-top: 15px;
+                    .star{
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;                        
+                        svg:not(:last-child){
+                            color: #f99c46;
+                        }
+                    }
+                    .point,.comment{
+                        color: #a4a4a4;
+                        font-weight: 600;
+                    }
+                    .point{
+                        font-size: 0.9375rem;
+                        margin-left: 15px;
+                    }
+                    .comment{
+                        margin-left: 30px;
+                        svg{
+                            margin-right: 6px;
+                        }
+                    }
+                }
+                &-price{
+                    display: flex;
+                    align-items: center;
+                    margin: 30px 0;
+                    .price{
+                        display: flex;
+                        align-items: center;
+                        
+                        gap: 10px;
+                        p{
+                            color: #000;
+                            font-weight:600;
+                            font-size: 2rem;
+                        }
+                        & > div{
+                            display: flex;
+                            flex-direction: column;
+                            
+                            p,span{
+                                font-size: 0.75rem;
+                            }
+                            span{
+                                color: #a4a4a4;
+                            }
+                        }
+
+                    }
+                    .shipping{
+                        display: flex;
+                        gap: 30px;
+                        margin-left: 30px;
+                        div{
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                            color: #6e62ef;
+                            font-weight: 600;
+                        }
+                    }
+                    
+                }
+                &-color,&-price,&-size,&-special-offer{
+                    margin: 30px 0;
+                }
+                &-colors,&-size{
+                    p{
+                        font-size: 1.1rem;
+                        color: #000;
+                        margin-bottom: 15px;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                    .color{
+                        display: flex;
+                        gap: 12px;
+                        button{
+                            background-color: inherit;
+                            padding: 10px 15px;
+                            border-radius: 20px;
+                            border: 1px solid #a4a4a4;
+                            font-weight: 600;
+                            img{
+                                width: 56px;
+                                height: 43px;
+                            }
+                            &:hover{
+                                background-color: #e6e5ff;
+                                border: 1px solid #6762f7;
+                            }
+                        }
+                        .active{
+                            background-color: #e6e5ff !important;
+                            border: 1px solid #6762f7;
+                        }
+                    }
+                }
+            }
         }
     }
 }

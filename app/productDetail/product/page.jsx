@@ -13,6 +13,7 @@ import product3 from "public/img/product/product4.webp"
 import color1 from "public/img/product/color1.png"
 import color2 from "public/img/product/color2.png"
 import color3 from "public/img/product/color3.png"
+import Link from "next/link"
 
 const ProductDetail = () => {
   return (
@@ -20,7 +21,7 @@ const ProductDetail = () => {
         <div className="product-wrapper">
             <div className="product-imgs">
                 <div className="img-left">
-                    <Image src={product0} alt="product" />
+                    <Image src={product0} alt="product" className="active" />
                     <Image src={product1} alt="product" />
                     <Image src={product2} alt="product" />
                     <Image src={product3} alt="product" />
@@ -32,26 +33,26 @@ const ProductDetail = () => {
             <div className="product-info">
                 <div className="product-title">
                     <h3>
-                        Classic Shirt
+                        Classic SHIRT
                     </h3>
-                    <span>
-                        by Zenana
-                        <BsArrowUpRightCircleFill size={25} />
-                    </span>
+                    <Link href={"/"}>
+                        by <span>Zenana</span>
+                        <BsArrowUpRightCircleFill size={22} />
+                    </Link>
                 </div>
                 <div className="product-stars">
                     <div className="star">
-                        <BsFillStarFill size={20} />
-                        <BsFillStarFill size={20} />
-                        <BsFillStarFill size={20} />
-                        <BsFillStarFill size={20} />
-                        <BsFillStarFill size={20} />
+                        <BsFillStarFill size={25} />
+                        <BsFillStarFill size={25} />
+                        <BsFillStarFill size={25} />
+                        <BsFillStarFill size={25} />
+                        <BsFillStarFill size={25} />
                     </div>
                     <div className="point">
                         4.5
                     </div>
                     <div className="comment">
-                        <LiaCommentDotsSolid size={16} />
+                        <LiaCommentDotsSolid size={30} />
                         110 Reviews
                     </div>
                 </div>
@@ -75,7 +76,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className="product-colors">
-                    <p>Colors Avaliable: Green</p>
+                    <p><span>Colors Avaliable:</span> Green</p>
                     <div className="color">
                         <button>
                             <Image src={color1} alt="color"/>
@@ -89,16 +90,18 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className="product-size">
-                    <p>Select Size: Large</p>
-                    <button>
+                    <p><span>Select Size:</span> Large</p>
+                    <div className="color">
+                    <button >
                         Small
                     </button>
-                    <button>
+                    <button >
                         Medium
                     </button>
-                    <button>
+                    <button className="active">
                         Large
                     </button>
+                    </div>
                 </div>
                 <div className="product-special-offer">
                     <button>
