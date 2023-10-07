@@ -21,10 +21,18 @@ const ProductDetail = () => {
         <div className="product-wrapper">
             <div className="product-imgs">
                 <div className="img-left">
-                    <Image src={product0} alt="product" className="active" />
-                    <Image src={product1} alt="product" />
-                    <Image src={product2} alt="product" />
-                    <Image src={product3} alt="product" />
+                    <div className="active">
+                        <Image src={product0} alt="product"  />
+                    </div>
+                    <div>
+                        <Image src={product1} alt="product" />
+                    </div>
+                    <div>
+                        <Image src={product2} alt="product" />
+                    </div>
+                    <div>
+                        <Image src={product3} alt="product" />
+                    </div>
                 </div>
                 <div className="img-right">
                     <Image src={product0} alt="product" />
@@ -104,31 +112,31 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className="product-special-offer">
-                    <button>
-                        <span>Buy 1</span>
+                    <button className="active">
+                        <div>Buy 1</div>
                         <p>$36.00 <span>/ ea</span> </p>
                     </button>
                     <button>
-                        <span>Buy 2</span>
+                        <div>Buy 2</div>
                         <p>$40.00 <span>/ ea</span> </p>
                     </button>
                     <button>
-                        <span>Buy 3</span>
+                        <div>Buy 3</div>
                         <p>$45.00 <span>/ ea</span> </p>
                     </button>
                     <button>
                         <p>Buy <br />More</p>
                     </button>
                 </div>
-                <div className="add-basket">
+                <div className="product-add-basket">
                     <button>
                         <SlBasket size={20} />
                         Add to card
-                        <TbPointFilled size={10} />
-                        $900.00
+                        <TbPointFilled size={16} />
+                        $243.98
                     </button>
                 </div>
-                <div className="options">
+                <div className="product-options">
                     <div className="option">
                         <div className="img">
                             <LiaShippingFastSolid size={25} />
@@ -137,7 +145,7 @@ const ProductDetail = () => {
                             <p>Standart Shipping</p>
                             <div>
                                 <span>Free</span>
-                                <span><MdOutlineAccessTime size={12}/> Tue, Jun 13 - Thu, Jun 15</span>
+                                <span><MdOutlineAccessTime size={18}/> Tue, Jun 13 - Thu, Jun 15</span>
                             </div>
                         </div>
                     </div>
@@ -149,7 +157,7 @@ const ProductDetail = () => {
                             <p>Express Shipping</p>
                             <div>
                                 <span>$1.99/item</span>
-                                <span><MdOutlineAccessTime size={12}/> Tue, Jun 13</span>
+                                <span><MdOutlineAccessTime size={18}/> Tue, Jun 13</span>
                             </div>
                         </div>
                     </div>
@@ -161,7 +169,7 @@ const ProductDetail = () => {
                             <p>Return Policy</p>
                             <div>
                                 <span>Free</span>
-                                <span><MdOutlineAccessTime size={12}/> Within 30 days of receipt</span>
+                                <span><MdOutlineAccessTime size={18}/> Within 30 days of receipt</span>
                             </div>
                         </div>
                     </div>
