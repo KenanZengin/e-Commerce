@@ -6,6 +6,11 @@ import {FiBox} from "react-icons/fi"
 import {SlBasket} from "react-icons/sl"
 import {TbPointFilled, TbTruckReturn} from "react-icons/tb"
 import {MdOutlineAccessTime} from "react-icons/md"
+import deneme from "public/img/product/deneme.png"
+import product00 from "public/img/product/product1.png"
+import product11 from "public/img/product/product2.png"
+import product22 from "public/img/product/product3.png"
+import product33 from "public/img/product/product4.png"
 import product0 from "public/img/product/product0.webp"
 import product1 from "public/img/product/product1.webp"
 import product2 from "public/img/product/product2.webp"
@@ -22,26 +27,26 @@ const ProductDetail = () => {
             <div className="product-imgs">
                 <div className="img-left">
                     <div className="active">
-                        <Image src={product0} alt="product"  />
+                        <Image src={product22} alt="product"  />
                     </div>
                     <div>
-                        <Image src={product1} alt="product" />
+                        <Image src={product11} alt="product" />
                     </div>
                     <div>
-                        <Image src={product2} alt="product" />
+                        <Image src={product00} alt="product" />
                     </div>
                     <div>
-                        <Image src={product3} alt="product" />
+                        <Image src={product33} alt="product" />
                     </div>
                 </div>
                 <div className="img-right">
-                    <Image src={product0} alt="product" />
+                    <Image src={deneme} alt="product" />
                 </div>
             </div>
             <div className="product-info">
                 <div className="product-title">
                     <h3>
-                        Classic SHIRT
+                        Armchair HUNDESTED
                     </h3>
                     <Link href={"/"}>
                         by <span>Zenana</span>
@@ -78,7 +83,7 @@ const ProductDetail = () => {
                             <span>Free Shipping</span>
                         </div>
                         <div>
-                            <FiBox size={25} />
+                            <FiBox size={22} />
                             <span>Free Returns</span>
                         </div>
                     </div>
