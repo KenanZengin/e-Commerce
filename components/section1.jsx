@@ -4,11 +4,11 @@ import Link from "next/link"
 import {AiOutlineFieldTime} from "react-icons/ai"
 import {BsPlayCircle,BsFillStarFill} from "react-icons/bs"
 import {FiArrowUpRight} from "react-icons/fi"
-import product from "public/img/product2.png"
-import videoImg from "public/img/video.png"
-import user_1 from "public/img/random_user1.jpg"
-import user_2 from "public/img/random_user2.jpg"
-import user_3 from "public/img/random_user4.jpg"
+import product from "public/img/sections/product2.png"
+import videoImg from "public/img/sections/video.png"
+import user_1 from "public/img/sections/random_user1.jpg"
+import user_2 from "public/img/sections/random_user2.jpg"
+import user_3 from "public/img/sections/random_user4.jpg"
 
 const Section_1 = () => {
   return (

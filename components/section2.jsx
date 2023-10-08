@@ -3,18 +3,18 @@ import Image from 'next/image'
 
 import {FiArrowUpRight} from "react-icons/fi"
 import {BsFillArrowRightCircleFill} from "react-icons/bs"
-import tennis from "public/img/tennis.png"
-import sport from "public/img/sport.png"
-import swim from "public/img/swim.png"
-import lamp from "public/img/lam.png"
-import head1 from 'public/img/head1.jpg'
-import head2 from 'public/img/head2.jpg'
-import head3 from 'public/img/head3.jpg'
-import head4 from 'public/img/head4.jpg'
-import product from "public/img/product3.png"
-import product2 from "public/img/product4.png"
-import product3 from "public/img/product5.png"
-import product4 from "public/img/product6.png"
+import tennis from "public/img/sections/tennis.png"
+import sport from "public/img/sections/sport.png"
+import swim from "public/img/sections/swim.png"
+import lamp from "public/img/sections/lam.png"
+import head1 from 'public/img/sections/head1.jpg'
+import head2 from 'public/img/sections/head2.jpg'
+import head3 from 'public/img/sections/head3.jpg'
+import head4 from 'public/img/sections/head4.jpg'
+import product from "public/img/sections/product3.png"
+import product2 from "public/img/sections/product4.png"
+import product3 from "public/img/sections/product5.png"
+import product4 from "public/img/sections/product6.png"
 
 const Section_2 = () => {
   return (

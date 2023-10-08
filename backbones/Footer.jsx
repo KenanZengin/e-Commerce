@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import mainLogo from 'public/img/mainLogo.png'
+import mainLogo from 'public/img/header/mainLogo.png'
 
 const Footer = () => {
   return (

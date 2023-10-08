@@ -1,10 +1,11 @@
-import {BsFillStarFill} from "react-icons/bs"
-import user_1 from "public/img/random_user1.jpg"
-import user_2 from "public/img/random_user2.jpg"
-import user_3 from "public/img/random_user4.jpg"
-import comma from "public/img/comma.png"
-import comma2 from "public/img/comma2.png"
 import Image from "next/image"
+
+import {BsFillStarFill} from "react-icons/bs"
+import user_1 from "public/img/sections/random_user1.jpg"
+import user_2 from "public/img/sections/random_user2.jpg"
+import user_3 from "public/img/sections/random_user4.jpg"
+import comma2 from "public/img/sections/comma2.png"
+
 
 const Section_3 = () => {
   return (

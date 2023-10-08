@@ -2,12 +2,13 @@
     width: 100%;
     max-width: 100%;
     background-color: #fff;
-    padding: 0 65px;
+    
     &-web{
         display: flex;
         flex-direction: column;
-        padding: 25px 0;
+        padding: 25px 65px;
         gap: 20px;
+        
     }
     &-web-top{
         display: flex;
@@ -33,10 +34,12 @@
             .departmans{
                 display: flex;
                 gap: 10px;
+                cursor: pointer;
                 .left{
                     display: grid;
                     grid-template-columns: repeat(2,1fr);
                     gap: 0px 5px;
+                    position: relative;
                     img{
                         height: 25px;
                         width: 25px;
@@ -57,10 +60,13 @@
                         color: #e1e1e1;
                         font-weight: bolder;
                     } 
-                    a{
+                    button{
                         display: block;
                         font-size: 0.875rem;
                         color: #6f63ee;
+                        background-color: inherit;
+                        text-align: start;
+                        padding-left: 2px;
                         svg{
                             margin-left: 8px;
                             background-color: white;
@@ -70,7 +76,26 @@
                     }
                 
                 }
+                .categories{
+                    display: var(--dp-c);
+                    position: absolute;
+                    z-index: 10;
+                    background-color: #fff;
+                    top: 160px;
+                    left: 0;        
+                    animation: fadein_2 .75s ease-in alternate ;
+                   
+                }  
             }
+            & .departmans:focus-within .categories{
+                --dp-c:flex;
+                --dp-s:block;
+            }
+            & .departmans:not(:focus-within) .categories{
+                --dp-c:none;
+                --dp-s:none;
+            }
+           
         }
         &-right{
             flex-grow: 1;
@@ -184,7 +209,14 @@
             }
         }
     }
+    
 }
+
+
+
+
+
+
 #close_btn{
     position: absolute;
     left: -99999px;
@@ -194,7 +226,20 @@
 }
   
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
+@keyframes fadein_2 {
+    from { top: -300px; }
+    to { top: 160px; }
+}
+
+@keyframes fadein_3 {
+    from { max-height: 0; }
+    to { max-height: 660px; }
+}
 
 
 
