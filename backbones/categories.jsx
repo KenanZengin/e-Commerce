@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import {AiOutlineClose} from "react-icons/ai"
 import {HiArrowNarrowRight} from "react-icons/hi"
 import categori_1 from 'public/img/categories/categori_1.png'
 import categori_2 from 'public/img/categories/categori_2.png'
@@ -38,8 +39,10 @@ const Categories = () => {
             <h3>Shop<br />everything<br />you need<br />online</h3>
         </div>
         <div className="categories-right">
+        
             <p>
-                ALL DEPARTMANS          
+                <span>ALL DEPARTMANS</span>    
+                <label htmlFor="close-btn"><AiOutlineClose size={32} /></label>
             </p>     
             <div className="categories-list">
                 {imageList.map((item)=>(
@@ -55,7 +58,7 @@ const Categories = () => {
             </div>
         </div>        
     </div>
-   
+
   </>
   )
 }

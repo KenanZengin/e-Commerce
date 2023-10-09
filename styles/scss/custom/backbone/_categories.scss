@@ -7,6 +7,11 @@
         font-weight: 600;
         margin-bottom: 45px;
         font-size: 1.15rem;
+        display: flex;
+        justify-content: space-between;
+        svg{
+            color: #000;
+        }
     }
     .categories-left{
         h3{
@@ -16,7 +21,7 @@
         }
     }
     .categories-right{
-        padding-left: 278px;
+        padding-left: 278px;    
         .categories-list{
             display: grid;
             grid-template-columns: repeat(5,1fr);

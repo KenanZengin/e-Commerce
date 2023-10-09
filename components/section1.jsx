@@ -14,6 +14,7 @@ const Section_1 = () => {
   return (
     <div className='section_1'>
       <div className="section_1_content">
+        <input type="text" id="close_categori" />
         
         <div className="title">
             <div className="video">

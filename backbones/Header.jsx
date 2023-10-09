@@ -43,11 +43,8 @@ const Header = () => {
                                     <BsFillArrowRightCircleFill size={18} />         
                                 </button>
                             </div>
-                           
-
                             <Categories />
                         </div>        
-                    
                     </div>
                     <div className="header-web-top-right">
                         <div className="search-bar">
@@ -87,7 +84,6 @@ const Header = () => {
                             </Link>
                         </div>
                     </div>
-                   
                 </div>
                 <div className="header-web-navbar">
                     <nav>
@@ -111,12 +107,9 @@ const Header = () => {
                         </Link>
                     </nav>  
                 </div>
-            </div>
-            
-            
-            
+            </div> 
         </header>
-        
+        <button id='close-btn'></button>
     </>
   )
 }

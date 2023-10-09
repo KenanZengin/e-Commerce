@@ -151,6 +151,7 @@ const Footer = () => {
             <p>Copyright © Rivly</p>
             <p>2023</p>
         </div>
+        <button id="close-btn"></button>
     </footer>
    
   )
