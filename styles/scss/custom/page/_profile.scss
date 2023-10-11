@@ -1,5 +1,5 @@
 .user-profile{
-    padding: 50px 65px;
+    padding: 0 65px;
     background-color: #fff;
     &-wrapper{
         display: flex;
@@ -9,6 +9,7 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            padding: 50px 0;
             .user-info{
                 display: flex;
                 flex-direction: column;
@@ -142,6 +143,7 @@
             width: 84%;
             text-align: start;
             padding-left: 250px;
+            padding-top: 27px;
             .title{
                 p{
                     font-size: 1.25rem;
@@ -153,6 +155,178 @@
                     color: #000;
                     font-weight: bolder;
                 }
+            }
+            .rewards-chart{
+                padding: 40px 50px;
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p{
+                        font-size: 1.5rem;
+                        color: #000;
+                        font-weight: 600;
+                    }
+                    div{
+                        display: flex;
+                        align-items: stretch;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            padding: 10px 15px;
+                            border-radius: 18px;
+                            gap: 10px;
+                            color: #635ef7;
+                            margin-left: 10px;
+                            font-size: 0.9375rem;
+                            font-weight: bold;
+                            box-shadow: -2px 2px 22px -10px rgba(0,0,0,0.75);
+
+                        }
+                        a:first-child{
+                            svg{
+                                background-color: #635ef7;
+                                color: #fff;
+                                border-radius: 5px;;
+                            }
+                        }
+                    }
+                }
+                .stats-info {
+                    margin-top: 50px;
+                    display: flex;
+                    align-items:stretch;
+                    .info-price{
+                        width: 55%;
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            li{
+                                display: flex;
+                                justify-content: space-between;
+                                width: 72%;
+                                p{
+                                    color: #000;
+                                    font-weight: 600;
+                                    font-size: 1.05rem;
+                                }
+                                span{
+                                    display: block;
+                                    height: 4px;
+                                    width: 100%;
+                                    border-radius: 10px;
+                                    background-color: #efefef;
+                                }
+                                .disabledd{
+                                    color: #9e9e9d;
+                                    display: flex;
+                                    align-items: center;
+                                    svg{
+                                        color: #6963f7;
+                                        margin-left: 6px;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                    .graph{
+                        width: 45%;
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .graph-container {
+                        position: relative;
+                        .percent {
+                            display: block;
+                            width: 244px;
+                            height: 100%;
+                        }
+                        .circle {
+                            stroke: #efefef;
+                            fill: none;
+                            stroke-width: 4;
+                        }
+                        // .circle:nth-child(2) {
+                        // 	stroke: #efefef;
+                        // }
+                        .circle:nth-child(3) {
+                            stroke: #fdcae4;
+                        }
+                        
+                        .circle:nth-child(4) {
+                            stroke: #918efc;
+                        }
+                        p {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 1rem;
+                            font-weight: bold;
+                            line-height: 1.5;
+                            color: #000;
+                            text-align: center;
+                        }
+                    }
+                    .state{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+                        .percent{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            .check,.watch{
+                                display: flex;
+                                align-items: center;
+                                gap: 15px;
+                                p{
+                                    border-radius: 6px;
+                                    padding: 5px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                                svg{   
+                                }
+                                span{
+                                    font-weight: bold;
+                                }
+                            }
+                            .check{
+                                p{
+                                    background-color: #908dfc;
+                                }
+                                svg{
+                                    color: #908dfc;
+                                    path{
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            .watch{
+                                p{
+                                    background-color: #fdc6e2;
+                                }
+                                svg{
+                                    color: #fdc6e2;
+                                    path{
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            .value{
+                                font-size: 3rem;
+                                font-weight: bold;
+                                text-align: end;
+                            }
+                        }
+                    }
+                }
+              
             }
         }
     }
@@ -170,48 +344,16 @@
 
 
 
-.stats-info {
-	margin-top: 15px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	position: relative;
-}
 
-.graph-container {
-	position: relative;
-}
 
-.percent {
-	display: block;
-	width: 120px;
-	height: 120px;
-}
 
-.circle {
-	stroke: #efefef;
-	fill: none;
-	stroke-width: 3;
-}
 
-// .circle:nth-child(2) {
-// 	stroke: #efefef;
-// }
 
-.circle:nth-child(3) {
-	stroke: #5397d6;
-}
 
-.circle:nth-child(4) {
-	stroke: #4cc790;
-}
 
-.graph-container p {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 12px;
-	color: #000;
-	text-align: center;
-}
+
+
+
+
+
+

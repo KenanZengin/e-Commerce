@@ -46,10 +46,10 @@ const Categories = () => {
             </p>     
             <div className="categories-list">
                 {imageList.map((item)=>(
-                    <Link href={item.link} className="list-item">
+                    <Link href={item.link} className="list-item" key={item.categoriName}>
                         <Image src={item.img} alt='categori' />
                         <span>{item.categoriName}</span>
-                    </Link>
+                    </Link> 
                 ))}
                 <Link href={"/"} className="list-item">
                     <p>See All Categories</p>
