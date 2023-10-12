@@ -1,6 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
 
+import {HiArrowNarrowRight} from "react-icons/hi"
+import {PiShareFat} from "react-icons/pi"
 import {LuCalendarRange} from "react-icons/lu"
 import {FiSearch} from "react-icons/fi"
 import {IoIosArrowDown} from "react-icons/io"
@@ -13,6 +15,9 @@ import {IoAnalyticsOutline, IoRibbonSharp,IoInfinite} from "react-icons/io5"
 import {GiStarsStack} from "react-icons/gi"
 import {PiWarningCircle} from "react-icons/pi"
 import user_1 from "public/img/sections/random_user2.jpg"
+import product_1 from "public/img/product/review1.png"
+import product_2 from "public/img/product/review2.png"
+import product_3 from "public/img/product/product4.png"
 
 const userProfil = () => {
     
@@ -200,8 +205,214 @@ const userProfil = () => {
                             <IoIosArrowDown size={20} />
                         </div>
                     </div>
-                    <div className="product-cart">
-                        
+                    <div className="product-carts">
+                        <div className="product-cart">
+                           <div className="info">
+                                <p>
+                                    Earned: <span>$5.23</span>
+                                </p>
+                                <p>
+                                    Helpful Clicks: <span>12</span>
+                                </p>
+                                <p>
+                                    Date: <span>May 4,2023</span>
+                                </p>
+                                <Link href={"/"}>
+                                    <PiShareFat size={20} />
+                                    
+                                        Share my review
+                                    
+                                </Link>
+                           </div>
+                           <div className="productt">
+                                <div className="productt__detail">
+                                    <div className="product__img">
+                                        <Image src={product_1} alt="produt" width={74} height={72}/>
+                                    </div>
+                                    <div className="name">
+                                        <div className="title">
+                                            <div className="title__info">
+                                                <h4>Curved OAK Chair</h4>
+                                                <Link href={"/"}>
+                                                    View Product
+                                                    <HiArrowNarrowRight size={20} />
+                                                </Link>
+                                            </div>
+                                            <div className="title__info">
+                                                <h4>5.0</h4>
+                                                <p>
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Great Modern chair
+                                        </p>
+                                        <span>
+                                            A cool gray cap soft cssorduray. W:15.pngme.'By bussying cottoaan products from Lindex, you're more <br /> responsibly
+                                        </span>
+                                        <div className="name_info">
+                                            <div className="info">
+                                                <p>Pros:</p>
+                                                <ul>
+                                                    <li>Durable</li>
+                                                    <li>Stylish</li>
+                                                </ul>
+                                            </div>
+                                            <div className="info">
+                                                <p>Cons:</p>
+                                                <ul>
+                                                    <li>Material not as soft as would like</li>
+                                                    <li>Made in Vietnam and not in USA </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                        <div className="product-cart">
+                           <div className="info">
+                                <p>
+                                    Earned: <span>$5.23</span>
+                                </p>
+                                <p>
+                                    Helpful Clicks: <span>12</span>
+                                </p>
+                                <p>
+                                    Date: <span>May 4,2023</span>
+                                </p>
+                                <Link href={"/"}>
+                                    <PiShareFat size={20} />
+                                    
+                                        Share my review
+                                    
+                                </Link>
+                           </div>
+                           <div className="productt">
+                                <div className="productt__detail">
+                                    <div className="product__img">
+                                        <Image src={product_2} alt="produt" width={74} height={72}/>
+                                    </div>
+                                    <div className="name">
+                                        <div className="title">
+                                            <div className="title__info">
+                                                <h4>Curved OAK Chair</h4>
+                                                <Link href={"/"}>
+                                                    View Product
+                                                    <HiArrowNarrowRight size={20} />
+                                                </Link>
+                                            </div>
+                                            <div className="title__info">
+                                                <h4>5.0</h4>
+                                                <p>
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Great Modern chair
+                                        </p>
+                                        <span>
+                                            A cool gray cap soft cssorduray. W:15.pngme.'By bussying cottoaan products from Lindex, you're more <br /> responsibly
+                                        </span>
+                                        <div className="name_info">
+                                            <div className="info">
+                                                <p>Pros:</p>
+                                                <ul>
+                                                    <li>Durable</li>
+                                                    <li>Stylish</li>
+                                                </ul>
+                                            </div>
+                                            <div className="info">
+                                                <p>Cons:</p>
+                                                <ul>
+                                                    <li>Material not as soft as would like</li>
+                                                    <li>Made in Vietnam and not in USA </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                        <div className="product-cart">
+                           <div className="info">
+                                <p>
+                                    Earned: <span>$5.23</span>
+                                </p>
+                                <p>
+                                    Helpful Clicks: <span>12</span>
+                                </p>
+                                <p>
+                                    Date: <span>May 4,2023</span>
+                                </p>
+                                <Link href={"/"}>
+                                    <PiShareFat size={20} />
+                                    
+                                        Share my review
+                                    
+                                </Link>
+                           </div>
+                           <div className="productt">
+                                <div className="productt__detail">
+                                    <div className="product__img">
+                                        <Image src={product_3} alt="produt" width={74} height={72}/>
+                                    </div>
+                                    <div className="name">
+                                        <div className="title">
+                                            <div className="title__info">
+                                                <h4>Curved OAK Chair</h4>
+                                                <Link href={"/"}>
+                                                    View Product
+                                                    <HiArrowNarrowRight size={20} />
+                                                </Link>
+                                            </div>
+                                            <div className="title__info">
+                                                <h4>5.0</h4>
+                                                <p>
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                    <AiTwotoneStar size={25} />
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Great Modern chair
+                                        </p>
+                                        <span>
+                                            A cool gray cap soft cssorduray. W:15.pngme.'By bussying cottoaan products from Lindex, you're more <br /> responsibly
+                                        </span>
+                                        <div className="name_info">
+                                            <div className="info">
+                                                <p>Pros:</p>
+                                                <ul>
+                                                    <li>Durable</li>
+                                                    <li>Stylish</li>
+                                                </ul>
+                                            </div>
+                                            <div className="info">
+                                                <p>Cons:</p>
+                                                <ul>
+                                                    <li>Material not as soft as would like</li>
+                                                    <li>Made in Vietnam and not in USA </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
                     </div>
                 </div>
             </div>
