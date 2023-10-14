@@ -1,0 +1,79 @@
+.product_page{
+    padding: 10px 60px;
+    .bread_crumbb{
+        span{
+            font-weight: 600;
+        }
+        span:first-child{
+            color: #b4b4b4;
+        }
+        span:last-child,svg{
+            color: #000;
+        }
+        svg{
+            margin: 0 12px;
+        }
+    }
+    .head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        .title{
+            display: flex;
+            align-items: baseline;
+            h2{
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-right: 15px;
+            }
+            span{
+                color: #b4b4b4;
+                font-weight: 600;
+            }
+        }
+        .search-detail{
+            display: flex;
+            gap: 25px;
+            button{
+                border-color: #fff;
+                font-weight: bold;
+                padding: 20px 30px;
+                background-color: #f4f4f4;
+                border-radius: 30.5px;
+                position: relative;
+                &:hover{
+                    background-color: #e6e4ff;
+                }
+            }   
+            .active{
+                background-color: #e6e4ff;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 5px;
+                    width: 40px;
+                    border-radius: 8px;
+                    background-color: #736beb;
+                    bottom: 0;
+                    left: calc(50%);
+                    transform: translate(-50%,0);
+                }
+            }
+            button:last-child{
+                margin-left: 75px;
+            }
+        }
+    }
+    .product_list{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: 75px 0;
+        gap: 60px 50px;
+        justify-content: space-between;
+        .productts{
+            width: 100%;
+        }
+    }
+}
