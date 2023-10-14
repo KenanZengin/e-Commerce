@@ -1,4 +1,11 @@
-import Image from 'next/image'
+"use client"
+import Image from 'next/image';
+import 'swiper/css';
+import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
 
 import {BsFillStarFill} from "react-icons/bs"
 import {LiaCommentDotsSolid, LiaShippingFastSolid} from "react-icons/lia"
@@ -8,223 +15,390 @@ import third from "public/img/recommedProduct/third.jpg"
 import forth from "public/img/recommedProduct/forth.jpg"
 import fifth from "public/img/recommedProduct/fifth.jpg"
 
+
 const RecommedProduct = () => {
   return (
    <div className='recommend_products'>
         <h3>Recommended Products</h3>
-        <div className="products">
-            <div className="productts">
-                <div className="productts_img">
-                    <Image src={first} alt='product' />
-                </div>
-                <div className="productts_info">
-                    <div className="color">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <p className='dis'> +12 variations</p>
+       
+            <Swiper
+            slidesPerView={1}
+            centeredSlides={false}
+            slidesPerGroupSkip={0}
+            grabCursor={true}
+            keyboard={{
+                enabled: true,
+            }}
+            breakpoints={{
+                769: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                },
+            }}
+            scrollbar={false}
+            navigation={true}
+            pagination={{
+                clickable: true,
+            }}
+            modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+            className="mySwiper"
+            >
+                <SwiperSlide>
+                <div className="productts">
+                    <div className="productts_img">
+                        <Image src={first} alt='product' />
                     </div>
-                    <h5>Curve OAK Chair</h5>
-                    <p className='dis'>Andree by Unit</p>
-                    <div className="product_point">
-                        <div className="stars">
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <span className="dis">4.5</span>
+                    <div className="productts_info">
+                        <div className="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p className='dis'> +12 variations</p>
                         </div>
-                        <div className="comment">
-                            <LiaCommentDotsSolid size={25} />
-                            <span className="dis">100 Reviews</span>
-                        </div>
+                        <h5>Curve OAK Chair</h5>
+                        <p className='dis'>Andree by Unit</p>
+                        <div className="product_point">
+                            <div className="stars">
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <span className="dis">4.5</span>
+                            </div>
+                            <div className="comment">
+                                <LiaCommentDotsSolid size={25} />
+                                <span className="dis">100 Reviews</span>
+                            </div>
 
-                    </div>
-                    <div className="product_price">
-                        <p>$900.00</p>
-                        <div className='discount'>
-                            <span>$925.00</span>
-                            <span className='dis'>you save $25</span>
                         </div>
-                        <div className='shipping'>
-                            <span><LiaShippingFastSolid size={25} /></span>
-                            <span className="dis">Express Shipping</span>
+                        <div className="product_price">
+                            <p>$900.00</p>
+                            <div className='discount'>
+                                <span>$925.00</span>
+                                <span className='dis'>you save $25</span>
+                            </div>
+                            <div className='shipping'>
+                                <span><LiaShippingFastSolid size={25} /></span>
+                                <span className="dis">Express Shipping</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="productts">
-                <div className="productts_img">
-                    <Image src={second} alt='product' />
-                </div>
-                <div className="productts_info">
-                    <div className="color">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <p className='dis'> +12 variations</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="productts">
+                    <div className="productts_img">
+                        <Image src={second} alt='product' />
                     </div>
-                    <h5>Curve OAK Chair</h5>
-                    <p className='dis'>Andree by Unit</p>
-                    <div className="product_point">
-                        <div className="stars">
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <span className="dis">4.5</span>
+                    <div className="productts_info">
+                        <div className="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p className='dis'> +12 variations</p>
                         </div>
-                        <div className="comment">
-                            <LiaCommentDotsSolid size={25} />
-                            <span className="dis">100 Reviews</span>
-                        </div>
+                        <h5>Curve OAK Chair</h5>
+                        <p className='dis'>Andree by Unit</p>
+                        <div className="product_point">
+                            <div className="stars">
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <span className="dis">4.5</span>
+                            </div>
+                            <div className="comment">
+                                <LiaCommentDotsSolid size={25} />
+                                <span className="dis">100 Reviews</span>
+                            </div>
 
-                    </div>
-                    <div className="product_price">
-                        <p>$900.00</p>
-                        <div className='discount'>
-                            <span>$925.00</span>
-                            <span className='dis'>you save $25</span>
                         </div>
-                        <div className='shipping'>
-                            <span><LiaShippingFastSolid size={25} /></span>
-                            <span className="dis">Express Shipping</span>
+                        <div className="product_price">
+                            <p>$900.00</p>
+                            <div className='discount'>
+                                <span>$925.00</span>
+                                <span className='dis'>you save $25</span>
+                            </div>
+                            <div className='shipping'>
+                                <span><LiaShippingFastSolid size={25} /></span>
+                                <span className="dis">Express Shipping</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="productts">
-                <div className="productts_img">
-                    <Image src={third} alt='product' />
-                </div>
-                <div className="productts_info">
-                    <div className="color">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <p className='dis'> +12 variations</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="productts">
+                    <div className="productts_img">
+                        <Image src={third} alt='product' />
                     </div>
-                    <h5>Curve OAK Chair</h5>
-                    <p className='dis'>Andree by Unit</p>
-                    <div className="product_point">
-                        <div className="stars">
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <span className="dis">4.5</span>
+                    <div className="productts_info">
+                        <div className="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p className='dis'> +12 variations</p>
                         </div>
-                        <div className="comment">
-                            <LiaCommentDotsSolid size={25} />
-                            <span className="dis">100 Reviews</span>
-                        </div>
+                        <h5>Curve OAK Chair</h5>
+                        <p className='dis'>Andree by Unit</p>
+                        <div className="product_point">
+                            <div className="stars">
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <span className="dis">4.5</span>
+                            </div>
+                            <div className="comment">
+                                <LiaCommentDotsSolid size={25} />
+                                <span className="dis">100 Reviews</span>
+                            </div>
 
-                    </div>
-                    <div className="product_price">
-                        <p>$900.00</p>
-                        <div className='discount'>
-                            <span>$925.00</span>
-                            <span className='dis'>you save $25</span>
                         </div>
-                        <div className='shipping'>
-                            <span><LiaShippingFastSolid size={25} /></span>
-                            <span className="dis">Express Shipping</span>
+                        <div className="product_price">
+                            <p>$900.00</p>
+                            <div className='discount'>
+                                <span>$925.00</span>
+                                <span className='dis'>you save $25</span>
+                            </div>
+                            <div className='shipping'>
+                                <span><LiaShippingFastSolid size={25} /></span>
+                                <span className="dis">Express Shipping</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="productts">
-                <div className="productts_img">
-                    <Image src={forth} alt='product' />
-                </div>
-                <div className="productts_info">
-                    <div className="color">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <p className='dis'> +12 variations</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="productts">
+                    <div className="productts_img">
+                        <Image src={forth} alt='product' />
                     </div>
-                    <h5>Curve OAK Chair</h5>
-                    <p className='dis'>Andree by Unit</p>
-                    <div className="product_point">
-                        <div className="stars">
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <span className="dis">4.5</span>
+                    <div className="productts_info">
+                        <div className="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p className='dis'> +12 variations</p>
                         </div>
-                        <div className="comment">
-                            <LiaCommentDotsSolid size={25} />
-                            <span className="dis">100 Reviews</span>
-                        </div>
+                        <h5>Curve OAK Chair</h5>
+                        <p className='dis'>Andree by Unit</p>
+                        <div className="product_point">
+                            <div className="stars">
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <span className="dis">4.5</span>
+                            </div>
+                            <div className="comment">
+                                <LiaCommentDotsSolid size={25} />
+                                <span className="dis">100 Reviews</span>
+                            </div>
 
-                    </div>
-                    <div className="product_price">
-                        <p>$900.00</p>
-                        <div className='discount'>
-                            <span>$925.00</span>
-                            <span className='dis'>you save $25</span>
                         </div>
-                        <div className='shipping'>
-                            <span><LiaShippingFastSolid size={25} /></span>
-                            <span className="dis">Express Shipping</span>
+                        <div className="product_price">
+                            <p>$900.00</p>
+                            <div className='discount'>
+                                <span>$925.00</span>
+                                <span className='dis'>you save $25</span>
+                            </div>
+                            <div className='shipping'>
+                                <span><LiaShippingFastSolid size={25} /></span>
+                                <span className="dis">Express Shipping</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="productts">
-                <div className="productts_img">
-                    <Image src={fifth} alt='product' />
-                </div>
-                <div className="productts_info">
-                    <div className="color">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <p className='dis'> +12 variations</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="productts">
+                    <div className="productts_img">
+                        <Image src={fifth} alt='product' />
                     </div>
-                    <h5>Curve OAK Chair</h5>
-                    <p className='dis'>Andree by Unit</p>
-                    <div className="product_point">
-                        <div className="stars">
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <BsFillStarFill size={20} />
-                            <span className="dis">4.5</span>
+                    <div className="productts_info">
+                        <div className="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p className='dis'> +12 variations</p>
                         </div>
-                        <div className="comment">
-                            <LiaCommentDotsSolid size={25} />
-                            <span className="dis">100 Reviews</span>
-                        </div>
+                        <h5>Curve OAK Chair</h5>
+                        <p className='dis'>Andree by Unit</p>
+                        <div className="product_point">
+                            <div className="stars">
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <span className="dis">4.5</span>
+                            </div>
+                            <div className="comment">
+                                <LiaCommentDotsSolid size={25} />
+                                <span className="dis">100 Reviews</span>
+                            </div>
 
-                    </div>
-                    <div className="product_price">
-                        <p>$900.00</p>
-                        <div className='discount'>
-                            <span>$925.00</span>
-                            <span className='dis'>you save $25</span>
                         </div>
-                        <div className='shipping'>
-                            <span><LiaShippingFastSolid size={25} /></span>
-                            <span className="dis">Express Shipping</span>
+                        <div className="product_price">
+                            <p>$900.00</p>
+                            <div className='discount'>
+                                <span>$925.00</span>
+                                <span className='dis'>you save $25</span>
+                            </div>
+                            <div className='shipping'>
+                                <span><LiaShippingFastSolid size={25} /></span>
+                                <span className="dis">Express Shipping</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="productts">
+                    <div className="productts_img">
+                        <Image src={second} alt='product' />
+                    </div>
+                    <div className="productts_info">
+                        <div className="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p className='dis'> +12 variations</p>
+                        </div>
+                        <h5>Curve OAK Chair</h5>
+                        <p className='dis'>Andree by Unit</p>
+                        <div className="product_point">
+                            <div className="stars">
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <span className="dis">4.5</span>
+                            </div>
+                            <div className="comment">
+                                <LiaCommentDotsSolid size={25} />
+                                <span className="dis">100 Reviews</span>
+                            </div>
 
-        </div>
+                        </div>
+                        <div className="product_price">
+                            <p>$900.00</p>
+                            <div className='discount'>
+                                <span>$925.00</span>
+                                <span className='dis'>you save $25</span>
+                            </div>
+                            <div className='shipping'>
+                                <span><LiaShippingFastSolid size={25} /></span>
+                                <span className="dis">Express Shipping</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="productts">
+                    <div className="productts_img">
+                        <Image src={first} alt='product' />
+                    </div>
+                    <div className="productts_info">
+                        <div className="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p className='dis'> +12 variations</p>
+                        </div>
+                        <h5>Curve OAK Chair</h5>
+                        <p className='dis'>Andree by Unit</p>
+                        <div className="product_point">
+                            <div className="stars">
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <span className="dis">4.5</span>
+                            </div>
+                            <div className="comment">
+                                <LiaCommentDotsSolid size={25} />
+                                <span className="dis">100 Reviews</span>
+                            </div>
+
+                        </div>
+                        <div className="product_price">
+                            <p>$900.00</p>
+                            <div className='discount'>
+                                <span>$925.00</span>
+                                <span className='dis'>you save $25</span>
+                            </div>
+                            <div className='shipping'>
+                                <span><LiaShippingFastSolid size={25} /></span>
+                                <span className="dis">Express Shipping</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="productts">
+                    <div className="productts_img">
+                        <Image src={forth} alt='product' />
+                    </div>
+                    <div className="productts_info">
+                        <div className="color">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p className='dis'> +12 variations</p>
+                        </div>
+                        <h5>Curve OAK Chair</h5>
+                        <p className='dis'>Andree by Unit</p>
+                        <div className="product_point">
+                            <div className="stars">
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <BsFillStarFill size={20} />
+                                <span className="dis">4.5</span>
+                            </div>
+                            <div className="comment">
+                                <LiaCommentDotsSolid size={25} />
+                                <span className="dis">100 Reviews</span>
+                            </div>
+
+                        </div>
+                        <div className="product_price">
+                            <p>$900.00</p>
+                            <div className='discount'>
+                                <span>$925.00</span>
+                                <span className='dis'>you save $25</span>
+                            </div>
+                            <div className='shipping'>
+                                <span><LiaShippingFastSolid size={25} /></span>
+                                <span className="dis">Express Shipping</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </SwiperSlide>
+            </Swiper>
+
+       
+       
    </div>
   )
 }
