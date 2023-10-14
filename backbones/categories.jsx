@@ -51,7 +51,7 @@ const Categories = () => {
                         <span>{item.categoriName}</span>
                     </Link> 
                 ))}
-                <Link href={"/"} className="list-item">
+                <Link href={"/categories"} className="list-item">
                     <p>See All Categories</p>
                     <HiArrowNarrowRight size={25} />
                 </Link>        
