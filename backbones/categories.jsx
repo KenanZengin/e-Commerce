@@ -30,16 +30,15 @@ import { useEffect, useState } from 'react'
 
 const Categories = () => {
 
-    const [deneme,deneme1] = useState(true)
+    const [close,setClose] = useState(true)
     useEffect(()=>(
-        deneme1(true)
-    ),[deneme])
+        setClose(true)
+    ),[close])
     const imageList = [{img : categori_1 , categoriName : "Arts & Crafts" ,link:"/"},{img : categori_2 , categoriName : "Baby" ,link:"/"},{img : categori_3 , categoriName : "Books" ,link:"/"},{img : categori_4 , categoriName : "Car & Other Vehicles" ,link:"/"},{img : categori_5 , categoriName : "Clothing & Accessories" ,link:"/"},{img : categori_6 , categoriName : "Electronics & Tech" ,link:"/"},{img : categori_7 , categoriName : "Food & Beverage" ,link:"/"},{img : categori_8 , categoriName : "Footwear" ,link:"/"},{img : categori_9 , categoriName : "Garden & Patio" ,link:"/"},{img : categori_10 , categoriName : "Gift Cards" ,link:"/"},{img : categori_11, categoriName : "Handmade" ,link:"/"},{img : categori_12 , categoriName : "Health & Beauty" ,link:"/"},{img : categori_13 , categoriName : "Home" ,link:"/"},{img : categori_14 , categoriName : "Industrial Tools & Products" ,link:"/"},{img : categori_15 , categoriName : "Jewelery & Watches" ,link:"/"},{img : categori_16 , categoriName : "Musical Instuments" ,link:"/"},{img : categori_17 , categoriName : "Office & School" ,link:"/"},{img : categori_18 , categoriName : "Pets &  Other Animals" ,link:"/"},{img : categori_19 , categoriName : "Sports & Outdoor Activities" ,link:"/"},{img : categori_20 , categoriName : "Tools & Handware" ,link:"/"},{img : categori_21 , categoriName : "Toys & Play" ,link:"/"}]
-
-
+    
   return (
   <>
-    {deneme && <div className="categories" >
+    {close && <div className="categories" >
         <div className="categories-left">
             <p>SHOP NOW</p>
             <h3>Shop<br />everything<br />you need<br />online</h3>
@@ -51,18 +50,15 @@ const Categories = () => {
             </p>            
             <div className="categories-list">
                 {imageList.map((item)=>(
-                    <Link href={item.link} className="list-item" key={item.categoriName} onClick={()=>deneme1(!deneme)}>
-                        <Image src={item.img} alt='categori' />
+                    <Link href={item.link} className="list-item" key={item.categoriName} onClick={()=>setClose(!close)}>
+                        <Image src={item.img} alt={item.categoriName} />
                         <span>{item.categoriName}</span>
                     </Link> 
                 ))}
-                
-                <Link href={"/categories"} className="list-item" onClick={()=>deneme1(!deneme)}>
+                {/* <Link href={"/categories"} className="list-item" onClick={()=>setClose(!close)}>
                     <p>See All Categories</p>
-                    <HiArrowNarrowRight size={25} />
-                    
-                </Link>        
-                
+                    <HiArrowNarrowRight size={25} />   
+                </Link>         */}
             </div>
         </div>        
     </div>}
