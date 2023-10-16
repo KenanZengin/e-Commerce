@@ -40,10 +40,9 @@
                 width: 100%;
                 img{
                     width: 100%;
-                    min-width: 794px;
                     height: 800px;
                     min-height: 800px;
-                    object-fit: contain;
+                    object-fit: cover;
                     border-radius: 40px;
                 }
             }
@@ -188,7 +187,8 @@
                         padding: 5px 25px;
                         border-radius: 20px;
                         width: 25%;  
-                        
+                        min-width: 25%;
+                        white-space: nowrap;
                         &:hover{
                             background-color: #e6e5ff !important;
                             border: 1px solid #6762f7;
@@ -236,6 +236,7 @@
                     display: grid;
                     grid-template-columns: repeat(2,1fr);
                     row-gap: 20px;
+                    column-gap: 40px;
                     margin-top: 25px;
                     .option{
                         display: flex;
@@ -260,6 +261,7 @@
                                 display: flex;
                                 align-items: center;
                                 font-size: 0.875rem !important;
+                                white-space: nowrap;
                                 span:first-child{
                                     font-weight: 600;
                                     color: #000;
