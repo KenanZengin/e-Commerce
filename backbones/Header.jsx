@@ -13,7 +13,8 @@ import head2 from 'public/img/sections/head2.jpg'
 import head3 from 'public/img/sections/head3.jpg'
 import head4 from 'public/img/sections/head4.jpg'
 import categori_1 from 'public/img/categories/categori_1.png'
-
+import first from "public/img/recommedProduct/first.jpg"
+import second from "public/img/recommedProduct/second.jpg"
 
 
 const Header = () => {
@@ -63,7 +64,42 @@ const Header = () => {
                                     <span>Total</span>
                                     <p>$0.00</p>
                                 </div>
+                                <div className="tooltips">
+                                    <div className="tooltip-info">
+                                        <div className="tooltip-body">
+                                            <div className="title">
+                                                My Basket (3 product)
+                                            </div>
+                                            <div className="products">
+                                                <div className="item">
+                                                    <Image src={first} alt='product' />
+                                                    <div className="left">
+                                                        <p>Curve OAK Chair</p>
+                                                        <span>size: S </span>
+                                                        &nbsp;&nbsp;
+                                                        <span>piece: 1</span>
+                                                        <p>$125.37</p>
+                                                    </div>
+                                                </div>
+                                                <div className="item">
+                                                    <Image src={second} alt='product' />
+                                                    <div className="left">
+                                                        <p>Curve OAK Chair</p>
+                                                        <span>size: S</span>
+                                                        &nbsp;&nbsp;
+                                                        <span>piece: 1</span>
+                                                        <p>$125.37</p>
+                                                    </div>
+                                                </div>                                           
+                                            </div>
+                                            <p className='go-basket' >
+                                                go to basket
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </Link>
+
                             <Link href={"/"} className="user-favorite" title='favorite products'>
                                 <div className="badgee">
                                     <AiOutlineHeart size={26} />

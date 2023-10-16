@@ -3,7 +3,6 @@
     width: 100%;
     max-width: 100%;
     background-color: #fff;
-    
     &-web{
         display: flex;
         flex-direction: column;
@@ -16,8 +15,7 @@
         align-items: stretch;
         justify-content: space-between;
         height: 100%;
-        width: 100%;
-        
+        width: 100%;      
         &-left{
             height: 100%;
             display: flex;
@@ -195,6 +193,80 @@
                         }
                     }
                 }  
+                &:has(.user-basket:hover) .user-basket .tooltips{
+                    --dp-t:block;
+                }
+                &:has(.user-basket:not(:hover)) .user-basket .tooltips{
+                    --dp-t:none;
+                }
+                .user-basket{
+                    position: relative;           
+                    .tooltips{
+                        display: var(--dp-t);
+                        color: black;
+                        transform: translate(-36%, 59%);
+                        z-index: 100;
+                        width: 300px;
+                        padding-top: 10px;
+                        .tooltip-body{
+                            border-radius: 10px;
+                            border: 1px solid #e6e6e6;
+                            background-color: #fff;
+                            .title,.products{
+                                white-space: nowrap;
+                            }
+                            .title{
+                                font-size: 0.9375rem;
+                                font-weight: 600;
+                                padding: 20px 20px 0 20px ;
+                            }
+                            .products{
+                                display: flex;
+                                flex-direction: column;
+                                .item{
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 10px 0;
+                                    border-bottom: 1px solid #e6e6e6;
+                                    img{
+                                        height: 90px;
+                                        width: 134px;
+                                        object-fit: cover;
+                                    }
+                                    .left{
+                                        p{
+                                            font-size: 0.9375rem;
+                                            font-weight: 600;
+                                            text-wrap:wrap;
+                                        }
+                                        span{
+                                            color: #b4b4b4;
+                                            font-weight: 600;
+                                            font-size: 0.75rem;
+                                            margin: 5px 0;
+                                            display: inline-block;
+                                        }
+                                    }
+                                }
+                                .item:first-child{
+                                   
+                                }
+                            }
+                            .go-basket{
+                                color: white;
+                                background-color: #6f63ee;
+                                display: block;
+                                text-align: center;
+                                padding: 12px;
+                                border-radius: 14px;
+                                width: 60%;
+                                margin: 10px auto;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    
+                }
             }
         }
     }
