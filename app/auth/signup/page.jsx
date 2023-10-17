@@ -4,7 +4,7 @@ import {HiOutlineUser} from "react-icons/hi"
 import {MdAlternateEmail} from "react-icons/md"
 import {FaFingerprint,FaGithub} from "react-icons/fa"
 import {FcGoogle} from "react-icons/fc"
-import formimg from "public/img/sections/form2.jpg"
+import formimg from "public/img/sections/form1.jpg"
 import mainLogo from 'public/img/header/mainLogo.png'
 import Link from 'next/link'
 

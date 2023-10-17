@@ -59,6 +59,9 @@ const Header = () => {
                             <Link href={"/"} className="user-basket">
                                 <div className="badgee">
                                     <SlBasket size={26} />
+                                    <span className="badgee-value">
+                                        3  
+                                    </span>
                                 </div>
                                 <div className='info'>
                                     <span>Total</span>
@@ -103,9 +106,9 @@ const Header = () => {
                             <Link href={"/"} className="user-favorite" title='favorite products'>
                                 <div className="badgee">
                                     <AiOutlineHeart size={26} />
-                                    <span className="badgee-value">
+                                    {/* <span className="badgee-value">
                                         1   
-                                    </span>
+                                    </span> */}
                                 </div>
                             </Link>
                             

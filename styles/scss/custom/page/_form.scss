@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     z-index: 999;
-    background-color: #6e63ed;
+    background: linear-gradient(90deg, rgba(110,99,237,1) 21%, rgba(149,153,230,1) 78%);
     padding: 25px 0;
     &_wrapper{
         background-color: #fff;
@@ -55,10 +55,11 @@
                     padding-top: 40px;
                     label{
                         margin-bottom: 25px;
+                        width: 80%;
                         position: relative;
                         svg{
                             position: absolute;
-                            left: 76%;
+                            right: 1%;
                             top: 68.4%;
                             transform: translate(0,-50%);
                             color: #6e63ed;
@@ -70,11 +71,11 @@
                         input:not([type="checkbox"]){
                             background-color: #f4f4f4;
                             padding: 15px;
-                            width: 80%;
+                            width: 100%;
                             border-radius: 15px;
                             border: 1px solid #fff;
                             font-weight: bold;
-                            min-width: 560px;
+                           
                             &:hover{
                                 border: 1px solid #6e63ed; 
                             }
