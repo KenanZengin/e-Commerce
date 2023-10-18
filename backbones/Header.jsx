@@ -2,11 +2,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Categories from './categories'
+import {HiOutlineUserCircle} from "react-icons/hi2"
+
 import {AiOutlineHeart} from "react-icons/ai"
+import {CgFileDocument} from "react-icons/cg"
+import {LiaComment} from "react-icons/lia"
 import {FaRegUser} from "react-icons/fa6"
 import {SlBasket} from "react-icons/sl"
-import {BsFillArrowRightCircleFill} from "react-icons/bs"
+import {BsFillArrowRightCircleFill, BsQuestionCircle} from "react-icons/bs"
 import {FiSearch} from "react-icons/fi"
+import {BiLogOut} from "react-icons/bi"
 import mainLogo from 'public/img/header/mainLogo.png'
 import head1 from 'public/img/sections/head1.jpg'
 import head2 from 'public/img/sections/head2.jpg'
@@ -112,7 +117,7 @@ const Header = () => {
                                 </div>
                             </Link>
                             
-                            <Link href={"/"} className="user-account" title='sign in'>
+                            <div className="user-account" title='sign in'>
                                 <span className="badgee">
                                 <FaRegUser size={22} />
                                 </span>
@@ -120,7 +125,36 @@ const Header = () => {
                                     <span>Sign in</span>
                                     <p>Account</p>
                                 </div>
-                            </Link>
+                                <div className="tooltips">
+                                    <div className="tooltip-info">
+                                        <div className="tooltip-body">
+                                           <div className="sections">
+                                                <Link href={"/"} className="profile">
+                                                    <HiOutlineUserCircle size={25}/>
+                                                    <p>Your      Profile</p>
+                                                </Link>
+                                                <Link href={"/"} className="profile">
+                                                    <CgFileDocument size={25}/>
+                                                    <p>Orders & Returns</p>
+                                                </Link>
+                                                <Link href={"/"} className="profile">
+                                                    <LiaComment size={25}/>
+                                                    <p>Rewiews & Rewards</p>
+                                                </Link>
+                                                <Link href={"/"} className="profile">
+                                                    <BsQuestionCircle size={25}/>
+                                                    <p>Help & Support</p>
+                                                </Link>
+                                               
+                                           </div>
+                                           <button>
+                                                <BiLogOut size={25}/>
+                                                Log Out
+                                           </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

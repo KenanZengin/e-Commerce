@@ -150,7 +150,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 32px;
-                a{
+                a,.user-account{
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -267,6 +267,65 @@
                     }
                     
                 }
+                &:has(.user-account:hover) .user-account .tooltips{
+                    --dp-s:block;
+                }
+                &:has(.user-account:not(:hover)) .user-account .tooltips{
+                    --dp-s:none;
+                }
+                .user-account{
+                    position: relative;           
+                    .tooltips{
+                        display: var(--dp-s);
+                        color: black;
+                        transform: translate(-57%, 59%);
+                        z-index: 100;
+                        width: 250px;
+                        padding-top: 10px;
+                        .tooltip-body{
+                            border-radius: 25px;
+                            border: 1px solid #e6e6e6;
+                            background-color: #fff;
+                            padding: 15px;
+                            &::before{
+                                content: '';
+                                border-width: 0 !important;
+                            }
+                            .sections{
+                                display: grid;
+                                grid-template-columns: repeat(2,1fr);
+                                text-align: center;
+                                row-gap: 20px;
+                                column-gap: 5px;
+                                a{
+                                    display: block;
+                                    padding: 20px 10px ;
+                                    border-radius: 12px;
+                                    font-weight: bold;
+                                    font-size: 0.875;
+                                    background-color: #fff;
+                                    svg{
+                                        margin-bottom: 10px;
+                                    }
+                                    &:hover{
+                                        background-color: #e6e5ff;
+                                    }
+                                }
+                            }
+                            button{
+                                background-color: #fff;
+                                font-weight: bold;
+                                font-size: 0.875rem;
+                                margin-top: 35px;
+                                svg{
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+
             }
         }
     }
