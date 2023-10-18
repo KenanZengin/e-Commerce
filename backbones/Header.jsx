@@ -131,13 +131,13 @@ const Header = () => {
                                            <div className="sections">
                                                 <Link href={"/"} className="profile">
                                                     <HiOutlineUserCircle size={25}/>
-                                                    <p>Your      Profile</p>
+                                                    <p>Your Profile</p>
                                                 </Link>
-                                                <Link href={"/"} className="profile">
+                                                <Link href={"/orders"} className="profile">
                                                     <CgFileDocument size={25}/>
                                                     <p>Orders & Returns</p>
                                                 </Link>
-                                                <Link href={"/"} className="profile">
+                                                <Link href={"/userProfile"} className="profile">
                                                     <LiaComment size={25}/>
                                                     <p>Rewiews & Rewards</p>
                                                 </Link>

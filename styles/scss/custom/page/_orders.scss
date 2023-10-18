@@ -1,0 +1,86 @@
+.orders{
+    padding: 20px 60px 0;
+    width:85%;
+    .title{
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .items{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 60px 0 ;
+        padding: 0 10px;
+       
+        .item{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            .info{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                img{
+                    width: 127px;
+                    height: 124px;
+                    object-fit: contain;
+                }
+                .product-name{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    p{
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                    }
+                    span,div{
+                        font-weight: 600;
+                        font-size: 0.825rem;
+                    }
+                    span{
+                        color: #b4b4b4;
+                        display: block;
+                    }
+                    div{
+                        color: #000;
+                        svg{
+                            margin-right: 7px;
+                        }
+                    }
+                }
+            }
+            .piece{
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                p{
+                    color: #000;   
+                    white-space: nowrap;
+                }
+                p:first-child{
+                    font-weight: bold;
+                }
+                p:last-child{
+                    font-weight: 600;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    background-color: #6e63ed;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 20px;
+                    height: 100%;
+                    padding: 0 25px;
+                    font-weight: bold;
+                    &:hover{
+                        opacity: .9;
+                    }
+                }
+            }
+            
+           
+        }
+    }
+}
