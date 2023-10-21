@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 import {MdAlternateEmail} from "react-icons/md"
 import {FaFingerprint,FaGithub} from "react-icons/fa"
 import {FcGoogle} from "react-icons/fc"
@@ -8,6 +7,9 @@ import mainLogo from 'public/img/header/mainLogo.png'
 import Link from 'next/link'
 
 const SignIn = () => {
+
+
+
   return (
    <>
         <div className="title">
