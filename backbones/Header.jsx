@@ -61,7 +61,8 @@ const Header = () => {
                             
                         </div>
                         <div className="user-section">
-                            <Link href={"/"} className="user-basket">
+
+                            <div href={"/"} className="user-basket">
                                 <div className="badgee">
                                     <SlBasket size={26} />
                                     <span className="badgee-value">
@@ -100,13 +101,13 @@ const Header = () => {
                                                     </div>
                                                 </div>                                           
                                             </div>
-                                            <p className='go-basket' >
+                                            <Link href={"/userbasket"} className='go-basket' >
                                                 go to basket
-                                            </p>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
 
                             <Link href={"/"} className="user-favorite" title='favorite products'>
                                 <div className="badgee">
@@ -155,6 +156,7 @@ const Header = () => {
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
