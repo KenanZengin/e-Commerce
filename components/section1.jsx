@@ -18,8 +18,10 @@ const Section_1 = () => {
         
         <div className="title">
             <div className="video">
-              <Image src={videoImg} alt="videoImg" placeholder="blur" />
-              <BsPlayCircle size={40} />
+              <div className="video_img">
+                <Image src={videoImg} alt="videoImg" placeholder="blur" />
+                <BsPlayCircle size={40} />
+              </div>
               <p>
                 <span>Why shop</span> <br />
                 on Rivly?

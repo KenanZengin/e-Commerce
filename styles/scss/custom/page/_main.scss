@@ -17,24 +17,32 @@
                     align-self: flex-end;
                     gap: 35px;
                     padding-left: 60px;
-                    position: relative;
                     
-                    svg{
-                        position: absolute;
-                        left: 30%;
-                        border-radius: 50%;
-                        background-color: #fff;
-                        path:first-child{
-                            color: #fff;
+                    &_img{
+                        position: relative;
+                        svg{
+                            position: absolute;
+                            left: 30%;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            path:first-child{
+                                color: #fff;
+                            }
+                        }
+                        img{
+                            color: transparent;
+                            height: 168px;
+                            width: 153px;
+                            border-radius: 32px;
+                            transform: rotate(8deg);
                         }
                     }
-                    img{
-                        color: transparent;
-                        height: 168px;
-                        width: 153px;
-                        border-radius: 32px;
-                        transform: rotate(8deg);
-                    }
+                    
+                   
+                  
                     p{
                         color: black;
                         font-size: 1rem;
