@@ -130,23 +130,22 @@ const Header = () => {
                                     <div className="tooltip-info">
                                         <div className="tooltip-body">
                                            <div className="sections">
-                                                <Link href={"/"} className="profile">
+                                                <Link href={"/profile/userInformation/membershipInformation"} className="profile">
                                                     <HiOutlineUserCircle size={25}/>
-                                                    <p>Your Profile</p>
+                                                    <p>User Information</p>
                                                 </Link>
-                                                <Link href={"/orders"} className="profile">
+                                                <Link href={"/profile/orders"} className="profile">
                                                     <CgFileDocument size={25}/>
                                                     <p>Orders & Returns</p>
                                                 </Link>
-                                                <Link href={"/userProfile"} className="profile">
+                                                <Link href={"/profile/userRewiews"} className="profile">
                                                     <LiaComment size={25}/>
                                                     <p>Rewiews & Rewards</p>
                                                 </Link>
                                                 <Link href={"/"} className="profile">
                                                     <BsQuestionCircle size={25}/>
                                                     <p>Help & Support</p>
-                                                </Link>
-                                               
+                                                </Link>   
                                            </div>
                                            <button>
                                                 <BiLogOut size={25}/>
