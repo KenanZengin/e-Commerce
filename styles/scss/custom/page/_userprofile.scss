@@ -1,12 +1,59 @@
 .user__info{
     background-color: #fff;
-    padding: 20px 60px;
+    padding: 40px 60px;
     &__wrapper{
         background-color: #fff;
         display: flex;
+        justify-content: space-between;
         gap: 30px;
         .sidebar{
-            width: 15%;
+            width: 12.5%;
+            & > p {
+                margin-bottom: 40px;
+                border: 1px solid #e6e6e6;
+                border-radius: 8px;
+            }
+            p{
+                font-weight: 600;
+                font-size: .9375rem;
+                padding: 16px;
+               
+            }
+            .sidebar_menu{
+                border: 1px solid #e6e6e6;
+                border-radius: 8px;
+                p{
+                    border-bottom: 1px solid #e6e6e6;
+                }
+                ul{
+                    padding: 10px 0;
+                    li{
+                        padding: 0 5px;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            font-weight: 600;
+                            padding: 8px 6px;
+                            font-size: 0.8725rem;
+                            color: #000;
+                            
+                            svg{
+                                margin-right: 12px;
+                            }
+                            &:hover{
+                                background-color: #f0effd;
+                                color: #6e63ed;
+                                transition: .25s all;
+                            }
+                        }
+                        .active{
+                            background-color: #f0effd;
+                            color: #6e63ed;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
         }
         .user_info_2{
             width: 85%;

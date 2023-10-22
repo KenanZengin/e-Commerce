@@ -8,17 +8,17 @@ const UserInformation = () => {
         <form>
           <label htmlFor="name">
             <span>Name</span>
-            <input type="text" value={"Kenan"} />
+            <input type="text"  />
           </label>
           <label htmlFor="email">
             <span>Email</span>
-            <input type="email" value={"kenan@gmail.com"} />
+            <input type="email"  />
           </label>
           <label htmlFor="phone">
             <span>Email</span>
-            <input type="tel"  />
-            <button>Update</button>
+            <input type="tel"  />     
           </label>
+          <button>Update</button>
         </form>
         <div className="form_2">
           <div className="date">
