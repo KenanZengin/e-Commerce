@@ -47,6 +47,9 @@ const UserLayout = ({children}) => {
                 </div>
             </div>
             <div className="user_info_2">
+                <div className="titlee">
+                    My User Information
+                </div>
                 {children}
             </div>
         </div>

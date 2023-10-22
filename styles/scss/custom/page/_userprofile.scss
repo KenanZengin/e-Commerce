@@ -5,11 +5,11 @@
         background-color: #fff;
         display: flex;
         justify-content: space-between;
-        gap: 30px;
+        
         .sidebar{
             width: 12.5%;
             & > p {
-                margin-bottom: 40px;
+                margin-bottom:20px;
                 border: 1px solid #e6e6e6;
                 border-radius: 8px;
             }
@@ -57,6 +57,115 @@
         }
         .user_info_2{
             width: 85%;
+            margin-left: 125px;
+            .titlee{
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 30px;
+                border: 1px solid #e6e6e6;
+                padding: 20px;
+                border-radius: 8px;
+            }
+            .form-info{
+                display: flex;
+                justify-content: space-between;
+                border: 1px solid #e6e6e6;
+                
+                border-radius: 8px;
+                .left{
+                    background-color: #fff;
+                    border-right: 1px solid #e6e6e6;
+                }
+                .right{
+                  
+                }
+                .left,.right{
+                    width: 50%;
+                    padding: 20px;
+                    .title{
+                        color: #6e63ed;
+                        font-weight: bold;
+                        font-size: 1rem;
+                        margin-bottom: 25px;
+                    }
+                    form{
+                        
+                        padding: 10px 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 25px;
+                        .phone{
+                            &_value{
+                                display: flex;
+                                align-items: stretch;
+                                gap: 10px;
+                                p{
+                                    display: flex;
+                                    align-items: center;
+                                    border: 1px solid #e6e6e6;
+                                    flex-grow: 0.15;
+                                    border-radius: 12px;
+                                    padding-left: 8px;
+                                    font-weight: 600;
+                                    &:hover{
+                                        border: 1px solid #6e63ed; 
+                                    }
+                                    &:focus{
+                                        box-shadow: 0 0 0 4px rgba(110,99,237,.3);
+                                        border: 1px solid #6e63ed;
+                                    }
+                                    &::placeholder{
+                                        color: #b4b4b4;
+                                        font-weight: 600;
+                                    }
+                                }
+                                input{
+                                    flex-grow: 1;
+                                }
+                            }
+                        }
+                        label{
+                            display: flex;
+                            flex-direction: column;
+                            input{
+                                border: 1px solid #e6e6e6;
+                            }
+                        }
+                        .male{
+                            
+                        }
+                    }
+                    input:not([type="checkbox"]),input:not([type="radio"]){
+                        padding: 10px;
+                        border-radius: 12px;
+                        &:hover{
+                            border: 1px solid #6e63ed; 
+                        }
+                        &:focus{
+                            box-shadow: 0 0 0 4px rgba(110,99,237,.3);
+                            border: 1px solid #6e63ed;
+                        }
+                        &::placeholder{
+                            color: #b4b4b4;
+                            font-weight: 600;
+                        }
+                    }
+                    label{
+                        span{
+                            margin-bottom: 10px;
+                            font-weight: 600;
+                        }
+                    }
+                    button{
+                        padding: 13px 0;
+                        text-align: center;
+                        font-weight: 600;
+                        background-color: #dddddd;
+                        border-radius: 20px;
+                        color: rgb(102, 102, 102);
+                    }
+                }
+            }
         }
     }
 }

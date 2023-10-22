@@ -1,6 +1,9 @@
 import React from 'react'
 
 const UserInformation = () => {
+
+  const deneme = "kenan"
+
   return (
     <div className="form-info">
       <div className="left">
@@ -8,52 +11,43 @@ const UserInformation = () => {
         <form>
           <label htmlFor="name">
             <span>Name</span>
-            <input type="text"  />
+            <input type="text" placeholder={"kenan"}  />
           </label>
           <label htmlFor="email">
             <span>Email</span>
-            <input type="email"  />
+            <input type="email" placeholder='kenan@gmail.com'  />     
           </label>
-          <label htmlFor="phone">
-            <span>Email</span>
-            <input type="tel"  />     
+          <label htmlFor="phone" className='phone'>
+            <span>Phone</span>
+            <div className='phone_value'>
+              <p tabIndex={2}>+90</p>
+              <input type="tel" name="" id="" />
+            </div>
           </label>
-          <button>Update</button>
-        </form>
-        <div className="form_2">
-          <div className="date">
-            <span>Your date of birth</span>
+          <label htmlFor="male" className='male'>
+            <span>Gender</span>
             <div>
-              Date
-            </div>
-            <div>
-              Mounth
-            </div>
-            <div>
-              Year
-            </div>
-          </div>
-          <div className="gender">
-            <label htmlFor="male">
               <input type="radio" name="gender"  />
               Female
-            </label>
-            <label htmlFor="male">
               <input type="radio" name="gender"  />
               Male
-            </label>
-          </div>
-          <div className="mail-support">
+            </div>
+            
+          </label>
+          <label htmlFor="mail_2">
             <span>Institutional</span>
-            <label htmlFor="mail_2">
+            <div>
               <input type="checkbox" name="mail_2" id="mail_2" />
               I want to be informed about opportunities for my workplace shopping.
-            </label>
-          </div>
+            </div>
+          </label>
+
           <button>
             Update
           </button>
-        </div>
+          
+        </form>
+        
       </div>
       <div className="right">
         <div className="title">
