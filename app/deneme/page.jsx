@@ -1,9 +1,9 @@
-import React from 'react'
+
 
 
 const getData = async () => {
-    const res = await fetch("http://localhost:3000/api/auth/deneme");
-    const data = res.json()
+    const res = await fetch("http://localhost:3000/api/auth/denemeee",{cache:"no-store"});
+    const data = await res.json()
 
     return data
 }
@@ -17,11 +17,13 @@ const Deneme = async () => {
 
   return (
     <div>
-        {data && data.map(item => (
+        { data.map(item => (
             <div key={item._id} style={{padding : "60px",fontWeight:'bold'}}>
                 id : {item._id} &nbsp;&nbsp;&nbsp;
                 name : {item.name} &nbsp;&nbsp;&nbsp;
-                password : {item.password}&nbsp;&nbsp;&nbsp;
+                password : {item.email}&nbsp;&nbsp;&nbsp;
+                date : {item.date}&nbsp;&nbsp;&nbsp;
+                address : {item?.address?.country}
             </div>
         ))}
         xd

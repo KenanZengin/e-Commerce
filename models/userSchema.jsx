@@ -6,7 +6,10 @@ const userSchema = new Schema({
     email : String,
     password : String,
     date : {type : Date   , default  : Date.now()},
-
+    address :{
+        country :  String,
+        province : String
+    },
 })
 
 

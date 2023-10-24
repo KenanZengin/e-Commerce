@@ -8,11 +8,12 @@ export async function GET(){
 
     try{
 
-        const users = await Users.find({password : "123"})
+        const users = await Users.find({})
 
         if(!users) return NextResponse.json({error : "Data not found"},{status : 404})
 
         return NextResponse.json(users,{status : 200})
+        
     } catch(error){
         NextResponse.json({message : error},{status : 404})
     }
