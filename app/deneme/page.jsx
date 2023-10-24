@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const getData = async () => {
-    const res = await fetch("http://localhost:3000/api/auth/deneme",{cache:"no-store"});
+    const res = await fetch("http://localhost:3000/api/auth/deneme");
     const data = res.json()
 
     return data
@@ -17,13 +17,14 @@ const Deneme = async () => {
 
   return (
     <div>
-        {data.map(item => (
+        {data && data.map(item => (
             <div key={item._id} style={{padding : "60px",fontWeight:'bold'}}>
                 id : {item._id} &nbsp;&nbsp;&nbsp;
                 name : {item.name} &nbsp;&nbsp;&nbsp;
                 password : {item.password}&nbsp;&nbsp;&nbsp;
             </div>
         ))}
+        xd
     </div>
   )
 }
