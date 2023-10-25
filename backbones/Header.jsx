@@ -101,7 +101,7 @@ const Header = () => {
                                                     </div>
                                                 </div>                                           
                                             </div>
-                                            <Link href={"/userbasket"} className='go-basket' >
+                                            <Link href={"/profile/userbasket"} className='go-basket' >
                                                 go to basket
                                             </Link>
                                         </div>

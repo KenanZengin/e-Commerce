@@ -1,15 +1,11 @@
-import Section_1 from "@/components/section1"
-import Section_2 from "@/components/section2"
-import Section_3 from "@/components/section3"
+import Home from "@/components/home"
 
 
 const HomePage = () => {
   return (
-  <div className="sections">
-    <Section_1 />
-    <Section_2 />
-    <Section_3 />
-  </div>
+    <>
+      <Home />
+    </>
   )
 }
 
