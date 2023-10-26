@@ -24,6 +24,7 @@ const userProfil = () => {
     
   return (
     <>
+    
         <div className="user-profile">
             <div className="user-profile-wrapper">
                 <div className="left">
