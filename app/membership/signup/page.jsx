@@ -1,7 +1,8 @@
 "use client"
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-
+import Loading from '@/components/loading'
 import {HiOutlineUser} from "react-icons/hi"
 import {MdAlternateEmail} from "react-icons/md"
 import {FaFingerprint,FaGithub} from "react-icons/fa"
@@ -11,9 +12,12 @@ import Link from 'next/link'
 
 const SignUp = () => {
 
+  const router = useRouter()
+  const [text,setText] = useState(false)
   const [userValue,setUserValue] = useState({name : "" , email : "" , password : ""})
 
   const onSubmit = async (e) => {
+    setText(true)
     e.preventDefault()
     const options = {
       method : "POST",
@@ -21,6 +25,9 @@ const SignUp = () => {
       body : JSON.stringify(userValue)
     }
     await fetch('http://localhost:3000/api/auth/signup',options)  
+    router.push(
+      "signin"
+    )
   }
 
   return (
@@ -51,7 +58,7 @@ const SignUp = () => {
           <p>I agree to the <Link href={"/"}>Teams & Privacy</Link></p>
         </label>
         <button type="submit">
-          Sign Up
+          {text ? <Loading /> : "Sign Up"}
         </button>
       </form>
       <div className='or'><span>OR</span></div>
