@@ -1,9 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Categories from './categories'
+import Categories from '../components/categories'
 import {HiOutlineUserCircle} from "react-icons/hi2"
-
 import {AiOutlineHeart} from "react-icons/ai"
 import {CgFileDocument} from "react-icons/cg"
 import {LiaComment} from "react-icons/lia"
@@ -20,6 +19,7 @@ import head4 from 'public/img/sections/head4.jpg'
 import categori_1 from 'public/img/categories/categori_1.png'
 import first from "public/img/recommedProduct/first.jpg"
 import second from "public/img/recommedProduct/second.jpg"
+import UserSection from './usersection'
 
 
 const Header = () => {
@@ -62,99 +62,7 @@ const Header = () => {
                         </div>
                         <div className="user-section">
 
-                            <div href={"/"} className="user-basket">
-                                <div className="badgee">
-                                    <SlBasket size={26} />
-                                    <span className="badgee-value">
-                                        3  
-                                    </span>
-                                </div>
-                                <div className='info'>
-                                    <span>Total</span>
-                                    <p>$0.00</p>
-                                </div>
-                                <div className="tooltips">
-                                    <div className="tooltip-info">
-                                        <div className="tooltip-body">
-                                            <div className="title">
-                                                My Basket (3 product)
-                                            </div>
-                                            <div className="products">
-                                                <div className="item">
-                                                    <Image src={first} alt='product' />
-                                                    <div className="left">
-                                                        <p>Curve OAK Chair</p>
-                                                        <span>size: S </span>
-                                                        &nbsp;&nbsp;
-                                                        <span>piece: 1</span>
-                                                        <p>$125.37</p>
-                                                    </div>
-                                                </div>
-                                                <div className="item">
-                                                    <Image src={second} alt='product' />
-                                                    <div className="left">
-                                                        <p>Curve OAK Chair</p>
-                                                        <span>size: S</span>
-                                                        &nbsp;&nbsp;
-                                                        <span>piece: 1</span>
-                                                        <p>$125.37</p>
-                                                    </div>
-                                                </div>                                           
-                                            </div>
-                                            <Link href={"/profile/userbasket"} className='go-basket' >
-                                                go to basket
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <Link href={"/"} className="user-favorite" title='favorite products'>
-                                <div className="badgee">
-                                    <AiOutlineHeart size={26} />
-                                    {/* <span className="badgee-value">
-                                        1   
-                                    </span> */}
-                                </div>
-                            </Link>
-                            
-                            <div className="user-account" title='sign in'>
-                                <span className="badgee">
-                                <FaRegUser size={22} />
-                                </span>
-                                <div className='info'>
-                                    <span>Sign in</span>
-                                    <p>Account</p>
-                                </div>
-                                <div className="tooltips">
-                                    <div className="tooltip-info">
-                                        <div className="tooltip-body">
-                                           <div className="sections">
-                                                <Link href={"/profile/userInformation/membershipInformation"} className="profile">
-                                                    <HiOutlineUserCircle size={25}/>
-                                                    <p>User Information</p>
-                                                </Link>
-                                                <Link href={"/profile/orders"} className="profile">
-                                                    <CgFileDocument size={25}/>
-                                                    <p>Orders & Returns</p>
-                                                </Link>
-                                                <Link href={"/profile/userRewiews"} className="profile">
-                                                    <LiaComment size={25}/>
-                                                    <p>Rewiews & Rewards</p>
-                                                </Link>
-                                                <Link href={"/"} className="profile">
-                                                    <BsQuestionCircle size={25}/>
-                                                    <p>Help & Support</p>
-                                                </Link>   
-                                           </div>
-                                           <button>
-                                                <BiLogOut size={25}/>
-                                                Log Out
-                                           </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          <UserSection />
 
                         </div>
                     </div>

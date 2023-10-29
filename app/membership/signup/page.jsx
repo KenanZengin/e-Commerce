@@ -33,9 +33,9 @@ const SignUp = () => {
   return (
     <>
       <div className="title">
-            <Image src={mainLogo} alt='mainLogo' />
-            <h3>Get Started</h3>
-            <p>Already have an account? <Link href={"./signin"}>Log in</Link></p>
+        <Image src={mainLogo} alt='mainLogo' />
+        <h3>Get Started</h3>
+        <p>Already have an account? <Link href={"./signin"}>Log in</Link></p>
       </div>
       <form onSubmit={onSubmit}>
         <label htmlFor="name">

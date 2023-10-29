@@ -332,6 +332,18 @@
                                     margin-right: 8px;
                                 }
                             }
+                            .member_ship{
+                                display: block;
+                                width: 100%;
+                                text-align: center;
+                               
+                                background-color: #6e63ed;
+                                color: #fff;
+                                font-weight: 600;
+                            }
+                            .member_ship:first-child{
+                                margin-bottom: 10px;
+                            }
                         }
                     }
                     
