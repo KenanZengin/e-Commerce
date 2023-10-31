@@ -9,6 +9,6 @@ const userSchema = new Schema({
 })
 
 
-const Users = models.users || model('users',userSchema)
+const Users = models?.users || model('users',userSchema)
 
 export default Users

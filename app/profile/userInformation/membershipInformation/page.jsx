@@ -1,8 +1,11 @@
-import React from 'react'
+"use client"
+import { useSession } from 'next-auth/react'
+import {IoIosCheckbox} from "react-icons/io"
 
-const UserInformation = () => {
+const UserInformation =  () => {
 
-  const deneme = "kenan"
+  const session =  useSession()
+  console.log("session : ",session);
 
   return (
     <div className="form-info">
@@ -11,11 +14,11 @@ const UserInformation = () => {
         <form>
           <label htmlFor="name">
             <span>Name</span>
-            <input type="text" placeholder={"kenan"}  />
+            <input type="text" placeholder={session.status=="loading" ? "name" :  session?.data?.user?.name}  />
           </label>
           <label htmlFor="email">
             <span>Email</span>
-            <input type="email" placeholder='kenan@gmail.com'  />     
+            <input type="email" placeholder={session.status=="loading" ? "email" :  session?.data?.user?.email}  />     
           </label>
           <label htmlFor="phone" className='phone'>
             <span>Phone</span>
@@ -24,20 +27,29 @@ const UserInformation = () => {
               <input type="tel" name="" id="" />
             </div>
           </label>
-          <label htmlFor="male" className='male'>
+          <div className='male'>
             <span>Gender</span>
+            <label htmlFor="Female" className='male_2 container_checkbox'>
+              <input type="radio" name="male" id="Female"  />
+              <span className="checkmark"></span>
+              <p>Female</p>
+            </label>
+            <label htmlFor="Male" className='male_2 container_checkbox'>
+              <input type="radio" name="male" id="Male"  />
+              <span className="checkmark"></span>
+              <p>Male</p>
+            </label>
             <div>
-              <input type="radio" name="gender"  />
-              Female
-              <input type="radio" name="gender"  />
-              Male
+
+              
             </div>
             
-          </label>
-          <label htmlFor="mail_2">
+          </div>
+          <label htmlFor="mail_2"  className='container_checkbox mail_2'>
             <span>Institutional</span>
-            <div>
-              <input type="checkbox" name="mail_2" id="mail_2" />
+            <div className='text_checkbox'>
+              <input type="checkbox"  name="mail_2" id="mail_2" />
+              <span className='checkmark' ></span>
               I want to be informed about opportunities for my workplace shopping.
             </div>
           </label>

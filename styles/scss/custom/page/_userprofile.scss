@@ -133,7 +133,35 @@
                             }
                         }
                         .male{
-                            
+                            display: flex;
+                            flex-wrap: wrap;
+                            span:first-child{
+                                display: block;
+                                width: 100%;
+                                font-weight: 600;
+                                margin-bottom: 10px;
+                            }
+                            &_2{
+                                display: flex;
+                                flex-direction: row;
+                                gap: 10px;
+                                margin-right: 16px;
+                                p{
+                                    padding-left: 28px;
+                                }
+                                .checkmark{
+                                    top: 1px;
+                                }
+                            }
+                        }
+                        .mail_2{
+                            .checkmark{
+                                top: 32px;
+                                left: 0;
+                            }
+                            .text_checkbox{
+                                padding-left: 28px;
+                            }
                         }
                     }
                     input:not([type="checkbox"]),input:not([type="radio"]){

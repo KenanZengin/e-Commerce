@@ -53,8 +53,9 @@ const SignUp = () => {
           <input type="password" id="password" placeholder='Enter your password' value={userValue.password} onChange={(e) => setUserValue({...userValue,password : e.target.value})} />
           <FaFingerprint size={20} />
         </label>
-        <label htmlFor="agree" className='check'>
+        <label htmlFor="agree" className='check container_checkbox' >
           <input type="checkbox" id="agree"  />
+          <span className='checkmark'></span>
           <p>I agree to the <Link href={"/"}>Teams & Privacy</Link></p>
         </label>
         <button type="submit">

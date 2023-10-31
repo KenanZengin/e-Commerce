@@ -1,17 +1,21 @@
 import Link from 'next/link'
-
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import {BiUser} from "react-icons/bi"
 import {GrMapLocation} from "react-icons/gr"
 import {FaRegCreditCard,FaRegUser,FaMapLocation} from "react-icons/fa6"
 import {FiHelpCircle} from "react-icons/fi"
 
-const UserLayout = ({children}) => {
+const UserLayout = async ({children}) => {
+
+  const session = await getServerSession(authOptions)
+
   return (
     <div className='user__info'>
         <div className="user__info__wrapper">
             <div className="sidebar">
                 <p>
-                    kenanZengin@gmail.com
+                    {session?.user?.email}
                 </p>
                 <div className="sidebar_menu">
                     <p>

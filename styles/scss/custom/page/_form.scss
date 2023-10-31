@@ -97,11 +97,16 @@
                         }
                         p{
                             margin-bottom: 0 !important;
+                            font-size: 1rem !important;
                             a{
                                 color: #6e63ed;
                                 text-decoration: underline;
                             }
                         }
+                        
+                    }
+                    .container_checkbox{
+                        padding-left: 30px !important;
                     }
                     button{
                         background-color: #6e63ed;
