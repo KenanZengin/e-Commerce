@@ -4,6 +4,7 @@ import Image from "next/image"
 import {LiaCommentDotsSolid,LiaShippingFastSolid} from "react-icons/lia"
 import {BsFillStarFill} from "react-icons/bs"
 import {HiArrowNarrowRight} from "react-icons/hi"
+import {AiOutlinePlusCircle} from "react-icons/ai"
 import first from "public/img/recommedProduct/first.jpg"
 import second from "public/img/recommedProduct/second.jpg"
 import third from "public/img/recommedProduct/third.jpg"
@@ -49,6 +50,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={second} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -91,6 +95,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={first} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -133,6 +140,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={third} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -175,6 +185,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={forth} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -217,6 +230,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={fifth} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -259,6 +275,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={sixth} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -301,6 +320,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={seventh} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -343,6 +365,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={eighth} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -385,6 +410,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={nineth} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -427,6 +455,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={tenth} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -469,6 +500,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={eleventh} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">
@@ -511,6 +545,9 @@ const ProductPage = () => {
             <div className="productts">
                 <div className="productts_img">
                     <Image src={twelfth} alt='product' />
+                    <div className="add_baskets">
+                        <AiOutlinePlusCircle size={37} />
+                    </div>
                 </div>
                 <div className="productts_info">
                     <div className="color">

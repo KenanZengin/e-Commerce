@@ -74,6 +74,35 @@
         justify-content: space-between;
         .productts{
             width: 100%;
+            .productts_img{
+                position: relative;
+                .add_baskets{
+                    position: absolute;
+                    bottom: 25px;
+                    right: 25px;
+                    cursor: pointer;
+                }
+            }
+            &:has(.productts_img:not(:hover)) .add_baskets svg{
+                display: none !important;
+                color: #736beb;
+               
+            }
+            &:has(.productts_img:hover) .add_baskets svg{
+                display: block !important;
+                color: #736beb;
+                animation: .4s hovered ease;
+            }
         }
+    }
+}
+
+
+@keyframes hovered{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

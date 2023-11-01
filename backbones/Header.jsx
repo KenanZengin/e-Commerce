@@ -69,22 +69,22 @@ const Header = () => {
                 </div>
                 <div className="header-web-navbar">
                     <nav>
-                        <Link href={"/"} className='nav-item'>
+                        <Link href={"/productPage"} className='nav-item'>
                             Populer Product
                         </Link>
-                        <Link href={"/"} className='nav-item'>
+                        <Link href={"/productPage"} className='nav-item'>
                             Favorite Brands
                         </Link>
-                        <Link href={"/"} className='nav-item'>
+                        <Link href={"/productPage"} className='nav-item'>
                             Today's Deals
                         </Link>
-                        <Link href={"/"} className='nav-item'>
+                        <Link href={"/productPage"} className='nav-item'>
                             Top Reviews
                         </Link>
-                        <Link href={"/"} className='nav-item'>
+                        <Link href={"/productPage"} className='nav-item'>
                             Highest Rewards
                         </Link>
-                        <Link href={"/"} className='nav-item'>   
+                        <Link href={"/productPage"} className='nav-item'>   
                             Recently Viewed
                         </Link>
                     </nav>  

@@ -27,10 +27,10 @@ export  function signIn_validate(values){
 export default function signUp_validate(values){
     const errors={};
 
-    if(!values.userName){
-        errors.userName="Required"
-    }else if(values.userName.includes(" ")){
-        errors.userName="Invalid Username"
+    if(!values.name){
+        errors.name="Required"
+    }else if(values.name.includes(" ")){
+        errors.name="Invalid Username"
     }
 
 

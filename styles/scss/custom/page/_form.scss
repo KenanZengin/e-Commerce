@@ -54,7 +54,7 @@
                     flex-direction: column;
                     padding-top: 40px;
                     label{
-                        margin-bottom: 25px;
+                        margin-bottom: 24px;
                         width: 80%;
                         position: relative;
                         svg{
@@ -66,7 +66,7 @@
                         }
                         p{
                             font-weight: bold;
-                            margin-bottom: 10px;
+                            margin-bottom: 7px;
                         }
                         input:not([type="checkbox"]){
                             background-color: #f4f4f4;
@@ -116,7 +116,23 @@
                         max-height: 56px;
                         font-size: 1.05rem;
                     }
+                    .validate_message{
+                        position: absolute;
+                       
+                        left: 0;
+                        top: 90px;
+                        font-size: 0.875rem;
+                        color: #ea3943;
+                        font-weight: 600;
+                    }   
+                    label:has(.validate_message) {
+                        margin-bottom: 40px !important;
+                        svg{
+                            color: #ea3943;
+                        }
+                    }
                 }
+                
                 .or{
                     color: #d2d2d2;
                     font-weight: bold;
@@ -152,6 +168,7 @@
                         border: 1px solid #6e63ed;
                     }
                 }
+               
                 & > button:first-of-type{
                     margin-bottom: 10px ;
                 }
