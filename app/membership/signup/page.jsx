@@ -24,7 +24,8 @@ const SignUp = () => {
     initialValues:{
       name:"",
       email:"",
-      password:""
+      password:"",
+      trys:false,
     },
     validate:signUp_validate,
     onSubmit
@@ -39,7 +40,7 @@ const SignUp = () => {
       headers : {'Content-Type' : 'application/json'},
       body : JSON.stringify(values)
     }
-    await fetch('http://localhost:3000/api/auth/signup',options)  
+    //await fetch('http://localhost:3000/api/auth/signup',options)  
    
     formik.resetForm()
   }
@@ -74,12 +75,12 @@ const SignUp = () => {
           </span> : <></>}
         </label>
         <label htmlFor="agree" className='check container_checkbox' >
-          <input type="checkbox" id="agree"  onClick={()=>setCheckBox(!checkBox)} />
+          <input type="checkbox" id="agree" {...formik.getFieldProps("trys")}  />
           <span className='checkmark'></span>
           <p>I agree to the <Link href={"/"}>Teams & Privacy</Link></p>
         </label>
-        <button type="submit" disabled={checkBox && formik.isValid ? false : true}  style={{opacity: checkBox && formik.isValid ? "1" : ".4"}}>
-          {text ? <Loading /> : "Sign Up"}
+        <button type="submit" disabled={ formik.isValid ? false : true}   style={{opacity: checkBox && formik.isValid ? "1" : ".4"}}>
+          {formik.isValid  ? <Loading /> : "Sign Up"}
         </button>
       </form>
       <div className='or'><span>OR</span></div>
