@@ -107,14 +107,18 @@
                     }
                     .container_checkbox{
                         padding-left: 30px !important;
+                        .validate_message{
+                            top: 30px;
+                        }
                     }
-                    button{
+                    button,.form_div{
                         background-color: #6e63ed;
                         color: #fff;
                         margin-top: 10px ;
                         height: 56px;
                         max-height: 56px;
                         font-size: 1.05rem;
+                        text-align: center;
                     }
                     .validate_message{
                         position: absolute;
@@ -152,7 +156,7 @@
                         border-radius: 4px;
                     }
                 }
-                button{
+                button,.form_div{
                     text-align: center;
                     width: 80%;
                     border-radius: 25px;

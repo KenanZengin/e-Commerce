@@ -34,6 +34,7 @@ export default function signUp_validate(values){
     }
 
 
+
     if (!values.email) {
         errors.email = "Required";
       }else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -48,6 +49,12 @@ export default function signUp_validate(values){
         errors.password= "Must be greater then 8 and less then 20 characters long"
     }else if(values.password.includes(" ")){
         errors.password="Invalid Password"
+    }
+
+
+
+    if(values.accept==false){
+        errors.accept = "Required"
     }
 
 

@@ -3,22 +3,32 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import {signIn,signOut,useSession} from "next-auth/react"
-
-
+import {signIn} from "next-auth/react"
+import { useFormik } from 'formik'
+import { signIn_validate } from '@/lib/validate'
 import {MdAlternateEmail} from "react-icons/md"
 import {FaFingerprint,FaGithub} from "react-icons/fa"
 import {FcGoogle} from "react-icons/fc"
 import mainLogo from 'public/img/header/mainLogo.png'
-
+import Loading from '@/components/loading'
 
 const SignIn = () => {
 
     
-    const [userValue_2,setUserValue_2] = useState({ email : "" , password : ""})
+    const [checkForm,setCheckForm] = useState(false)
+    
+    const formik=useFormik({
+        initialValues:{
+            email:"",
+            password:""
+        },
+        validate:signIn_validate,
+        onSubmit
+    })
 
-    const onSubmit = async (e) => {
-        e.preventDefault()
+    async function onSubmit(values){
+        console.log(values);
+        setCheckForm(true)
         const status = await signIn('credentials',{
             redirect :true,
             email : userValue_2.email,
@@ -34,31 +44,42 @@ const SignIn = () => {
             <h3>Get Started</h3>
             <p>Don't have an account? <Link href={"./signup"}>Sign up</Link></p>
         </div>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={formik.handleSubmit}>
             <label htmlFor="email">
                 <p>Email</p>
-                <input type="email"  id="email" placeholder='Enter your email' value={userValue_2.email} onChange={(e) => setUserValue_2({...userValue_2,email : e.target.value})} />
+                <input type="email"  id="email" placeholder='Enter your email' {...formik.getFieldProps("email")} className={formik.errors.email && formik.touched.email ? "errborder": ""}  />
                 <MdAlternateEmail size={20} />
+                {formik.errors.email && formik.touched.email ? <span className='validate_message'>{formik.errors.email}
+                </span> : <></>}
             </label>
             <label htmlFor="password">
                 <p>Password</p>
-                <input type="password" id="password" placeholder='Enter your password' value={userValue_2.password} onChange={(e) => setUserValue_2({...userValue_2,password : e.target.value})} />
+                <input type="password" id="password" placeholder='Enter your password' {...formik.getFieldProps("password")} className={formik.errors.password && formik.touched.password ? "errborder": ""}/>
                 <FaFingerprint size={20} />
+                {formik.errors.password && formik.touched.password ? <span className='validate_message'>{formik.errors.password}
+          </span> : <></>}
             </label>
             
-            <button type="submit">
-                Sign In
-            </button>
+            {formik.isValid 
+                ?  
+                    <button type="submit"  style={{opacity: formik.isValid ? "1" : ".4"}}>
+                        {checkForm ? <Loading /> : "Sign In"}
+                    </button>
+                :
+                    <div className='form_div' style={{opacity: formik.isValid ? "1" : ".4"}}>
+                        Sign In
+                    </div>
+                }
         </form>
         <div className='or'><span>OR</span></div>
         <button>
             <FcGoogle size={25} />
             Sign Up with Google
         </button>
-        <button>
+        {/* <button>
             <FaGithub size={25} />
             Sign Up with Github
-        </button>
+        </button> */}
    </>
   )
 }

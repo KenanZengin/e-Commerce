@@ -15,33 +15,35 @@ import Link from 'next/link'
 const SignUp = () => {
 
   const router = useRouter()
-  const [text,setText] = useState(false)
-  const [checkBox,setCheckBox] = useState(false)
-  const [userValue,setUserValue] = useState({name : "" , email : "" , password : ""})
-
+  const [checkInfo,setCheckInfo] = useState(false)
+  
+  
 
   const formik = useFormik({
     initialValues:{
       name:"",
       email:"",
       password:"",
-      trys:false,
+      accept:false,
     },
     validate:signUp_validate,
     onSubmit
   })
+  
 
 
-    async function onSubmit(values){
+  async function onSubmit(values){
     console.log(values);
-    setText(true)
+    setCheckInfo(true)
     const options = {
       method : "POST",
       headers : {'Content-Type' : 'application/json'},
       body : JSON.stringify(values)
     }
-    //await fetch('http://localhost:3000/api/auth/signup',options)  
-   
+    await fetch('http://localhost:3000/api/auth/signup',options)
+    router.push(
+      "/membership/signin"
+    )  
     formik.resetForm()
   }
 
@@ -74,24 +76,33 @@ const SignUp = () => {
           {formik.errors.password && formik.touched.password ? <span className='validate_message'>{formik.errors.password}
           </span> : <></>}
         </label>
-        <label htmlFor="agree" className='check container_checkbox' >
-          <input type="checkbox" id="agree" {...formik.getFieldProps("trys")}  />
+        <label htmlFor="accept" className='check container_checkbox' >
+          <input type="checkbox" name='accept' id="accept" {...formik.getFieldProps("accept")}  />
           <span className='checkmark'></span>
           <p>I agree to the <Link href={"/"}>Teams & Privacy</Link></p>
+          {formik.errors.accept && formik.touched.accept ? <span className='validate_message'>{formik.errors.accept}</span> : <></>}
         </label>
-        <button type="submit" disabled={ formik.isValid ? false : true}   style={{opacity: checkBox && formik.isValid ? "1" : ".4"}}>
-          {formik.isValid  ? <Loading /> : "Sign Up"}
-        </button>
+        {formik.isValid 
+          ?  
+            <button type="submit"  style={{opacity: formik.isValid ? "1" : ".4"}}>
+              {checkInfo ? <Loading /> : "Sign Up"}
+            </button>
+          :
+            <div className='form_div' style={{opacity: formik.isValid ? "1" : ".4"}}>
+              Sign Up
+            </div>
+        }
+        
       </form>
       <div className='or'><span>OR</span></div>
       <button>
         <FcGoogle size={25} />
         Sign Up with Google
       </button>
-      <button>
+      {/* <button>
         <FaGithub size={25} />
         Sign Up with Github
-      </button>
+      </button> */}
     </>
   )
 }
