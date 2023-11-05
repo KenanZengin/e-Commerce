@@ -1,6 +1,7 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
-
+import { useSession } from "next-auth/react"
 import {AiOutlineFieldTime} from "react-icons/ai"
 import {BsPlayCircle,BsFillStarFill} from "react-icons/bs"
 import {FiArrowUpRight} from "react-icons/fi"
@@ -11,6 +12,7 @@ import user_2 from "public/img/sections/random_user2.jpg"
 import user_3 from "public/img/sections/random_user4.jpg"
 
 const Section_1 = () => {
+  const session = useSession()
   return (
     <div className='section_1'>
       <div className="section_1_content">
@@ -57,11 +59,11 @@ const Section_1 = () => {
           </div>
           <div className="middle">
               <div className="top">
-                <Link href={"/"}>
+                {session?.data?.user ? <></> :  <Link href={"/"} className="free_signup">
                   Join the Rivly United for FREE
                   <FiArrowUpRight size={25} />
-                </Link>
-                <Link href={"/"}>
+                </Link>}
+                <Link href={"/"} className="all_product_redirect">
                   <span>Shop all products</span>
                 </Link>
               </div>

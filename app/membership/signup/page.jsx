@@ -16,9 +16,8 @@ const SignUp = () => {
 
   const router = useRouter()
   const [checkInfo,setCheckInfo] = useState(false)
+  const [reqMessage,setReqMessage] = useState("")
   
-  
-
   const formik = useFormik({
     initialValues:{
       name:"",
@@ -30,8 +29,6 @@ const SignUp = () => {
     onSubmit
   })
   
-
-
   async function onSubmit(values){
     console.log(values);
     setCheckInfo(true)
@@ -40,13 +37,19 @@ const SignUp = () => {
       headers : {'Content-Type' : 'application/json'},
       body : JSON.stringify(values)
     }
-    await fetch('http://localhost:3000/api/auth/signup',options)
-    router.push(
-      "/membership/signin"
-    )  
-    formik.resetForm()
-  }
+ 
+    const res = await fetch('http://localhost:3000/api/auth/signup',options)
+    const data = await res.json()
 
+    if(res.ok && res.status==201){
+      router.push("/membership/signin")
+      formik.resetForm()
+    }else{
+      setReqMessage(data.message)
+      setCheckInfo(false)
+    }
+  }
+    
   return (
     <>
       <div className="title">
@@ -99,6 +102,13 @@ const SignUp = () => {
         <FcGoogle size={25} />
         Sign Up with Google
       </button>
+      {reqMessage.length > 0 
+        ? <div className="already_message">
+          {reqMessage}
+          </div> 
+        :
+          ""
+      }
       {/* <button>
         <FaGithub size={25} />
         Sign Up with Github

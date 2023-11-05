@@ -1,12 +1,16 @@
 "use client"
 import { useSession } from 'next-auth/react'
+import { redirect } from 'next/navigation'
 import {IoIosCheckbox} from "react-icons/io"
 
 const UserInformation =  () => {
 
   const session =  useSession()
-  console.log("session : ",session);
-
+  // if(!session){
+  //   redirect("/membership/signin")
+  // }
+  //onsole.log("session : ",session);
+  //if(status == "loading") return <>loading</>
   return (
     <div className="form-info">
       <div className="left">

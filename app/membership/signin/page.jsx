@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import {signIn} from "next-auth/react"
 import { useFormik } from 'formik'
@@ -12,10 +13,12 @@ import {FcGoogle} from "react-icons/fc"
 import mainLogo from 'public/img/header/mainLogo.png'
 import Loading from '@/components/loading'
 
+
 const SignIn = () => {
 
-    
+    const router = useRouter()
     const [checkForm,setCheckForm] = useState(false)
+    const [errorMessage,setErrorMessage] = useState({error : ""})
     
     const formik=useFormik({
         initialValues:{
@@ -27,15 +30,27 @@ const SignIn = () => {
     })
 
     async function onSubmit(values){
-        console.log(values);
         setCheckForm(true)
-        const status = await signIn('credentials',{
-            redirect :true,
-            email : userValue_2.email,
-            password : userValue_2.password,
-            callbackUrl: "http://localhost:3000"
-        })
+        signIn('credentials',{
+            redirect :false,
+            email : values.email,
+            password : values.password,
+        }).then(res=>{
+            if(res.ok){
+                router.push("/")
+                router.refresh()
+            }else{
+                setCheckForm(false)
+                setErrorMessage(()=>({ error : res.error}))
+            }
+        }).catch(error => setErrorMessage(()=>({ error : error.message})))
+        
+        //if(status.ok) router.push("/")
+        
+        
+        
     }
+    console.log("empty",errorMessage);
 
   return (
    <>
@@ -76,6 +91,13 @@ const SignIn = () => {
             <FcGoogle size={25} />
             Sign Up with Google
         </button>
+        {errorMessage?.error.length > 0 
+        ? <div className="already_message">
+          {errorMessage.error}
+          </div> 
+        :
+          ""
+      }
         {/* <button>
             <FaGithub size={25} />
             Sign Up with Github

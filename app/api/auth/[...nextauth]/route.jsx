@@ -1,18 +1,22 @@
+import { NextResponse } from "next/server";
 import NextAuth from "next-auth";
 import CredentialsProvider  from "next-auth/providers/credentials";
 import connectMongo from "@/database/conn";
 import Users from "@/models/userSchema";
 
 export const authOptions = ({
+    // pages:{
+    //     signIn : "/membership/signin"
+    // }
+    //,
     providers : [
-
         CredentialsProvider({
             name : "Credentials",
             async  authorize(credentials,req){
                 connectMongo().catch(error => {error : "connection failed..."})
 
                 const result = await Users.findOne({email : credentials.email})
-                if(!result) throw new Error("no user find with email please sign up")
+                if(!result) throw new Error("account not found!")
 
                 return result 
 
@@ -42,7 +46,6 @@ export const authOptions = ({
                     name : token.name
                 }
             }
-            return session
         }
     },
     session : {
