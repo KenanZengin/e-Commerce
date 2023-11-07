@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react"
 import {AiOutlineFieldTime} from "react-icons/ai"
 import {BsPlayCircle,BsFillStarFill} from "react-icons/bs"
 import {FiArrowUpRight} from "react-icons/fi"
-import product from "public/img/sections/product2.png"
+import product_1 from "public/img/sections/product2.png"
 import videoImg from "public/img/sections/video.png"
 import user_1 from "public/img/sections/random_user1.jpg"
 import user_2 from "public/img/sections/random_user2.jpg"
@@ -34,7 +34,7 @@ const Section_1 = () => {
                <span> you love</span>
             </h1>
             <div className="products">
-              <Image src={product} />
+              <Image src={product_1} alt="product_1"/>
             </div>
             <p className="on_sale">And for a limited time only...</p>
         </div>

@@ -15,7 +15,11 @@ const UserAddress = () => {
           </label>
         </div>
         <div className="address_list">
-          xd
+          <div className="no-address">
+            <IoLocationSharp size={130} />
+            <h4>Your registered address was not found</h4>
+            <p>To add an address that you can use for your orders, you can create an address by clicking the "Add New Address" link at the top of the screen.</p>
+          </div>
         </div>
       </div>
       <div className="user_address_section">
@@ -54,7 +58,6 @@ const UserAddress = () => {
             <button>
               Save
             </button>
-
           </form>
         </div>
       </div>

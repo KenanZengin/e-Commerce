@@ -35,7 +35,7 @@ const UserLayout = async ({children}) => {
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/"}>
+                            <Link href={"registered_card"}>
                                 <FaRegCreditCard size={17} />
                                 My Registered Cards
                             </Link>

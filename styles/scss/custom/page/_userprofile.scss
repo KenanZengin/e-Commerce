@@ -223,20 +223,46 @@
                             }
                         }
                     }
-                    &-list{
+                    &_list{
                         display: grid;
                         grid-template-columns: repeat(3, 1fr);
                         gap: 20px;
                         width: 100%;
                         box-sizing: border-box;
-                        padding: 20px;
-                        margin-top: 15px;
-                        box-shadow: 0 1px 1px 0 rgb(0 0 0%);
+                        
+                        margin-top: 35px;
+                        //box-shadow: 0 1px 1px 0 rgb(0 0 0%);
                         background-color: #fff;
                         min-height: 460px;
-                        border: solid 1px #e2e2e2;
+                        //border: solid 1px #e2e2e2;
                         border-radius: 6px;
+                        .no-address{
+                            text-align: center;
+                            border: 1px solid #e6e6e6;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0 3px;
+                            border-radius: 6px;
+                            svg{
+                                color: #6e63ed;
 
+                            }
+                            h4,p{
+                                text-align: center;
+                            }
+                            h4{
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                                margin: 20px 0;
+                            }
+                            p{
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                line-height: 2;
+                            }
+                        }
                     }
                 }
                 &_section{
@@ -307,8 +333,11 @@
                                 }
                                 
                             }
+                            .w-3{
+                                width: calc(33% - 30px) ;
+                            }
                             .w-2{
-                                width: calc(50% - 15px) !important;
+                                width: calc(50% - 15px) ;
                             }
                             .w-1{
                                 width: 100%;
