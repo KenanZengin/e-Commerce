@@ -1,6 +1,7 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
-
+import { useRevlyContenxt } from "@/context/context"
 import {LiaCommentDotsSolid,LiaShippingFastSolid} from "react-icons/lia"
 import {BsFillStarFill} from "react-icons/bs"
 import {HiArrowNarrowRight} from "react-icons/hi"
@@ -19,6 +20,13 @@ import eleventh from "public/img/recommedProduct/eleventh.jpg"
 import twelfth from "public/img/recommedProduct/twelfth.jpg"
 
 const ProductPage = () => {
+  const {addToBasket,items } = useRevlyContenxt()
+    
+
+  // ürün detay sayfası için ürün id'sini url'e at ve items ile karşılaştır eğer var ise ürünü sil yazdır yok ise ürün ekle yazdır ve parametre olarak eğer ki id eşleşmiş ise true değil ise false gönder bu olaydan ekle çıkar işlemini anla
+  
+   
+
   return (
     <div className='product_page'>
         <div className="bread_crumbb">
@@ -32,16 +40,16 @@ const ProductPage = () => {
                 <span>45 results</span>
             </div>
             <div className="search-detail">
-                <button className="active">
+                <button className="active" onClick={() => addToBasket("product_1")}>
                     Express Shipping
                 </button>
-                <button>
+                <button onClick={() => addToBasket("product_2")}>
                     Made in USA
                 </button>
-                <button>
+                <button onClick={() => addToBasket("product_3")}>
                     Assembled in USA
                 </button>
-                <button>
+                <button onClick={() => addToBasket("product_4")}>
                     All Filtres
                 </button>
             </div>

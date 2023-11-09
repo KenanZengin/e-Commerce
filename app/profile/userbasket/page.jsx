@@ -1,6 +1,7 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
-
+import { useRevlyContenxt } from "@/context/context"
 import {AiOutlineClose} from "react-icons/ai"
 import {HiArrowLongLeft} from "react-icons/hi2"
 import {FaArrowsRotate} from "react-icons/fa6"
@@ -11,8 +12,14 @@ import product_3 from "public/img/product/product4.png"
 
 
 const UserBasket = () => {
+
+    const {test} = useRevlyContenxt()
+    
+    console.log("basket test",test);
+
   return (
     <div className="user_basket">
+        {test}
         <div className="go_back">
             <Link href={"/"}>
                 <HiArrowLongLeft size={20} />

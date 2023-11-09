@@ -3,7 +3,8 @@ import "../styles/global.scss"
 import { Red_Hat_Display } from 'next/font/google'
 import Header from '@/backbones/Header';
 import Footer from '@/backbones/Footer';
-import NextAuthProvider from '@/components/sessionProvider';
+import Providers from '@/components/providers';
+
 
 const Red_HAT = Red_Hat_Display({ subsets: ['latin'] })
 
@@ -15,16 +16,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <NextAuthProvider>
-        <body className={Red_HAT.className}>
-
-        <div className="body-wrapper">
-            <Header/>
-            {children}
-            <Footer />
-        </div>
-        </body>
-      </NextAuthProvider>
+      <Providers>
+          <body className={Red_HAT.className}>
+            <div className="body-wrapper">
+              <Header/>
+              {children}
+              <Footer />
+            </div>
+          </body>
+      </Providers>
     </html>
   )
 }
