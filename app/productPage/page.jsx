@@ -49,7 +49,7 @@ const ProductPage = () => {
                 <button onClick={() => addToBasket("product_3")}>
                     Assembled in USA
                 </button>
-                <button onClick={() => addToBasket("product_4")}>
+                <button >
                     All Filtres
                 </button>
             </div>
