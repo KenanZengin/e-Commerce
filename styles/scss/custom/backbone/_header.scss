@@ -214,10 +214,12 @@
                     .tooltips{
                         display: var(--dp-t);
                         color: black;
-                        transform: translate(-36%, 59%);
+                        transform: translate(0px,0px);
+                        top:60px;
                         z-index: 100;
                         width: 300px;
                         padding-top: 10px;
+                        left: -91px;
                         .tooltip-body{
                             border-radius: 10px;
                             border: 1px solid #e6e6e6;

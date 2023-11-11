@@ -7,33 +7,50 @@ export const RevlyContext = createContext({})
 export const RevlyProvider = ({children}) => {
 
     
-    const defaultBasket = JSON.parse(localStorage.getItem('basket')) || []
-    const [items,setItems] = useState(defaultBasket)
+    const defaultBasket = JSON.parse(localStorage.getItem('basket')) || [];
+    const [items,setItems] = useState(defaultBasket);
 
 
     useEffect(() => {
-        localStorage.setItem('basket',JSON.stringify(items))
-    },[items])
+        localStorage.setItem('basket',JSON.stringify(items));
+    },[items]);
 
     
 
 
-    const addToBasket = (data) => {
-        setItems((prev) => [...prev,data]);
-        
+    const addToBasket = (data, findBasketItem) => {
+        if(!findBasketItem){
+            return setItems((items)=> [...items,data]);
+        }
+        const filtered = items.filter((item) => item._id !== findBasketItem._id);
+        return setItems(filtered);    
     }
 
 
     const removeFromBasket = (item_id) => {
-        const filtered = items.filter((item) => item._id !== item_id)
-        setItems(filtered)
+        const filtered = items.filter((item) => item._id !== item_id);
+        setItems(filtered);
     }
-    console.log(items);
+
+    const increasingProduct = (item_id) => {
+        const findItem = items.find((item) => item._id == item_id)
+        findItem.count +=1
+        setItems([...items])
+    }
+
+    const creasingProduct = (item_id) => {
+        const findItem = items.find((item) => item._id == item_id)
+        findItem.count -=1
+        setItems([...items])
+    }
 
     const values = {
         items,
         setItems,
-        addToBasket
+        addToBasket,
+        removeFromBasket,
+        increasingProduct,
+        creasingProduct
     }
 
   

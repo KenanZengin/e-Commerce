@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Image from "next/image"
 
 import {BsArrowUpRightCircleFill, BsFillStarFill} from "react-icons/bs"
@@ -14,11 +15,27 @@ import product33 from "public/img/product/product4.png"
 import color1 from "public/img/product/color1.png"
 import color2 from "public/img/product/color2.png"
 import color3 from "public/img/product/color3.png"
-import Link from "next/link"
+import BasketBtn from "@/components/basketbtn"
 
-const ProductDetail = () => {
+
+const getSingleProduct = async (id) => {
+
+    const res = await fetch(`http://localhost:3000/api/product/singleproduct?id=${id}`)
+    const data = await res.json()
+
+    return data
+}
+
+
+const ProductDetail = async ({searchParams}) => {
+
+    const data = await getSingleProduct(searchParams.id)
+    
+ 
+
   return (
     <div className="product">
+        
         <div className="product-wrapper">
             <div className="product-imgs">
                 <div className="img-left">
@@ -36,16 +53,16 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className="img-right">
-                    <Image src={deneme} alt="product" />
+                    <Image src={data.img} width={576} height={573} alt="product" />
                 </div>
             </div>
             <div className="product-info">
                 <div className="product-title">
                     <h3>
-                        Armchair HUNDESTED
+                        {data.name}
                     </h3>
                     <Link href={"/"}>
-                        by <span>Zenana</span>
+                        by <span>{data.producer}</span>
                         <BsArrowUpRightCircleFill size={22} />
                     </Link>
                 </div>
@@ -58,19 +75,19 @@ const ProductDetail = () => {
                         <BsFillStarFill size={25} />
                     </div>
                     <div className="point">
-                        4.5
+                        {data.star}
                     </div>
                     <div className="comment">
                         <LiaCommentDotsSolid size={30} />
-                        110 Reviews
+                        {data.comments} Reviews
                     </div>
                 </div>
                 <div className="product-price">
                     <div className="price">
-                        <p>$900</p>
+                        <p>${data.price}</p>
                         <div>
-                            <p>$20.99</p>
-                            <span>you save 14$</span>
+                            <p>${data.real_price}</p>
+                            <span>you save ${Number(data.real_price) - Number(data.price)}</span>
                         </div>
                     </div>
                     <div className="shipping">
@@ -130,12 +147,7 @@ const ProductDetail = () => {
                     </button>
                 </div>
                 <div className="product-add-basket">
-                    <button>
-                        <SlBasket size={20} />
-                        Add to card
-                        <TbPointFilled size={16} />
-                        $243.98
-                    </button>
+                    <BasketBtn data={data} />
                 </div>
                 <div className="product-options">
                     <div className="option">

@@ -1,25 +1,19 @@
 "use client"
-import Image from "next/image"
 import Link from "next/link"
 import { useRevlyContenxt } from "@/context/context"
-import {AiOutlineClose} from "react-icons/ai"
 import {HiArrowLongLeft} from "react-icons/hi2"
-import {FaArrowsRotate} from "react-icons/fa6"
-import {CgArrowUpR} from "react-icons/cg"
-import product_1 from "public/img/product/review1.png"
-import product_2 from "public/img/product/review2.png"
-import product_3 from "public/img/product/product4.png"
+import BasketItemList from "@/components/basketItemList"
 
 
 const UserBasket = () => {
 
-    const {test} = useRevlyContenxt()
+    const {items,removeFromBasket,increasingProduct,creasingProduct} = useRevlyContenxt()
     
-    console.log("basket test",test);
+    const total_price = items.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
 
   return (
     <div className="user_basket">
-        {test}
+        
         <div className="go_back">
             <Link href={"/"}>
                 <HiArrowLongLeft size={20} />
@@ -33,46 +27,9 @@ const UserBasket = () => {
                     <span>3 Items</span>
                 </div>
                 <div className="items">
-                    <div className="item">
-                        <div className="info">
-                            <Image src={product_1} alt="product" />
-                            <div className="product-name">
-                                <p>
-                                    Curved OAK Chair
-                                    <span>Color : Universal Grey Wool/Oak</span>
-                                </p>
-                                <div>
-                                    <FaArrowsRotate size={15} />
-                                    Free Returns
-                                </div>
-                            </div>
-                        </div>
-                        <div className="piece">
-                            <div className="number">
-                                <button>-</button>
-                                <span>2</span>
-                                <button>+</button>
-                            </div>
-                            <p>
-                                <CgArrowUpR size={15} />
-                                Save for Later
-                            </p>
-                        </div>
-                        <div className="price">
-                            <div className="price_detail">
-                                <p>$900.00</p>
-                                <div>
-                                    <span>$925.00</span>
-                                    <span>you save 25$</span>
-                                </div>
-                            </div>
-                            <button className="close">
-                                <AiOutlineClose size={20} />
-                            </button>
-                  
-                        </div>
-                    </div>
-
+                    {items.map((item)=>(
+                        <BasketItemList key={item._id} item={item} crease={creasingProduct} remove={removeFromBasket} increase={increasingProduct} />
+                    ))}
                 </div>
             </div>
             <div className="right">
@@ -86,7 +43,7 @@ const UserBasket = () => {
                         <ul>
                             <li>
                                 <p>Subtotal</p>
-                                <p>$36000.00</p>
+                                <p>${total_price}</p>
                             </li>
                             <li>
                                 <p>Savings</p>
@@ -102,7 +59,7 @@ const UserBasket = () => {
                             </li>
                             <li> 
                                 <p>Estimated Total</p>
-                                <p>$ 36000.00</p>
+                                <p>$ {total_price - 5.23}</p>
                             </li>
                         </ul>
                         <button className="go-order">
