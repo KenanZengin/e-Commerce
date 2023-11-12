@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-
+import { useState } from "react"
 import { useRevlyContenxt } from "@/context/context"
+import {TiTick} from "react-icons/ti"
 import {LiaCommentDotsSolid,LiaShippingFastSolid} from "react-icons/lia"
 import {BsFillStarFill} from "react-icons/bs"
 import {AiOutlinePlusCircle} from "react-icons/ai"
@@ -10,17 +11,30 @@ import {AiOutlinePlusCircle} from "react-icons/ai"
 
 const ProductItem = ({data}) => {
 
+    const [basketNotif,setBasketNotif] = useState(false)
     const {addToBasket,items} = useRevlyContenxt()
-    const findBasketItem = items.find((basket_item) => basket_item._id == data._id )
+    const findBasketItem = items.find((basket_item) => basket_item._id == data._id)
+
+    const basketWarning =  async () => {
+        setBasketNotif(() => true)
+        await new Promise((resolve) => setTimeout(resolve,3000));
+        setBasketNotif(() => false)
+    }
 
   return (
     <>
         <div  className="productts" key={data._id}>
             <div className="productts_img">
                 <Image src={data.img} alt="product" width={372} height={360} />
-                <div className="add_baskets" onClick={() =>addToBasket(data,findBasketItem)}>
+                {findBasketItem ? "" :  <div className="add_baskets" onClick={() =>{addToBasket(data,findBasketItem);basketWarning()}}>
                     <AiOutlinePlusCircle size={37} />
-                </div>
+                </div>}
+                {basketNotif 
+                    &&  
+                        <div className={`add-basket-warning ${basketNotif ? "animateWarning" : ""}`}>
+                            <TiTick size={30} /> Added to basket
+                        </div>
+                }
             </div>
             <Link href={`productDetail/${data.name}?id=${Number(data._id)}`} className="productts_info">
                 <div className="color">

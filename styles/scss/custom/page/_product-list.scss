@@ -72,36 +72,58 @@
         margin: 75px 0;
         gap: 60px 50px;
         justify-content: space-between;
-        .productts{
-            width: 100%;
-            color: #000;
-            .productts_img{
-                position: relative;
-                .add_baskets{
-                    position: absolute;
-                    bottom: 25px;
-                    right: 25px;
-                    cursor: pointer;
+    .productts{
+        width: 100%;
+        color: #000;
+        .productts_img{
+            position: relative;
+            .add_baskets{
+                position: absolute;
+                bottom: 25px;
+                right: 25px;
+                cursor: pointer;
+                svg{
+                    color: #736beb
                 }
             }
-            .productts_info{
-                color: #000 !important;
+            .add-basket-warning{
+                position: absolute;
+                left: 28%;
+                bottom: 21px;
+                color: black;
+                background-color: #fdeaa2;
                 display: flex;
-                flex-direction: column;
-            }
-            &:has(.productts_img:not(:hover)) .add_baskets svg{
-                display: none !important;
-                color: #736beb;
-               
-            }
-            &:has(.productts_img:hover) .add_baskets svg{
-                display: block !important;
-                color: #736beb;
-                animation: .4s hovered ease;
+                align-items: center;
+                justify-content: space-around;
+                /* gap: 10px; */
+                border-radius: 20px;
+                padding: 5px 12.5px;
+                font-weight: 600;
+            }           
+            .animateWarning{
+                animation-name: hovered;
+                animation-duration: 1.25s;
             }
         }
     }
+        .productts_info{
+            color: #000 !important;
+            display: flex;
+            flex-direction: column;
+        }
+        // &:has(.productts_img:not(:hover)) .add_baskets svg{
+        //     display: block !important;
+        //     color: #736beb;
+            
+        // }
+        // &:has(.productts_img:hover) .add_baskets svg{
+        //     display: block !important;
+        //     color: #736beb;
+        //     animation: .4s hovered ease;
+        // }
+    }
 }
+
 
 
 @keyframes hovered{
