@@ -10,6 +10,8 @@ import {SlBasket} from "react-icons/sl"
 const BasketFavoriteTooltip = () => {
     const session = useSession()
     const {items} = useRevlyContenxt()
+    const total_price = items.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
+
   return (
     <>
 
@@ -25,7 +27,7 @@ const BasketFavoriteTooltip = () => {
             </div>
             <div className='info'>
                 <span>Total</span>
-                <p>$0.00</p>
+                <p>${total_price > 0 ? total_price : "0.00"}</p>
             </div>
             {session.data!==null && <div className="tooltips">
                 <div className="tooltip-info">
