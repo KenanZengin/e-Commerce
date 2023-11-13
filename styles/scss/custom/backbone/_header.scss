@@ -224,6 +224,14 @@
                             border-radius: 10px;
                             border: 1px solid #e6e6e6;
                             background-color: #fff;
+                            .empty_tooltip{
+                                padding: 37px 0 37px;
+                                display: block;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 1.1rem;
+
+                            }
                             .title,.products{
                                 white-space: nowrap;
                             }

@@ -35,23 +35,29 @@ const BasketFavoriteTooltip = () => {
                         <div className="title">
                             My Basket ({items.length} product)
                         </div>
-                        <div className="products">
-                        {items.map((item)=>(
-                            <div className="item" key={item._id}>
-                                <Image src={item.img} alt="product" height={90} width={134} />
-                                <div className="left">
-                                    <p>{item.name}</p>
-                                    <span>size : S</span>
-                                    &nbsp;&nbsp;
-                                    <span>piece: 1</span>
-                                    <p>${item.price}</p>
+                        { items.length > 0
+                            ?
+                           <>
+                                <div className="products">
+                                    {items.map((item)=>(
+                                        <div className="item" key={item._id}>
+                                            <Image src={item.img} alt="product" height={90} width={134} />
+                                            <div className="left">
+                                                <p>{item.name}</p>
+                                                <span>size : S</span>
+                                                &nbsp;&nbsp;
+                                                <span>piece: 1</span>
+                                                <p>${item.price}</p>
+                                            </div>
+                                        </div>
+                                    ))}                             
                                 </div>
-                            </div>
-                        ))}                                      
-                        </div>
-                        <Link href={"/profile/userbasket"} className='go-basket' >
-                            go to basket
-                        </Link>
+                                <Link href={"/profile/userbasket"} className='go-basket' >
+                                    go to basket
+                                </Link>
+                           </>
+                        :<span className="empty_tooltip">Your basket is empty</span>
+                        }
                     </div>
                 </div>
             </div>}

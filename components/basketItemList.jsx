@@ -1,9 +1,21 @@
+"use client"
 import Image from "next/image"
-import {AiOutlineClose} from "react-icons/ai"
 import {FaArrowsRotate} from "react-icons/fa6"
 import {CgArrowUpR} from "react-icons/cg"
+import { AiOutlineClose } from "react-icons/ai"
+import { useState } from "react"
 
 const BasketItemList = ({item,remove,increase,crease}) => {
+
+    const [productDelete,setProductDelete] = useState(false)
+
+    const deleteWarning = async () => {
+        setProductDelete(()=>true)
+        await new Promise((resolve) => setTimeout(resolve,1000));
+        remove(item._id);
+        setProductDelete(() => false)
+    }
+
   return (
     <>
         <div className="item" >
@@ -39,12 +51,18 @@ const BasketItemList = ({item,remove,increase,crease}) => {
                         <span>you save ${Number(item.real_price) - Number(item.price)}</span>
                     </div>
                 </div>
-                <button className="close" onClick={()=>remove(item._id)}>
+               <button className="close" onClick={()=>{deleteWarning()}}>
                     <AiOutlineClose size={20} />
                 </button>
+                {productDelete 
+                    &&
+                        <span className={`deletedMessage ${productDelete ? "animateWarning" : ""}`}>Product deleted</span>
+                }
 
             </div>
+            
         </div>
+       
     </>
   )
 }

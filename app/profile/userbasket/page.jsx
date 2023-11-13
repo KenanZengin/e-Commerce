@@ -24,12 +24,15 @@ const UserBasket = () => {
             <div className="left">
                 <div className="title">
                     <h3>Shopping cart</h3>
-                    <span>3 Items</span>
+                    <span>{items.length} Item{items.length > 9 && "s"}</span>
                 </div>
                 <div className="items">
-                    {items.map((item)=>(
-                        <BasketItemList key={item._id} item={item} crease={creasingProduct} remove={removeFromBasket} increase={increasingProduct} />
-                    ))}
+                    {items.length > 0 
+                        ? items.map((item)=>(
+                            <BasketItemList key={item._id} item={item} crease={creasingProduct} remove={removeFromBasket} increase={increasingProduct} />
+                        ))
+                        :<span className="no-item">There are no items in your basket</span>
+                    }
                 </div>
             </div>
             <div className="right">
