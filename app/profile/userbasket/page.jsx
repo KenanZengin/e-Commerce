@@ -9,7 +9,7 @@ const UserBasket = () => {
 
     const {items,removeFromBasket,increasingProduct,creasingProduct} = useRevlyContenxt()
     
-    const total_price = items.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
+    const total_price = items?.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
 
   return (
     <div className="user_basket">
@@ -28,7 +28,7 @@ const UserBasket = () => {
                 </div>
                 <div className="items">
                     {items.length > 0 
-                        ? items.map((item)=>(
+                        ? items?.map((item)=>(
                             <BasketItemList key={item._id} item={item} crease={creasingProduct} remove={removeFromBasket} increase={increasingProduct} />
                         ))
                         :<span className="no-item">There are no items in your basket</span>

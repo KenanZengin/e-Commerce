@@ -13,7 +13,7 @@ const ProductItem = ({data}) => {
 
     const [basketNotif,setBasketNotif] = useState(false)
     const {addToBasket,items} = useRevlyContenxt()
-    const findBasketItem = items.find((basket_item) => basket_item._id == data._id)
+    const findBasketItem = items?.find((basket_item) => basket_item._id == data._id)
 
     const basketWarning =  async () => {
         setBasketNotif(() => true)

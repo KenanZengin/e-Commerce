@@ -10,7 +10,7 @@ import {SlBasket} from "react-icons/sl"
 const BasketFavoriteTooltip = () => {
     const session = useSession()
     const {items} = useRevlyContenxt()
-    const total_price = items.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
+    const total_price = items?.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
 
   return (
     <>
@@ -20,7 +20,7 @@ const BasketFavoriteTooltip = () => {
                 <SlBasket size={26} />
                 {session.data!==null
                     ? 
-                        items.length > 0 ? <span className="badgee-value">{items.length}</span> :""  
+                        items?.length > 0 ? <span className="badgee-value">{items?.length}</span> :""  
                     :   "" 
                 }
                 
@@ -33,7 +33,7 @@ const BasketFavoriteTooltip = () => {
                 <div className="tooltip-info">
                     <div className="tooltip-body">
                         <div className="title">
-                            My Basket ({items.length} product)
+                            My Basket ({items?.length} product)
                         </div>
                         { items.length > 0
                             ?

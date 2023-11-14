@@ -6,14 +6,24 @@ export const RevlyContext = createContext({})
 
 export const RevlyProvider = ({children}) => {
 
+     
+
+    let fener
+   
     
-    const defaultBasket = JSON.parse(localStorage.getItem('basket')) || [];
-    const [items,setItems] = useState(defaultBasket);
 
+    if(typeof window !=="undefined"){
+        fener = JSON.parse(localStorage.getItem('basket')) || []
+    }
 
+    let [items,setItems] = useState(fener)
+    console.log(items);    
+    
     useEffect(() => {
         localStorage.setItem('basket',JSON.stringify(items));
     },[items]);
+
+    
 
     
 
