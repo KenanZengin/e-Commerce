@@ -88,8 +88,8 @@
             }
             .add-basket-warning{
                 position: absolute;
-                left: 28%;
-                bottom: 21px;
+                left: 50%;
+                bottom:25px;
                 color: black;
                 background-color: #fdeaa2;
                 display: flex;
@@ -99,6 +99,8 @@
                 border-radius: 20px;
                 padding: 5px 12.5px;
                 font-weight: 600;
+                width: 201px;
+                transform: translate(-50%, 10px);
             }           
           
         }
