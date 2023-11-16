@@ -243,6 +243,9 @@
                             .products{
                                 display: flex;
                                 flex-direction: column;
+                                max-height: 333px;
+                                overflow-y: auto;
+                                
                                 .item{
                                     display: flex;
                                     align-items: center;

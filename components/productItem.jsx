@@ -2,6 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { useSession } from "next-auth/react"
 import { useRevlyContenxt } from "@/context/context"
 import {TiTick} from "react-icons/ti"
 import {LiaCommentDotsSolid,LiaShippingFastSolid} from "react-icons/lia"
@@ -13,6 +14,8 @@ const ProductItem = ({data}) => {
 
     const [basketNotif,setBasketNotif] = useState(false)
     const {addToBasket,items} = useRevlyContenxt()
+    const {status} = useSession()
+    
     const findBasketItem = items?.find((basket_item) => basket_item._id == data._id)
 
     const basketWarning =  async () => {
@@ -26,9 +29,15 @@ const ProductItem = ({data}) => {
         <div  className="productts" key={data._id}>
             <div className="productts_img">
                 <Image src={data.img} alt="product" width={372} height={360} />
-                {findBasketItem ? "" :  <div className="add_baskets" onClick={() =>{addToBasket(data,findBasketItem);basketWarning()}}>
-                    <AiOutlinePlusCircle size={37} />
-                </div>}
+                {status == "authenticated" 
+                    ?
+                    findBasketItem 
+                        ? "" 
+                        :  <div className="add_baskets" onClick={() =>{addToBasket(data,findBasketItem);basketWarning()}}>
+                                <AiOutlinePlusCircle size={37} />
+                            </div>
+                    : ""
+                }
                 {basketNotif 
                     &&  
                         <div className={`add-basket-warning ${basketNotif ? "animateWarning" : ""}`}>
@@ -67,8 +76,8 @@ const ProductItem = ({data}) => {
                         <span className="dis">you save ${Number(data.real_price) - Number(data.price)}</span>
                     </div>
                     <div className="shipping">
-                        <span><LiaShippingFastSolid size={25} /></span>
-                        <span className="dis">Express Shipping</span>
+                        <span className="cargo"><LiaShippingFastSolid size={25} /></span>
+                        <span className="dis"></span>
                     </div>
                 </div>
             </Link>

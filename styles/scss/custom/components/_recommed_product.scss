@@ -130,7 +130,6 @@
                 }
             }
             .shipping{
-                
                 padding-right: 15px;
                 flex-grow: 1;
                 text-align: end;
@@ -141,6 +140,20 @@
                     border-radius: 10px;
                     margin-right: 5px;
                 }
+                .cargo::after{
+                    content: "Express Shipping";
+                    font-size: 0.875rem;
+                    color: #bebebe;
+                    font-size: 0.875rem !important;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    margin-left: 7px;
+                }
+                @include BootstrapMaxWidthResponsive(hd){
+                    .cargo::after{
+                        content: "Express Sh.";
+                    }
+                } 
             }                    
         }
     }

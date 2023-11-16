@@ -17,7 +17,7 @@ const ProductPage =  () => {
         <div className="head">
             <div className="title">
                 <h2>Slance Dining Chair</h2>
-                <span>45 results</span>
+                <span>{DataSetProducts.length} results</span>
             </div>
             <div className="search-detail">
                 <button className="active" >

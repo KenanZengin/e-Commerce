@@ -27,7 +27,7 @@ const BasketFavoriteTooltip = () => {
             </div>
             <div className='info'>
                 <span>Total</span>
-                <p>${total_price > 0 ? total_price : "0.00"}</p>
+                <p>${session.data!==null ? total_price > 0 ? total_price : "0.00" : "0.00"}</p>
             </div>
             {session.data!==null && <div className="tooltips">
                 <div className="tooltip-info">
