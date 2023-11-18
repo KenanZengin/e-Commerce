@@ -41,7 +41,7 @@ const UserLayout = async ({children}) => {
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/"}>
+                            <Link href={"help"}>
                                 <FiHelpCircle size={17} />
                                 Help
                             </Link>

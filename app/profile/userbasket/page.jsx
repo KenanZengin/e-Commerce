@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import { useSession } from "next-auth/react"
 import { useRevlyContenxt } from "@/context/context"
 import {HiArrowLongLeft} from "react-icons/hi2"
 import BasketItemList from "@/components/basketItemList"
@@ -8,6 +9,7 @@ import BasketItemList from "@/components/basketItemList"
 const UserBasket = () => {
 
     const {items,removeFromBasket,increasingProduct,creasingProduct} = useRevlyContenxt()
+    const {data} = useSession()
     
     const total_price = items?.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
 
@@ -46,11 +48,11 @@ const UserBasket = () => {
                         <ul>
                             <li>
                                 <p>Subtotal</p>
-                                <p>${total_price}</p>
+                                <p>${items.length > 0 ? total_price : "0.00"}</p>
                             </li>
                             <li>
                                 <p>Savings</p>
-                                <p>-5.23$</p>
+                                <p>${items.length > 0 ? "-5.23" : "0.00"}</p>
                             </li>
                             <li>
                                 <p>Standart Shipping</p>
@@ -62,7 +64,7 @@ const UserBasket = () => {
                             </li>
                             <li> 
                                 <p>Estimated Total</p>
-                                <p>$ {total_price - 5.23}</p>
+                                <p>$ {items.length > 0 ? total_price - 5.23 : "0.00"}</p>
                             </li>
                         </ul>
                         <button className="go-order">

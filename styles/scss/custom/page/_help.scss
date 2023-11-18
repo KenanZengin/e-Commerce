@@ -1,0 +1,79 @@
+.help_categories{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title{
+        margin-bottom: 60px;
+        font-size: 40px;
+        color: #000;
+        font-weight: bold;
+    }
+    .categoriess{
+        width: 1205px;
+        max-width: 1205px;
+        padding: 0 !important;
+        border-width: 0 1px 1px 1px ;
+        border-color: #625df6;
+        border-style: solid;
+        .nav-tabs{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            background-color: #625df6;
+            border-color:#625df6!important;
+            border-width: 0 !important;
+            height: 56px;
+            .nav-item{
+                background-color: #625df6;
+                display: flex;
+                align-items: center;
+                button{
+                    white-space: nowrap;
+                    background-color: #625df6;
+                    color: #fff;
+                    border-radius: 0;
+                    border-width: 0 !important;
+                    font-size: 15px;
+                    height: 99%;   
+                    &:hover{
+                        background-color: #1b1759;
+                    }
+                }
+                .active{
+                    background-color: #1b1759;
+                }
+            }    
+        }
+        .accordion{
+            padding: 40px 30px;
+            .accordion-item:last-of-type .accordion-button.collapsed{
+                border-radius: 0 !important;
+            }
+            &-item{
+                border-width: 0px;
+                button{
+                    background-color: #fff !important;
+                    font-size: 18px;
+                    border-bottom: 1px solid #625df6;
+                    padding: 16px 0px;
+                }
+            }
+            .accordion-body{
+                color: rgb(117, 117, 117);
+                font-weight: 600;
+                padding: 16px 0 !important;
+            }
+        }
+        .accordion-button:not(.collapsed){
+            button{
+                background-color: #fff;
+            }
+        }
+        .accordion-button:focus{
+            box-shadow: none;
+        }
+    }
+}

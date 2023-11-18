@@ -47,7 +47,7 @@ const UserSection = async () => {
                                         <LiaComment size={25}/>
                                         <p>Rewiews & Rewards</p>
                                     </Link>
-                                    <Link href={"/"} className="profile">
+                                    <Link href={"/profile/help"} className="profile">
                                         <BsQuestionCircle size={25}/>
                                         <p>Help & Support</p>
                                     </Link>   
