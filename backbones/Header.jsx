@@ -9,7 +9,6 @@ import {LiaComment} from "react-icons/lia"
 import {FaRegUser} from "react-icons/fa6"
 import {SlBasket} from "react-icons/sl"
 import {BsFillArrowRightCircleFill, BsQuestionCircle} from "react-icons/bs"
-import {FiSearch} from "react-icons/fi"
 import {BiLogOut} from "react-icons/bi"
 import mainLogo from 'public/img/header/mainLogo.png'
 import head1 from 'public/img/sections/head1.jpg'
@@ -20,9 +19,12 @@ import categori_1 from 'public/img/categories/categori_1.png'
 import first from "public/img/recommedProduct/first.jpg"
 import second from "public/img/recommedProduct/second.jpg"
 import UserSection from './usersection'
+import CategoriSearch from './categorisearch'
 
 
 const Header = () => {
+
+
   return (
     <>
         <header className='header'>
@@ -54,10 +56,8 @@ const Header = () => {
                     </div>
                     <div className="header-web-top-right">
                         <div className="search-bar">
-                            <label htmlFor="search">
-                                <FiSearch size={24} />
-                                <input type="text" id="search" name="search" placeholder='Search Products' />
-                            </label>
+                           
+                           <CategoriSearch />
                             
                         </div>
                         <div className="user-section">
