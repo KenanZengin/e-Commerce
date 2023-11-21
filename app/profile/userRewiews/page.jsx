@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
-
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import {HiArrowNarrowRight} from "react-icons/hi"
 import {PiShareFat} from "react-icons/pi"
 import {LuCalendarRange} from "react-icons/lu"
@@ -20,11 +21,23 @@ import product_2 from "public/img/product/review2.png"
 import product_3 from "public/img/product/product4.png"
 import RecommedProduct from "@/components/recommedProduct"
 
-const userProfil = () => {
-    
+
+export const dynamic = 'force-dynamic'
+
+async function getUserData(name){
+    const res = await fetch(`http://localhost:3000/api/auth/singleuser?user_name=${name}`)
+    const data = await res.json()
+
+    return data
+}
+
+const userProfil = async () => {
+
+    const session = await getServerSession(authOptions)
+    const user = await getUserData(session?.user?.name)
+    console.log("user data = " , user);
   return (
     <>
-    
         <div className="user-profile">
             <div className="user-profile-wrapper">
                 <div className="left">
@@ -32,7 +45,7 @@ const userProfil = () => {
                         <p>My Public Reviewer Profile</p>
                         <Image src={user_1} alt="user" />
                         <h4>
-                            Ryan Reynolds
+                            {user.name}
                         </h4>
                         <span>Member since Apr 2023</span>
                     </div>
@@ -222,9 +235,7 @@ const userProfil = () => {
                                     </p>
                                     <Link href={"/"}>
                                         <PiShareFat size={20} />
-                                        
-                                            Share my review
-                                        
+                                        Share my review
                                     </Link>
                             </div>
                             <div className="productt">
@@ -422,7 +433,6 @@ const userProfil = () => {
             </div>
         </div>
         <RecommedProduct />
-    
     </>
   )
 }

@@ -6,13 +6,13 @@ const CreditCard = () => {
   return (
     <div className="user_address">
         <div className="address">
-        <div className="address_add">
-            <label htmlFor="new_address" className='address_label'>
-            Add New Credit Card
-            <BsFillPlusCircleFill size={22} />
-            <input type="checkbox" name="new_address" id="new_address" />
-            </label>
-        </div>
+            <div className="address_add">
+                <label htmlFor="new_address" className='address_label'>
+                Add New Credit Card
+                <BsFillPlusCircleFill size={22} />
+                <input type="checkbox" name="new_address" id="new_address" />
+                </label>
+            </div>
         <div className="address_list">
             <div className="no-address">
             <HiOutlineCreditCard size={130} />
@@ -22,7 +22,7 @@ const CreditCard = () => {
         </div>
         </div>
         <div className="user_address_section">
-        <div className="address_form">
+            <div className="address_form">
             <div className='title'>
             Add Credit Card
             <label htmlFor="new_address" >
@@ -55,9 +55,9 @@ const CreditCard = () => {
                 Save
             </button>
             </form>
+            </div>
         </div>
-        </div>
-  </div>
+    </div>
   )
 }
 

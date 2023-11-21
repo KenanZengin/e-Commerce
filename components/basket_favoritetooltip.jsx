@@ -29,7 +29,7 @@ const BasketFavoriteTooltip = () => {
                 <span>Total</span>
                 <p>${session.data!==null ? total_price > 0 ? total_price : "0.00" : "0.00"}</p>
             </div>
-            {session.data!==null && <div className="tooltips">
+            {session?.data?.user?.name !== "undefiend" && <div className="tooltips">
                 <div className="tooltip-info">
                     <div className="tooltip-body">
                         <div className="title">

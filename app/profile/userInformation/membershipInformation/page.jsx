@@ -1,6 +1,5 @@
 "use client"
 import { useSession } from 'next-auth/react'
-import { redirect } from 'next/navigation'
 import {IoIosCheckbox} from "react-icons/io"
 
 const UserInformation =  () => {
