@@ -22,7 +22,6 @@ import product_3 from "public/img/product/product4.png"
 import RecommedProduct from "@/components/recommedProduct"
 
 
-export const dynamic = 'force-dynamic'
 
 async function getUserData(name){
     const res = await fetch(`http://localhost:3000/api/auth/singleuser?user_name=${name}`)

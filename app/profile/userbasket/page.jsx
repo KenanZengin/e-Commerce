@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import { useState } from "react"
 import { useSession } from "next-auth/react"
 import { useRevlyContenxt } from "@/context/context"
 import {HiArrowLongLeft} from "react-icons/hi2"
@@ -12,6 +13,9 @@ const UserBasket = () => {
     const {data} = useSession()
     
     const total_price = items?.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
+
+  
+
 
   return (
     <div className="user_basket">

@@ -5,7 +5,7 @@ import Header from '@/backbones/Header';
 import Footer from '@/backbones/Footer';
 import Providers from '@/components/providers';
 
-
+export const revalidate = 0;
 const Red_HAT = Red_Hat_Display({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,15 +16,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">   
-      <Providers>
+       <Providers> 
           <body className={Red_HAT.className}>
             <div className="body-wrapper">
-              <Header/>
+              <Header/> 
               {children}
-              <Footer />
+              <Footer /> 
             </div>
           </body>
-      </Providers>
+       </Providers> 
     </html>
   )
 }

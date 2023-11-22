@@ -1,10 +1,10 @@
 "use client"
 import { useSession } from 'next-auth/react'
-// import Information from '@/components/information'
-// import {BiUser} from "react-icons/bi"
-// import {GrMapLocation} from "react-icons/gr"
-// import {FaRegCreditCard,FaRegUser,FaMapLocation} from "react-icons/fa6"
-// import {FiHelpCircle} from "react-icons/fi"
+import Information from '@/components/information'
+import {BiUser} from "react-icons/bi"
+import {GrMapLocation} from "react-icons/gr"
+import {FaRegCreditCard,FaRegUser,FaMapLocation} from "react-icons/fa6"
+import {FiHelpCircle} from "react-icons/fi"
 
 
 
@@ -24,6 +24,7 @@ const UserLayout = async ({children}) => {
                     <p>
                         My Account & Help
                     </p>
+                    <Information />
                     
 
                 </div>
