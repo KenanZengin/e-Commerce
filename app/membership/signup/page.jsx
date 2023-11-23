@@ -37,8 +37,18 @@ const SignUp = () => {
       headers : {'Content-Type' : 'application/json'},
       body : JSON.stringify(values)
     }
+
+    const env = process.env.NODE_ENV
+    let url
+
+    if(env == "development"){
+      url = "http://localhost:3000"
+    }else{
+      url = "https://e-commerce-lyart-eight.vercel.app"
+    }
+
  
-    const res = await fetch('http://localhost:3000/api/auth/signup',options)
+    const res = await fetch(`${url}/api/auth/signup`,options)
     const data = await res.json()
 
     if(res.ok && res.status==201){
