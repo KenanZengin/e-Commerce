@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { useSession } from "next-auth/react"
 import { useRevlyContenxt } from "@/context/context"
+import {AiOutlineHeart} from "react-icons/ai"
 import {TiTick} from "react-icons/ti"
 import {LiaCommentDotsSolid,LiaShippingFastSolid} from "react-icons/lia"
 import {BsFillStarFill} from "react-icons/bs"
@@ -13,10 +14,11 @@ import {AiOutlinePlusCircle} from "react-icons/ai"
 const ProductItem = ({data}) => {
 
     const [basketNotif,setBasketNotif] = useState(false)
-    const {addToBasket,items} = useRevlyContenxt()
+    const {addToBasket,items,favoriteItems,addToFavorite} = useRevlyContenxt()
     const {status} = useSession()
     
     const findBasketItem = items?.find((basket_item) => basket_item._id == data._id)
+    const findFavoriteItem = favoriteItems?.find((favorite_item) => favorite_item._id == data._id)
 
     const basketWarning =  async () => {
         setBasketNotif(() => true)
@@ -29,6 +31,13 @@ const ProductItem = ({data}) => {
         <div  className="productts" key={data._id}>
             <div className="productts_img">
                 <Image src={data.img} alt="product" width={372} height={360} />
+                {findFavoriteItem 
+                    ?
+                     ""
+                    : <div className="add_favorite" onClick={() => addToFavorite(data)}> 
+                        <AiOutlineHeart size={40} />
+                    </div>
+                }
                 {status == "authenticated" 
                     ?
                     findBasketItem 

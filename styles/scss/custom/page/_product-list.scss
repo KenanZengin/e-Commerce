@@ -86,6 +86,13 @@
                     color: #736beb
                 }
             }
+            .add_favorite{
+                color: #6f63ee;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
             .add-basket-warning{
                 position: absolute;
                 left: 50%;
@@ -103,6 +110,12 @@
                 transform: translate(-50%, 10px);
             }           
           
+        }
+        &:has(.productts_img:not(:hover)) .add_favorite{
+            display: none;
+        }
+        &:has(.productts_img:hover) .add_favorite{
+            display: block;
         }
     }
         .productts_info{

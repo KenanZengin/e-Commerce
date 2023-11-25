@@ -63,7 +63,7 @@ const BasketFavoriteTooltip = () => {
             </div>}
         </div>
 
-        <Link href={"/"} className="user-favorite" title='favorite products'>
+        <Link href={"/favoritelist"} className="user-favorite" title='favorite products'>
             <div className="badgee">
                 <AiOutlineHeart size={26} />
                 {/* <span className="badgee-value">

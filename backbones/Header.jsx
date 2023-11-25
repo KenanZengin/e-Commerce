@@ -1,23 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
 import Categories from '../components/categories'
-import {HiOutlineUserCircle} from "react-icons/hi2"
-import {AiOutlineHeart} from "react-icons/ai"
-import {CgFileDocument} from "react-icons/cg"
-import {LiaComment} from "react-icons/lia"
-import {FaRegUser} from "react-icons/fa6"
-import {SlBasket} from "react-icons/sl"
 import {BsFillArrowRightCircleFill, BsQuestionCircle} from "react-icons/bs"
-import {BiLogOut} from "react-icons/bi"
 import mainLogo from 'public/img/header/mainLogo.png'
 import head1 from 'public/img/sections/head1.jpg'
 import head2 from 'public/img/sections/head2.jpg'
 import head3 from 'public/img/sections/head3.jpg'
 import head4 from 'public/img/sections/head4.jpg'
 import categori_1 from 'public/img/categories/categori_1.png'
-import first from "public/img/recommedProduct/first.jpg"
-import second from "public/img/recommedProduct/second.jpg"
 import UserSection from './usersection'
 import CategoriSearch from './categorisearch'
 
