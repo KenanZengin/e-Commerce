@@ -47,6 +47,10 @@ export const RevlyProvider = ({children}) => {
         return setFavoriteItems((items) => [...items, data])
     }
 
+    const removeFromFavorite = (item_id) => {
+        const filtered = favoriteItems.filter((item) => item._id !== item_id);
+        setFavoriteItems(filtered);
+    }
 
     const removeFromBasket = (item_id) => {
         const filtered = items.filter((item) => item._id !== item_id);
@@ -61,8 +65,8 @@ export const RevlyProvider = ({children}) => {
 
     const creasingProduct = (item_id) => {
         const findItem = items.find((item) => item._id == item_id)
-        if(findItem.count == 0){
-            findItem.count = 0
+        if(findItem.count == 1){
+            findItem.count = 1
         }else {
             findItem.count -=1
         }
@@ -79,7 +83,8 @@ export const RevlyProvider = ({children}) => {
         creasingProduct,
         favoriteItems,
         setFavoriteItems,
-        addToFavorite
+        addToFavorite,
+        removeFromFavorite
     }
 
   
