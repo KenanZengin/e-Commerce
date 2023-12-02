@@ -193,4 +193,5 @@ const ProductDetail = async ({searchParams}) => {
   )
 }
 
+
 export default ProductDetail
