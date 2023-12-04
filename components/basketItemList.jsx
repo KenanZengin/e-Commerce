@@ -10,10 +10,10 @@ const BasketItemList = ({item,remove,increase,crease}) => {
     const [productDelete,setProductDelete] = useState(false)
 
     const deleteWarning = async () => {
-        setProductDelete(()=>true)
+        setProductDelete(()=>true);
         await new Promise((resolve) => setTimeout(resolve,1000));
         remove(item._id);
-        setProductDelete(() => false)
+        setProductDelete(() => false);
     }
 
   return (
