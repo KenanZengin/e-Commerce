@@ -3,6 +3,7 @@ import Link from "next/link"
 import {useState} from "react"
 import {FiSearch} from "react-icons/fi"
 import { FaFire } from "react-icons/fa";
+import { IoIosClose } from "react-icons/io";
 
 
 const CategoriSearch = () => {
@@ -35,12 +36,13 @@ const CategoriSearch = () => {
         </label>
         <div className="search-list">
             <span className="search-list-title">Categories</span>
+            <label htmlFor="close2" className="close2"><IoIosClose size={30} /></label>
             <ul>
                {searchResult.map((item,i) => (  
                     i < 5 
                         ? 
                             <li key={i}>
-                                <Link href={"/"}>
+                                <Link href={"/productPage"}>
                                     {item}
                                 </Link>
                             </li>
@@ -52,11 +54,11 @@ const CategoriSearch = () => {
                 <div className="popular_list">
                     <Link href={"/"}><FaFire /> Footwear</Link>
                     <Link href={"/"}><FaFire /> Pets</Link>
-                    <Link href={"/"}><FaFire /> Musical Instuments</Link>
                     <Link href={"/"}><FaFire /> Tools</Link>
                 </div>
             </div>
         </div>
+        <input type="checkbox" name="close2" id="close2" className="close_2" />
     </>
   )
 }

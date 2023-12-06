@@ -86,13 +86,13 @@ const SignIn = () => {
                     </div>
                 }
         </form>
-        <div className='or'><span>OR</span></div>
-        <button>
+        {/* <div className='or'><span>OR</span></div> */}
+        {/* <button>
             <FcGoogle size={25} />
             Sign Up with Google
-        </button>
+        </button> */}
         {errorMessage?.error.length > 0 
-        ? <div className="already_message">
+        ? <div className="already_message mt-4">
           {errorMessage.error}
           </div> 
         :

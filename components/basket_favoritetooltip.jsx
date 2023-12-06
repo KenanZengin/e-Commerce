@@ -5,6 +5,9 @@ import { useRevlyContenxt } from "@/context/context"
 import { useSession } from "next-auth/react"
 import {AiOutlineHeart} from "react-icons/ai"
 import {SlBasket} from "react-icons/sl"
+import { FaSearch } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi"
+
 
 
 const BasketFavoriteTooltip = () => {
@@ -14,7 +17,15 @@ const BasketFavoriteTooltip = () => {
 
   return (
     <>
-
+        <div  className="user-favorite search_res" title='favorite products'>
+            <label htmlFor="test">
+                <input type="checkbox" name="test" id="test" />
+                <div className="badgee">
+                <FaSearch size={26} />
+                </div>
+            </label>
+            
+        </div>
         <div href={"/"} className="user-basket">
             <div className="badgee">
                 <SlBasket size={26} />
@@ -63,7 +74,7 @@ const BasketFavoriteTooltip = () => {
             </div>}
         </div>
 
-        <Link href={"/favoritelist"} className="user-favorite" title='favorite products'>
+        <Link href={"/favoritelist"} className="user-favorite user-favorite-real" title='favorite products'>
             <div className="badgee">
                 <AiOutlineHeart size={26} />
                 {/* <span className="badgee-value">
