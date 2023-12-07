@@ -1,6 +1,12 @@
 .sections{
     .section_1,.section_2{      
         padding: 0 65px;  
+        @include BootstrapMaxWidthResponsive(xl){
+            padding: 0 30px;
+        }
+        @include BootstrapMaxWidthResponsive(lg){
+            padding: 0 15px;
+        }
     }
     .section_1{ 
         margin-top: 20px;
@@ -11,13 +17,16 @@
                 background-image: url("../../../../public/img/sections/section1-bg.png");
                 background-repeat: no-repeat;
                 background-position: center;
+                @include BootstrapMaxWidthResponsive(xl){
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                }
                 .video{
                     display: flex;
                     align-items: center;
                     align-self: flex-end;
                     gap: 35px;
                     padding-left: 60px;
-                    
                     &_img{
                         position: relative;
                         svg{
@@ -40,26 +49,32 @@
                             transform: rotate(8deg);
                         }
                     }
-                    
-                   
-                  
                     p{
                         color: black;
                         font-size: 1rem;
                         font-weight: bold;
                         
                     }
+                    @include BootstrapMaxWidthResponsive(xl){
+                        display: none;
+                    }
                 }
                 h1{
                     font-size: 3.5rem;
                     font-weight: bold;
-                    
                     white-space: nowrap;
                     text-align: center;
                     span{
                         background:  linear-gradient(90deg, rgba(83,186,227,1) 0%, rgba(105,94,240,1) 100%);
                         -webkit-text-fill-color: transparent;
                         -webkit-background-clip: text;
+                    }
+                    @include BootstrapMaxWidthResponsive(md){
+                        font-size: 2.75rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(xxs){
+                        font-size: 2rem;
+                        text-wrap:pretty;
                     }
                 }
                 .products{
@@ -70,6 +85,9 @@
                         width: 250px;
                         height: 103px;
                     }
+                    @include BootstrapMaxWidthResponsive(xl){
+                        display: none;
+                    }
                 }
                 .on_sale{
                     grid-column: 1/4;
@@ -78,11 +96,21 @@
                     font-size: 1.1rem;
                     color: #cac9ca;
                     font-weight: 600;
+                    @include BootstrapMaxWidthResponsive(md){
+                        font-size: 0.9375rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(xxs){
+                        font-size: 0.875rem;
+                    }
                 }
             }
            .info{
                 display: grid;
                 grid-template-columns: 1.25fr 3fr 1.25fr;
+                @include BootstrapMaxWidthResponsive(lg){
+                    grid-template-columns: 1.25fr 1.25fr 3fr ;
+                    grid-template-rows: 1fr 1fr;
+                }
                 margin-top: 20px;
                 .left,.right{
                     color: white;
@@ -98,7 +126,10 @@
                 }
                 .left{
                     background-color: #928dfd;
-                
+                    @include BootstrapMaxWidthResponsive(lg){
+                       
+                        grid-column: 1 / 3;
+                     }
                     .stars{
                         display: flex;
                         gap: 6px;
@@ -116,6 +147,9 @@
                 }
                 .right{
                     background-color: #2f63dc;
+                    @include BootstrapMaxWidthResponsive(lg){
+                        margin-left: 20px;
+                    }
                     .learn{
                         border-top: 1px solid white;
                         display: flex;
@@ -132,6 +166,11 @@
                     }
                 }
                 .middle{
+                    @include BootstrapMaxWidthResponsive(lg){
+                       order: 3;
+                       grid-row-start: 2;
+                       grid-column: 1 / 4;
+                    }
                     .top{
                         margin-top: 20px;
                         justify-self: center;
@@ -167,6 +206,9 @@
                         margin-top: 10px;
                         display: grid;
                         grid-template-columns: repeat(3,1fr);
+                        @include BootstrapMaxWidthResponsive(lg){
+                            grid-template-columns: repeat(2,1fr);
+                        }
                         gap: 20px;
                         padding: 0 20px;
                         .box{   
@@ -184,6 +226,9 @@
                             justify-content: space-evenly;
                             align-self: flex-end;
                             text-align: center;
+                            @include BootstrapMaxWidthResponsive(lg){
+                                display: none;
+                            }
                             .users{
                                 display: flex;
                                 align-items: center;

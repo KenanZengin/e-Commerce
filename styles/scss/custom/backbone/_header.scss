@@ -157,7 +157,7 @@
                     color: #cdcdce;
                     font-weight: 600;                    
                 }
-                label{
+                & > label{
                     width: 92%;
                     position: relative;
                     background-color: #f4f4f4;
@@ -175,8 +175,9 @@
                         z-index: 999;
                     }  
                     @include BootstrapMaxWidthResponsive(xm){
-                        left: 0;
+                        left: 50%;
                         min-width: 250px;
+                        transform: translate(-21%, 0);
                     }   
                     input{
                         background-color: #f4f4f4;
@@ -248,14 +249,15 @@
                     box-shadow: 0 0 0 4px rgba(110,99,237,0);
                     border: 1px solid #fff;
                     @include BootstrapMaxWidthResponsive(xm){
-                        left: 0 !important;
+                        left: 50% !important;
                         min-width: 250px !important;
+                        transform: translate(-21%, 0) !important;
                     }     
                     .close2{
                         position: absolute;
                         background-color: inherit;
-                        left: 180px;
-                        top: -14px;
+                        right: 15px;
+                        top: 7px;
                         background-color: inherit;
                         border-width: 0px !important;
                         box-shadow: 0 0 0 4px rgba(110, 99, 237, 0) !important;
@@ -560,13 +562,34 @@
         margin: auto;
         nav{
             display: flex;
-            gap: 30px;
+            gap: 30px;        
             a{
                 color: #000;
                 font-weight: 400;
                 font-size: 0.9375rem;
                 &:hover{
                     color: #6f63ee;
+                }
+            }
+            @include BootstrapMaxWidthResponsive(sm){
+                gap: 25px;
+                a:nth-child(2){
+                    display: none;
+                }
+            }
+            @include BootstrapMaxWidthResponsive(xxs){
+                gap: 20px;
+                a:nth-child(3){
+                    display: none;
+                }
+            }
+            @include BootstrapMaxWidthResponsive(xs){
+                gap: 15px;
+                a:nth-child(4){
+                    display: none;
+                }
+                a{
+                    font-size: 0.825rem;
                 }
             }
         }
