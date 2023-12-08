@@ -331,35 +331,67 @@
     }
     .section_2{
         margin-top: 100px;
+        @include BootstrapMaxWidthResponsive(xl_h){
+            margin-top: 60px;
+        }
+        @include BootstrapMaxWidthResponsive(md){
+            margin-top: 40px;
+        }
+        @include BootstrapMaxWidthResponsive(xxs){
+            margin-top: 20px;
+        }
         &_content{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             margin-bottom: 100px;
             gap: 20px;
+            @include BootstrapMaxWidthResponsive(xl){
+                grid-template-columns: repeat(1,1fr);
+            }
+            @include BootstrapMaxWidthResponsive(xxs){
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+            }
             .product_wrapper{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
+
             }
             .right,.left{
                 display: flex;
                 flex-direction: column;
+                @include BootstrapMaxWidthResponsive(xxs){
+                    max-width: -webkit-fill-available;
+                }
             }
             .left{
-             
                 gap: 20px;
-                
                 .title{
                     h2{
                         font-size: 4.5rem;
                         font-weight: bold;
                         color: #000000;
                         line-height: 1.2;
+                        @include BootstrapMaxWidthResponsive(xl){
+                            font-size: 3.5rem;
+                            text-align: center;
+                        }
+                        @include BootstrapMaxWidthResponsive(md){
+                            font-size: 2.5rem;
+                        }
+                        @include BootstrapMaxWidthResponsive(xxs){
+                            font-size: 2rem;
+                        }
                     }
                 }
                 .box{
                    padding: 30px 30px 0 30px;
+                   @include BootstrapMaxWidthResponsive(xxs){
+                        padding: 20px 20px 0 20px;
+                    }
                 }
                 .first{
                     display: grid;
@@ -370,12 +402,24 @@
                     background-color: #e6e5ff;
                     border-radius: 30px;
                    
-                   
+                    @include BootstrapMaxWidthResponsive(xxs){
+                        grid-template-columns: 1fr 1.5fr;
+                        img:last-child{
+                            display: none;
+                        }
+                    }
                     .info{
                         p{
                             font-size: 1.25rem;
                             font-weight: bold;
                             margin-bottom: 20px;
+                            @include BootstrapMaxWidthResponsive(xl){
+                                font-size: 1rem;
+                            }
+                            @include BootstrapMaxWidthResponsive(md){
+                                font-size: 0.9375rem;
+                            }
+                           
                         }
                         a{
                             color: #000;
@@ -397,14 +441,32 @@
                     grid-template-columns: 1.5fr 2fr 0.5fr;
                     gap: 15px;
                     align-items: center;
-                    
                     background-color: #feeb9d;
                     border-radius: 30px;
+                    @include BootstrapMaxWidthResponsive(xm){
+                        height: 240px;
+                    }
+                    img{
+                        @include BootstrapMaxWidthResponsive(xm){
+                            color: transparent;
+                            width: 214px;
+                            height: 218px;
+                        }
+                    }
                     p{
                         font-size: 2rem;
                         font-weight: bold;
                         line-height: 1.1;
                         margin-bottom: 20px;
+                        @include BootstrapMaxWidthResponsive(xl){
+                            font-size: 1.5rem;
+                        }
+                        @include BootstrapMaxWidthResponsive(md){
+                            font-size: 1.35rem;
+                        }
+                        @include BootstrapMaxWidthResponsive(xxs){
+                            //font-size: 1rem;
+                        }
                     }
                     a{
                         color: black;
@@ -420,18 +482,33 @@
                         padding: 15px;
                         border-radius: 21px;
                     }
+                    @include BootstrapMaxWidthResponsive(xxs){
+                        span{
+                            display: none;
+                        }
+                    }
                 }     
                 .third{
                     display: grid;
                     grid-template-columns: repeat(2,1fr);
                     gap: 66px;
+                    @include BootstrapMaxWidthResponsive(md_h){
+                        grid-template-columns: 1fr;
+                        overflow: hidden;
+                    }
                     .left{
                         display: flex;
                         flex-direction: column;
+                        @include BootstrapMaxWidthResponsive(md_h){
+                            overflow: hidden;
+                        }
                         .product{
                             display: grid;
                             grid-template-columns: 1fr auto 1fr;
                             margin-bottom: 60px;
+                            @include BootstrapMaxWidthResponsive(xm){
+                                padding: 10px 5px !important;
+                            }
                             .color{
                                 padding-left: 20px;
                                 margin-top: 25px;
@@ -494,6 +571,16 @@
                             color: #000;
                             margin-top: 25px;
                             margin-left: 15px;
+                            @include BootstrapMaxWidthResponsive(xl){
+                                p:nth-child(3){
+                                    display: none;
+                                }
+                            }
+                            @include BootstrapMaxWidthResponsive(md_h){
+                                p:nth-child(6){
+                                    display: none;
+                                }
+                            }
                             p{
                                 display: inline-block;
                                 padding: 15px;
@@ -514,6 +601,10 @@
                             .item{
                                 flex-grow: 1;
                                 width: 60%;
+                                @include BootstrapMaxWidthResponsive(xl){
+                                    flex-grow: inherit;
+                                    width: max-content;
+                                }
                             }
                         }
                         .go-detail{
@@ -599,7 +690,9 @@
                     grid-template-columns: repeat(2,1fr);
                     align-items: stretch;
                     gap: 20px;
-                    
+                    @include BootstrapMaxWidthResponsive(xxs){
+                        grid-template-columns: 1fr;
+                    }
                     .product{
                         display: grid;
                         grid-template-columns: 1fr;
@@ -685,6 +778,7 @@
                     border-radius: 30px;
                     padding-left:30px;
                     padding-top: 30px;
+                  
                     .info{
                         align-self: center;
                         p{
@@ -722,6 +816,15 @@
                         border-radius: 21px;
                         margin-right: 30px;
                     }
+                    @include BootstrapMaxWidthResponsive(xs){
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 20px;
+                        span{
+                            display: none;
+                        }
+                    }
                 }
             }
         }
@@ -744,6 +847,9 @@
             .comments{
                 display: flex;
                 gap: 15px;
+                @include BootstrapMaxWidthResponsive(sm){
+                    flex-wrap: wrap;
+                }
                 .comment{
                     display: flex;
                     flex-direction: column;

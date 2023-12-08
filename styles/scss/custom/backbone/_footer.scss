@@ -1,6 +1,15 @@
 .footer{
     background-color: #383565;
     padding: 100px 65px 0 65px;
+    @include BootstrapMaxWidthResponsive(xl){
+        padding: 90px 50px 0 50px;
+    }
+    @include BootstrapMaxWidthResponsive(md){
+        padding: 80px 30px 0 30px;
+    }
+    @include BootstrapMaxWidthResponsive(xxs){
+        padding: 90px 10px 0 10px;
+    }
     .title{
         h4{
             color: #fff;
