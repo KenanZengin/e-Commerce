@@ -1,17 +1,20 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
-import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+import { useSession } from "next-auth/react"
 import mainLogo from 'public/img/header/mainLogo.png'
+import { usePathname } from "next/navigation"
 
 
 
 const Footer = () => {
 
-    const session = getServerSession(authOptions)
+    const pathname = usePathname()
+    const session = useSession()
+
 
     return (
-        <footer className="footer">
+        <footer className="footer" style={{display : pathname == ["http://localhost:3000/membership/signup" || "http://localhost:3000/membership/signin"] ? "block" : "none"}}>
             <div className="title">
                 <h4>
                     Join the movement and get exclusive deals, promotions, <br /> and updates on your favorite brands
@@ -19,7 +22,7 @@ const Footer = () => {
             </div>
             <div className="info">
                 <div className="left">
-                    {session!==null ? "" : <form className="memberMail">
+                    {session.data!==null ? "" : <form className="memberMail">
                         <label htmlFor="member">
                             <input type="mail" id="member" name="member" placeholder="Email" />
                         </label>

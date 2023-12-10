@@ -6,6 +6,9 @@
     z-index: 999;
     background: linear-gradient(90deg, rgba(110,99,237,1) 21%, rgba(149,153,230,1) 78%);
     padding: 25px 0;
+    @include BootstrapMaxWidthResponsive(md){
+        height: 100vh;
+    }
     &_wrapper{
         background-color: #fff;
         display: flex;
@@ -17,6 +20,9 @@
         overflow: hidden;
         .form{
             &_img{
+                @include BootstrapMaxWidthResponsive(md){
+                    display: none;
+                }
                 width: 50%;
                 img{
                     width: 100%;
@@ -31,6 +37,13 @@
                 flex-direction: column;
                 padding: 0 75px 0;
                 position: relative;
+                @include BootstrapMaxWidthResponsive(md){
+                    width: 100%;
+                    padding: 0 25px;
+                }
+                @include BootstrapMaxWidthResponsive(xm){
+                   padding: 0 10px;
+                }
                 .backHome{
                     position: absolute;
                     bottom: -62px;
@@ -49,6 +62,12 @@
                         font-weight: bold;
                         font-size: 3rem;
                         margin-top: 30px;
+                        @include BootstrapMaxWidthResponsive(md){
+                            font-size: 2.5rem;
+                        }
+                        @include BootstrapMaxWidthResponsive(xm){
+                            font-size: 2rem;
+                        }
                     }
                     p{
                         color: #b4b4b4;
@@ -56,6 +75,12 @@
                         a{
                             color: #6e63ed;
                             text-decoration: underline;
+                            @include BootstrapMaxWidthResponsive(md){
+                                font-size: 0.9375rem;
+                            }
+                            @include BootstrapMaxWidthResponsive(xm){
+                                font-size: 0.875rem;
+                            }
                         }
                     }
                 }              
@@ -67,6 +92,9 @@
                         margin-bottom: 24px;
                         width: 80%;
                         position: relative;
+                        @include BootstrapMaxWidthResponsive(xm){
+                            width:100%;
+                        }
                         svg{
                             position: absolute;
                             right: 1%;

@@ -15,13 +15,31 @@
             color: #fff;
             font-size: 2.5rem;
             font-weight: bold;
+            @include BootstrapMaxWidthResponsive(lg){
+                font-size: 2rem;
+            }
+            @include BootstrapMaxWidthResponsive(xs){
+                font-size: 1.76rem;
+              
+            }
         }
     }
     .info{
         display: flex;
         margin-top: 100px;
+        @include BootstrapMaxWidthResponsive(md){
+            margin-top: 50px;
+            flex-direction: column;
+        }
         .left{
             width: 25%;
+            @include BootstrapMaxWidthResponsive(lg){
+                width: 50%;
+            }
+            @include BootstrapMaxWidthResponsive(xs){
+                width: 100%;
+              
+            }
             .memberMail{
                 display: flex;
                 align-items: center;
@@ -56,9 +74,21 @@
         .right{
             width: 75%;
             padding-left: 200px;
+            @include BootstrapMaxWidthResponsive(lg){
+                padding-left: 100px;
+            }
+            @include BootstrapMaxWidthResponsive(md){
+                width: 100%;
+                padding-left: 0px;
+                margin-top: 50px;
+            }
             .links_group{
                 display: flex;
                 justify-content: space-between;
+                @include BootstrapMaxWidthResponsive(xs){
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                }
                 .item{
                     display: flex;
                     flex-direction: column;

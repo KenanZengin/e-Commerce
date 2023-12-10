@@ -9,7 +9,7 @@ import {FiHelpCircle} from "react-icons/fi"
 const Information = () => {
 
     const pathname = usePathname()
-    console.log(pathname);
+    console.log(pathname)
 
   return (
     <ul>
