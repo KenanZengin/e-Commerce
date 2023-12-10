@@ -128,3 +128,9 @@
         }
     }
 }
+.footer-go{
+    position: absolute;
+    top: -10000px;
+    z-index: 0;
+    opacity: 0;
+}

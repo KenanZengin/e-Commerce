@@ -11,10 +11,11 @@ const Footer = () => {
 
     const pathname = usePathname()
     const session = useSession()
-
+    console.log(pathname);  
+    const test = ["/membership/signin" , "/membership/signup"]
 
     return (
-        <footer className="footer" style={{display : pathname == ["http://localhost:3000/membership/signup" || "http://localhost:3000/membership/signin"] ? "block" : "none"}}>
+        <footer className={`footer ${pathname == test[1] ? "footer-go" : ""}`} style={{display : pathname == test[0] ? "none" : "block"}}  >
             <div className="title">
                 <h4>
                     Join the movement and get exclusive deals, promotions, <br /> and updates on your favorite brands
