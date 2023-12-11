@@ -1,5 +1,14 @@
 .product_page{
     padding: 10px 60px;
+    @include BootstrapMaxWidthResponsive(xl){
+        padding: 10px 40px;
+    }
+    @include BootstrapMaxWidthResponsive(md){
+        padding: 10px 25px;
+    }
+    @include BootstrapMaxWidthResponsive(xxs){
+        padding: 10px 10px;
+    }
     .bread_crumbb{
         span{
             font-weight: 600;
@@ -19,6 +28,10 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 50px;
+        @include BootstrapMaxWidthResponsive(xs){
+            flex-direction: column;
+            gap: 20px;
+        }
         .title{
             display: flex;
             align-items: baseline;
@@ -26,15 +39,30 @@
                 font-size: 2.5rem;
                 font-weight: bold;
                 margin-right: 15px;
+                @include BootstrapMaxWidthResponsive(md){
+                    margin-right: 0px;
+                    font-size: 2rem;
+                }
             }
             span{
                 color: #b4b4b4;
                 font-weight: 600;
+                @include BootstrapMaxWidthResponsive(xs){
+                    display: none;
+                }
             }
         }
         .search-detail{
             display: flex;
             gap: 25px;
+           
+            @include BootstrapMaxWidthResponsive(md){
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            @include BootstrapMaxWidthResponsive(md_h){
+                justify-content: center;
+            }
             button{
                 border-color: #fff;
                 font-weight: bold;
@@ -42,6 +70,9 @@
                 background-color: #f4f4f4;
                 border-radius: 30.5px;
                 position: relative;
+                @include BootstrapMaxWidthResponsive(md){
+                    font-size: 0.9125rem;
+                }
                 &:hover{
                     background-color: #e6e4ff;
                 }
@@ -63,6 +94,9 @@
             }
             button:last-child{
                 margin-left: 75px;
+                @include BootstrapMaxWidthResponsive(md){
+                    margin-left: 0px;
+                }
             }
         }
     }
@@ -72,7 +106,20 @@
         margin: 75px 0;
         gap: 60px 50px;
         justify-content: space-between;
-    .productts{
+        @include BootstrapMaxWidthResponsive(xl){
+            grid-template-columns: repeat(3,1fr);
+            margin: 50px 0;
+        }
+        @include BootstrapMaxWidthResponsive(md){
+            grid-template-columns: repeat(2,1fr);
+            margin: 50px 0;
+        }
+        @include BootstrapMaxWidthResponsive(xxs){
+            grid-template-columns: repeat(1,1fr);
+            margin: 25px 0;
+        }
+
+        .productts{
         width: 100%;
         color: #000;
         .productts_img{
@@ -117,7 +164,7 @@
         &:has(.productts_img:hover) .add_favorite{
             display: block;
         }
-    }
+        }
         .productts_info{
             color: #000 !important;
             display: flex;
