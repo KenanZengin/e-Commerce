@@ -66,6 +66,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: stretch;
+                
                 @include BootstrapMaxWidthResponsive(md){
                     justify-content: flex-start;
                     gap: 50px;
