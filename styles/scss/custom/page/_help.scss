@@ -1,5 +1,8 @@
 .help_categories{
     padding: 50px 0;
+    @include BootstrapMaxWidthResponsive(lg){
+        padding: 50px 10px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,19 +20,43 @@
         border-width: 0 1px 1px 1px ;
         border-color: #625df6;
         border-style: solid;
+        @include BootstrapMaxWidthResponsive(lg){
+            width: auto;
+            max-width: auto;
+        }
         .nav-tabs{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+            align-items: center;
+          
             background-color: #625df6;
             border-color:#625df6!important;
             border-width: 0 !important;
             height: 56px;
+            @include BootstrapMaxWidthResponsive(lg){
+                grid-template-columns: repeat(4,1fr);
+                width: auto;
+                max-width: auto;
+                height: auto;
+            }
+            @include BootstrapMaxWidthResponsive(md_h){
+                grid-template-columns: repeat(3,1fr);
+               
+            }
+            @include BootstrapMaxWidthResponsive(xs){
+                grid-template-columns: repeat(2,1fr);
+               
+            }
+            @include BootstrapMaxWidthResponsive(xx){
+                grid-template-columns: 1fr;
+            }
             .nav-item{
                 background-color: #625df6;
                 display: flex;
                 align-items: center;
+                @include BootstrapMaxWidthResponsive(lg){
+                    justify-content: center;
+                }
                 button{
                     white-space: nowrap;
                     background-color: #625df6;
@@ -38,12 +65,22 @@
                     border-width: 0 !important;
                     font-size: 15px;
                     height: 99%;   
+                    @include BootstrapMaxWidthResponsive(lg){
+                        padding: 10px 2px !important;
+                    }
+                    @include BootstrapMaxWidthResponsive(xs){
+                        padding: 10px 12px !important;
+                       
+                    }
                     &:hover{
                         background-color: #1b1759;
                     }
                 }
                 .active{
                     background-color: #1b1759;
+                }
+                .nav-link{
+                    margin-bottom: 0 !important;
                 }
             }    
         }

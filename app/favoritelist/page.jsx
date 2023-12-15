@@ -18,9 +18,11 @@ const FavoriteProduct =  () => {
             
         </div>
         <div className="product_list">
-            {favoriteItems.map((item)=>(
+          {favoriteItems.length > 0 
+            ? favoriteItems.map((item)=>(
               <ProductItem data={item} key={item._id} />
-            ))}
+            ))
+            : "You don't have a favorite product"}
         </div>
     </div>
   )

@@ -1,13 +1,16 @@
 import Link from 'next/link'
 import { getServerSession } from "next-auth"
 import { authOptions } from "../app/api/auth/[...nextauth]/route"
+import BasketFavoriteTooltip from '@/components/basket_favoritetooltip'
 import LogOut from '../components/logout'
 import {HiOutlineUserCircle} from "react-icons/hi2"
 import {CgFileDocument} from "react-icons/cg"
 import {LiaComment} from "react-icons/lia"
 import {FaRegUser} from "react-icons/fa6"
 import { BsQuestionCircle} from "react-icons/bs"
-import BasketFavoriteTooltip from '@/components/basket_favoritetooltip'
+import {SlBasket} from "react-icons/sl"
+import {AiOutlineHeart} from "react-icons/ai"
+
 
 
 
@@ -51,6 +54,14 @@ const UserSection = async () => {
                                         <BsQuestionCircle size={25}/>
                                         <p>Help & Support</p>
                                     </Link>   
+                                    <Link href={"/profile/userbasket"} className="profile">
+                                        <SlBasket size={25}/>
+                                        <p>Your Basket</p>
+                                    </Link>  
+                                    <Link href={"/favoritelist"} className="profile">
+                                        <AiOutlineHeart size={25}/>
+                                        <p>Favorite Products</p>
+                                    </Link>  
                                     </div>
                                    <LogOut />
                                 </>
