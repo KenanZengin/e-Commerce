@@ -1,7 +1,12 @@
 .user_basket{
     padding: 10px 60px 100px;
     width: 100%;
-    
+    @include BootstrapMaxWidthResponsive(xl){
+        padding: 10px 30px 100px;
+    }
+    @include BootstrapMaxWidthResponsive(sm){
+        padding: 10px 15px 100px;
+    }
     .go_back{
         a{
             display: flex;
@@ -15,16 +20,33 @@
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
+        @include BootstrapMaxWidthResponsive(xl){
+            flex-direction: column;
+            align-items: center;
+        }
         .left{
             width: 58%;
             min-width: 900px;
+            @include BootstrapMaxWidthResponsive(xl){
+                order: 2;
+                width: 100%;
+            }
             .title{
                 display: flex;
                 align-items: baseline;
+                @include BootstrapMaxWidthResponsive(sm){
+                   flex-direction: column;
+                   align-items: center;
+                }
                 h3{
                     font-size: 2.75rem;
                     font-weight: bold;
                     margin-right: 10px;
+                    @include BootstrapMaxWidthResponsive(sm){
+                        width: 100%;
+                        text-align: center;
+                        font-size: 2rem;
+                    }
                 }
                 span{
                     color: #b4b4b4;
@@ -38,19 +60,42 @@
                 gap: 50px;
                 margin-top: 75px;
                 padding: 0 10px;
-               
+                @include BootstrapMaxWidthResponsive(md_h){
+                    margin-top: 30px;
+                    position: relative;
+                }
                 .no-item{
                     font-size: 1.1rem;
                     font-weight: bold;
                     background-color: #fdeaa2;
                     padding: 12.5px 10px ;
                     border-radius: 20px;
+                    @include BootstrapMaxWidthResponsive(md_h){
+                        width: 400px;
+                    }
+                    @include BootstrapMaxWidthResponsive(sm){
+                       width: 300px;
+                       font-size: 0.9376rem;
+                       position: absolute;
+                       left: 50%;
+                       transform: translate(-50%, 10px);
+                       text-align: center;
+                    }
                 }
                 .item{
                     display: grid;
                     grid-template-columns: 1.2fr 1fr 0.86fr;
                     align-items: center;
                     position: relative;
+                    @include BootstrapMaxWidthResponsive(md_h){
+                        grid-template-columns: 1fr 1fr;
+                    }
+                    @include BootstrapMaxWidthResponsive(sm){
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                    }
                     .info{
                         display: flex;
                         align-items: center;
@@ -59,6 +104,10 @@
                             width: 102px;
                             height: 100px;
                             object-fit: contain;
+                            @include BootstrapMaxWidthResponsive(md_h){
+                                width: 153px;
+                                height: 150px;
+                            }
                         }
                         .product-name{
                             display: flex;
@@ -68,10 +117,16 @@
                                 font-size: 1.25rem;
                                 font-weight: 700;
                                 margin-bottom: 15px;
+                                @include BootstrapMaxWidthResponsive(sm){
+                                    font-size: 1rem;
+                                }
                             }
                             span,div{
                                 font-weight: 600;
                                 font-size: 0.825rem;
+                                @include BootstrapMaxWidthResponsive(sm){
+                                    font-size: 0.75rem;
+                                }
                             }
                             span{
                                 color: #b4b4b4;
@@ -89,6 +144,10 @@
                         display: flex;
                         align-items: center;
                         gap: 25px;
+                        @include BootstrapMaxWidthResponsive(md_h){
+                            justify-content: flex-start;
+                            gap: 17.5px;
+                        }
                         .number{
                             padding: 5px 10px;
                             border: 1px solid #b4b4b4;
@@ -123,6 +182,14 @@
                     .price{
                         display: flex;
                         justify-content: space-between;
+                        @include BootstrapMaxWidthResponsive(md_h){
+                            grid-column-start: 2;
+                            justify-content: flex-start;
+                            gap: 15px;
+                        }
+                        @include BootstrapMaxWidthResponsive(sm){
+                            grid-column-start: auto;
+                        }
                         &_detail{
                            display: flex;
                            align-items: flex-end;
@@ -130,6 +197,9 @@
                             p{
                                 font-size: 1.35rem;
                                 font-weight: bold;
+                                @include BootstrapMaxWidthResponsive(sm){
+                                    font-size: 1.1rem;
+                                }
                             }
                             & > div{
                                 display: flex;
@@ -138,7 +208,10 @@
                                     display: block;
                                     font-weight: bold;
                                     font-size: 0.875rem;
-                                    line-height: 1  ;
+                                    line-height: 1;
+                                    @include BootstrapMaxWidthResponsive(sm){
+                                        font-size: 0.75rem;
+                                    }
                                 }
                                 span:first-child{
                                     color: black;
@@ -168,6 +241,9 @@
                         padding: 6px 6px;
                         color: #fff;
                         font-size: 0.9rem;
+                        @include BootstrapMaxWidthResponsive(sm){
+                            font-size: 0.8rem;
+                        }
                     }
                 }
             }
@@ -175,6 +251,12 @@
         .right{
             width: 25.5%;
             padding-right:0 !important;
+            @include BootstrapMaxWidthResponsive(xl){
+                width: 50%;
+            }
+            @include BootstrapMaxWidthResponsive(sm){
+                width: 100%;
+            }
             .title{
                 margin-top: 15px;
                 h4{
@@ -193,6 +275,9 @@
                         justify-content: space-between;
                         color: #b4b4b4;
                         font-weight: bold;
+                        @include BootstrapMaxWidthResponsive(sm){
+                            font-size: 0.825rem;
+                        }
                     }
                     li:first-child{
                         padding-bottom: 10px;
@@ -200,6 +285,9 @@
                     li:last-child{
                         margin-top: 30px;
                         font-size: 1.3rem;
+                        @include BootstrapMaxWidthResponsive(sm){
+                            font-size: 0.9rem;
+                        }
                     }
                     li:first-child,li:last-child{
                         color: #000;
@@ -218,6 +306,13 @@
                 border-radius: 30px;
                 margin-top: 75px;
                 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+                @include BootstrapMaxWidthResponsive(xl){
+                    margin-top: 50px;
+                }
+                @include BootstrapMaxWidthResponsive(sm){
+                    margin-top: 25px;
+                    margin-bottom: 10px;
+                }
                 &:hover{
                     opacity: .9;
                 }
