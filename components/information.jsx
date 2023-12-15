@@ -16,7 +16,7 @@ const Information = () => {
         <li>
             <Link href={"membershipInformation"} className={`${pathname == "/profile/userInformation/membershipInformation" ? "active" : ""}`}>
                 <FaRegUser size={17} />
-                My User Information
+                My Membership Information
             </Link>
         </li>
         <li>

@@ -9,7 +9,7 @@ import {FiHelpCircle} from "react-icons/fi"
 
 
 
-const UserLayout = async ({children}) => {
+const UserLayout =  ({children}) => {
 
     const session =  useSession()
 

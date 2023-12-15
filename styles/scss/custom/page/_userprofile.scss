@@ -1,14 +1,26 @@
 .user__info{
     background-color: #fff;
     padding: 40px 60px;
+    @include BootstrapMaxWidthResponsive(lg){
+        padding: 40px;
+    }
+    @include BootstrapMaxWidthResponsive(md){
+        padding: 40px 20px;
+    }
     &__wrapper{
         background-color: #fff;
         display: flex;
         justify-content: space-between;
-        
+        @include BootstrapMaxWidthResponsive(xxs){
+            flex-direction: column;
+            gap: 10px;
+        }
         .sidebar{
             width: 12.5%;
             min-width: 210px;
+            @include BootstrapMaxWidthResponsive(xxs){
+                width: 100%;
+            }
             & > p {
                 margin-bottom:20px;
                 border: 1px solid #e6e6e6;
@@ -18,7 +30,12 @@
                 font-weight: 600;
                 font-size: .9375rem;
                 padding: 16px;
-               
+                @include BootstrapMaxWidthResponsive(md){
+                    font-size: .875rem;
+                }
+                @include BootstrapMaxWidthResponsive(xxs){
+                    font-size: .8rem;
+                }
             }
             .sidebar_menu{
                 border: 1px solid #e6e6e6;
@@ -37,7 +54,12 @@
                             padding: 8px 6px;
                             font-size: 0.8725rem;
                             color: #000;
-                            
+                            @include BootstrapMaxWidthResponsive(md){
+                                font-size: .8rem;
+                            }
+                            @include BootstrapMaxWidthResponsive(xxs){
+                                font-size: .75rem;
+                            }
                             svg{
                                 margin-right: 12px;
                             }
@@ -59,6 +81,16 @@
         .user_info_2{
             width: 85%;
             margin-left: 125px;
+            @include BootstrapMaxWidthResponsive(lg){
+                margin-left: 75px;
+            }
+            @include BootstrapMaxWidthResponsive(md){
+                margin-left: 25px;
+            }
+            @include BootstrapMaxWidthResponsive(xxs){
+                margin-left: 0px;
+                width: 100%;
+            }
             .titlee{
                 font-size: 1.5rem;
                 font-weight: bold;
@@ -66,13 +98,21 @@
                 border: 1px solid #e6e6e6;
                 padding: 20px;
                 border-radius: 8px;
+                @include BootstrapMaxWidthResponsive(md){
+                    font-size: 1.25rem;
+                }
+                @include BootstrapMaxWidthResponsive(xxs){
+                    font-size: 1rem;
+                }
             }
             .form-info{
                 display: flex;
                 justify-content: space-between;
                 border: 1px solid #e6e6e6;
-                
                 border-radius: 8px;
+                @include BootstrapMaxWidthResponsive(md){
+                    flex-direction: column;
+                }
                 .left{
                     background-color: #fff;
                     border-right: 1px solid #e6e6e6;
@@ -83,14 +123,22 @@
                 .left,.right{
                     width: 50%;
                     padding: 20px;
+                    @include BootstrapMaxWidthResponsive(md){
+                        width: 100%;
+                    }
                     .title{
                         color: #6e63ed;
                         font-weight: bold;
                         font-size: 1rem;
                         margin-bottom: 25px;
+                        @include BootstrapMaxWidthResponsive(md){
+                            font-size: .9375rem;
+                        }
+                        @include BootstrapMaxWidthResponsive(xxs){
+                            font-size: .875rem;
+                        }
                     }
                     form{
-                        
                         padding: 10px 0;
                         display: flex;
                         flex-direction: column;
@@ -208,6 +256,12 @@
                             border-radius: 19.5px;
                             font-weight: bold;
                             font-size: 0.9175rem;
+                            @include BootstrapMaxWidthResponsive(md){
+                                font-size: .875rem;
+                            }
+                            @include BootstrapMaxWidthResponsive(xxs){
+                                font-size: .8rem;
+                            }
                             display: flex;
                             align-items: center;
                             
@@ -256,11 +310,23 @@
                                 font-size: 1.5rem;
                                 font-weight: bold;
                                 margin: 20px 0;
+                                @include BootstrapMaxWidthResponsive(md){
+                                    font-size: 1.25rem;
+                                }
+                                @include BootstrapMaxWidthResponsive(xxs){
+                                    font-size: 1rem;
+                                }
                             }
                             p{
                                 font-size: 1.1rem;
                                 font-weight: 600;
                                 line-height: 2;
+                                @include BootstrapMaxWidthResponsive(md){
+                                    font-size: 1rem;
+                                }
+                                @include BootstrapMaxWidthResponsive(xxs){
+                                    font-size: 0.9375rem;
+                                }
                             }
                         }
                     }
@@ -287,6 +353,12 @@
                         animation: tops .4s ease-in-out;
                         .title{
                             font-size: 1.2rem;
+                            @include BootstrapMaxWidthResponsive(md){
+                                font-size: 1rem;
+                            }
+                            @include BootstrapMaxWidthResponsive(xxs){
+                                font-size: .9375rem;
+                            }
                             color: #000;
                             font-weight: 600;
                             padding: 14px 20px;
