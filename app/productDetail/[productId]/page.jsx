@@ -132,15 +132,15 @@ const ProductDetail = async ({searchParams}) => {
                 <div className="product-special-offer">
                     <button className="active">
                         <div>Buy 1</div>
-                        <p>$36.00 <span>/ ea</span> </p>
+                        <p>$36.00 <span></span> </p>
                     </button>
                     <button>
                         <div>Buy 2</div>
-                        <p>$40.00 <span>/ ea</span> </p>
+                        <p>$40.00 <span></span> </p>
                     </button>
                     <button>
                         <div>Buy 3</div>
-                        <p>$45.00 <span>/ ea</span> </p>
+                        <p>$45.00 <span></span> </p>
                     </button>
                     <button>
                         <p>Buy <br />More</p>

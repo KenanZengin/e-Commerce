@@ -1,30 +1,49 @@
 .product{
     padding: 10px 65px;
     background-color: #fff; 
+    @include BootstrapMaxWidthResponsive(xl_h){
+        padding: 10px 30px;
+    }
     &-wrapper{
         display: flex;
         justify-content: space-between;
         align-items: stretch;
+        @include BootstrapMaxWidthResponsive(lg_m){
+            flex-direction: column;
+        }
         .product-imgs{      
             display: flex;
-            gap: 30px;        
+            gap: 30px;  
+            @include BootstrapMaxWidthResponsive(sm){
+                flex-direction: column;
+            }     
             .img-left{
                 width: 15%;
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
+                @include BootstrapMaxWidthResponsive(sm){
+                    flex-direction: row;
+                    width: 100%;
+                    gap: 0;
+                }   
                 div{
                     border-radius: 21px;
                     padding: 5px;
                     width: 110px;
                     border: 2px solid #fff;
+                    @include BootstrapMaxWidthResponsive(xl){
+                        width: 89px;
+                    }
                     img{
                         width: 96px;
-                        
                         height: 97px;
                         object-fit: contain;
                         cursor: pointer;
-                        
+                        @include BootstrapMaxWidthResponsive(xl){
+                            width: 75px;
+                            height: 76px;
+                        }
                     }
                     &:hover{
                         border: 2px solid #6e62ef;
@@ -38,17 +57,32 @@
             .img-right{
                 width: 100%;
                 img{
-                    width: 100%;
+                    width: 700px;
+                    max-width: 700px;
                     height: 800px;
-                    min-height: 800px;
-                    object-fit: cover;
-                    border-radius: 40px;
+                    max-height: 800px;
+                    object-fit: contain;
+                    @include BootstrapMaxWidthResponsive(xl){
+                        width: 500px;
+                        max-width: 500px;
+                        height: 650px;
+                        max-height: 650px;
+                    }
+                    @include BootstrapMaxWidthResponsive(lg_m){
+                        width: 100%;
+                        max-width: 100%;
+                        height: auto;
+                        max-height: 100%;
+                    }
                 }
             }
         }
         .product-info{
             flex-grow: 1;
             padding-left: 75px;
+            @include BootstrapMaxWidthResponsive(xl_h){
+                padding-left: 25px;
+            }
             .product{
                 &-title{
                     h3{
@@ -101,6 +135,10 @@
                     display: flex;
                     align-items: center;
                     margin: 20px 0;
+                    @include BootstrapMaxWidthResponsive(xm){
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }   
                     .price{
                         display: flex;
                         align-items: center;
@@ -128,6 +166,10 @@
                         display: flex;
                         gap: 30px;
                         margin-left: 30px;
+                        @include BootstrapMaxWidthResponsive(xm){
+                            margin-left: 0;
+                            margin-top: 10px;
+                        }   
                         div{
                             display: flex;
                             align-items: center;
@@ -177,17 +219,20 @@
                 &-special-offer{
                     display: flex;
                     align-items: stretch;
-                    flex-wrap: nowrap;
-                    gap: 20px;
-                    
+                    flex-wrap: wrap;
+                    gap: 10px;
                     button{
                         background-color: inherit;
                         border: 1px solid #a4a4a4;
                         padding: 5px 25px;
                         border-radius: 20px;
-                        width: 25%;  
-                        min-width: 25%;
+                        width: 23%;  
+                        min-width: 23%;
                         white-space: nowrap;
+                        @include BootstrapMaxWidthResponsive(xm){
+                            min-width: 104px;
+                            width: 104px;
+                        }   
                         &:hover{
                             background-color: #e6e5ff !important;
                             border: 1px solid #6762f7;
@@ -237,6 +282,9 @@
                     row-gap: 20px;
                     column-gap: 40px;
                     margin-top: 25px;
+                    @include BootstrapMaxWidthResponsive(xl_m){
+                        grid-template-columns: repeat(1,1fr);
+                    }
                     .option{
                         display: flex;
                         align-items: center;
@@ -261,6 +309,9 @@
                                 align-items: center;
                                 font-size: 0.875rem !important;
                                 white-space: nowrap;
+                                @include BootstrapMaxWidthResponsive(xm){
+                                    white-space: pre-wrap;
+                                }   
                                 span:first-child{
                                     font-weight: 600;
                                     color: #000;
