@@ -1,15 +1,31 @@
 .user-profile{
     padding: 0 65px;
     background-color: #fff;
+    @include BootstrapMaxWidthResponsive(xl){
+        padding: 0 40px;
+    }
+    @include BootstrapMaxWidthResponsive(md){
+        padding: 0 20px;
+    }
     &-wrapper{
         display: flex;
         align-items: stretch;
+        @include BootstrapMaxWidthResponsive(lg){
+            flex-direction: column;
+        }
         .left{
             width: 16%;
             display: flex;
             flex-direction: column;
             gap: 30px;
             padding: 50px 0;
+            @include BootstrapMaxWidthResponsive(lg){
+                width: 100%;
+                flex-direction: row;
+            }
+            @include BootstrapMaxWidthResponsive(xs){
+                flex-direction: column;
+            }
             .user-info{
                 display: flex;
                 flex-direction: column;
@@ -18,6 +34,9 @@
                 padding: 21px 0 40px;
                 border-radius: 17.5px;
                 box-shadow: 0px 14px 18px -11px rgba(0, 0, 0, 0.375);
+                @include BootstrapMaxWidthResponsive(lg){
+                    padding: 0 0 40px;
+                }
                 p{
                     font-weight: 600;
                     color: #000;
@@ -36,20 +55,48 @@
                     font-size: 1.75rem;
                     font-weight: bold;
                     margin-bottom: 2.5px;
+                    @include BootstrapMaxWidthResponsive(lg){
+                        font-size: 1.4rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(lg){
+                        font-size: 1.2rem;
+                    }
                 }
                 span{
                     font-weight: bold;
                     font-size: 0.875rem;
+                    @include BootstrapMaxWidthResponsive(lg){
+                        font-size: 0.825rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(lg){
+                        font-size: 0.75rem;
+                    }
                 }
             }
             .user-stats{
+                @include BootstrapMaxWidthResponsive(lg){
+                    flex-grow: 1;
+                }
                 & > p{
                     font-size: 1.5rem;
                     font-weight: 600;
-                    
+                    @include BootstrapMaxWidthResponsive(lg){
+                        font-size: 1.2rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(lg){
+                        font-size: 1rem;
+                    }
                 }
                 ul{
                     margin: 20px 0;
+                    @include BootstrapMaxWidthResponsive(lg){
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+                    }
+                    // @include BootstrapMaxWidthResponsive(sm){
+                    //     display: grid;
+                    //     grid-template-columns: repeat(1,1fr);
+                    // }
                     li{
                         margin-bottom: 20px;
                         .rewards{
@@ -69,25 +116,25 @@
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: space-evenly;
-                                
                                 span{
                                     color: #b4b4b4;
                                     font-weight: 600;
                                     display: flex;
                                     align-items: center;
-                                    white-space: nowrap;
+                                    line-height: 1.2;
                                     svg{
                                         color: #6963f7;
                                         margin-left: 6px;
+                                        @include BootstrapMaxWidthResponsive(lg){
+                                           display: none;
+                                        }
                                     }
                                     
                                 }
                                 p{
+                                    line-height: 0.8;
                                     font-weight: bold;
-                                }
-                                p,span{
-                                    line-height: 0.7;
-                                }
+                                }                             
                             }
                         }  
                         .star{  
@@ -144,28 +191,75 @@
             text-align: start;
             padding-left: 250px;
             padding-top: 27px;
+            @include BootstrapMaxWidthResponsive(xl){
+                padding-left: 150px;
+            }
+            @include BootstrapMaxWidthResponsive(lg){
+                padding-left: 0;
+                width: 100%;
+            }
             .title{
                 p{
                     font-size: 1.25rem;
                     color: #b4b4b4;
                     font-weight: 600;
+                    @include BootstrapMaxWidthResponsive(xl){
+                        font-size: 1.15rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(lg){
+                        font-size: 1rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(md){
+                        font-size: 0.97rem;
+                    }
                 }
                 h3{
                     font-size: 3.25rem;
                     color: #000;
                     font-weight: bolder;
+                    @include BootstrapMaxWidthResponsive(xl){
+                        font-size: 3rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(lg){
+                        font-size: 2.75rem;
+                    }
+                    @include BootstrapMaxWidthResponsive(md){
+                        font-size: 2.5rem;
+                    }
                 }
             }
             .rewards-chart{
                 padding: 40px 50px;
+                @include BootstrapMaxWidthResponsive(xl){
+                    padding: 30px 40px;
+                }
+                @include BootstrapMaxWidthResponsive(lg){
+                    padding: 20px 30px;
+                }
+                @include BootstrapMaxWidthResponsive(md){
+                    padding: 10px 15px;
+                }
                 .title{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    @include BootstrapMaxWidthResponsive(xs){
+                        flex-direction: column;
+                        gap: 15px;
+                    }
                     p{
                         font-size: 1.5rem;
                         color: #000;
                         font-weight: 600;
+                        @include BootstrapMaxWidthResponsive(xl){
+                            font-size: 1.25rem;
+                        }
+                        @include BootstrapMaxWidthResponsive(lg){
+                            font-size: 1.15rem;
+                        }
+                        @include BootstrapMaxWidthResponsive(md){
+                            font-size: 1rem;
+                        }
                     }
                     div{
                         display: flex;
@@ -196,8 +290,16 @@
                     margin-top: 50px;
                     display: flex;
                     align-items:stretch;
+                    @include BootstrapMaxWidthResponsive(md_h){
+                       flex-direction: column;
+                       gap: 40px;
+                       align-items: center;
+                    }
                     .info-price{
                         width: 55%;
+                        @include BootstrapMaxWidthResponsive(md_h){
+                           width: 100%;
+                        }
                         ul{
                             display: flex;
                             flex-direction: column;
@@ -206,10 +308,22 @@
                                 display: flex;
                                 justify-content: space-between;
                                 width: 72%;
+                                @include BootstrapMaxWidthResponsive(md_h){
+                                    width: 100%;
+                                }
                                 p{
                                     color: #000;
                                     font-weight: 600;
                                     font-size: 1.05rem;
+                                    @include BootstrapMaxWidthResponsive(xl){
+                                        font-size: 1rem;
+                                    }
+                                    @include BootstrapMaxWidthResponsive(lg){
+                                        font-size: 0.9375rem;
+                                    }
+                                    @include BootstrapMaxWidthResponsive(md){
+                                        font-size: 0.875rem;
+                                    }
                                 }
                                 span{
                                     display: block;
@@ -236,6 +350,14 @@
                         position: relative;
                         display: flex;
                         justify-content: space-between;
+                        @include BootstrapMaxWidthResponsive(md_h){
+                            width: 100%;
+                        }
+                        @include BootstrapMaxWidthResponsive(xm){
+                            flex-direction: column;
+                            gap: 20px;
+                            align-items: center;
+                        }
                     }
                     .graph-container {
                         position: relative;
@@ -275,6 +397,10 @@
                         display: flex;
                         flex-direction: column;
                         gap: 40px;
+                        @include BootstrapMaxWidthResponsive(xm){
+                            flex-direction: row;
+                            gap: 20px;
+                        }
                         .percent{
                             display: flex;
                             flex-direction: column;
@@ -294,6 +420,12 @@
                                 }
                                 span{
                                     font-weight: bold;
+                                    @include BootstrapMaxWidthResponsive(xl){
+                                        font-size: 0.9375rem;
+                                    }
+                                    @include BootstrapMaxWidthResponsive(lg){
+                                        font-size: 0.875rem;
+                                    }
                                 }
                             }
                             .check{
@@ -322,6 +454,12 @@
                                 font-size: 3rem;
                                 font-weight: bold;
                                 text-align: end;
+                                @include BootstrapMaxWidthResponsive(xl){
+                                    font-size: 2.5rem;
+                                }
+                                @include BootstrapMaxWidthResponsive(lg){
+                                    font-size: 2.2rem;
+                                }
                             }
                         }
                     }
@@ -334,6 +472,10 @@
                     display: flex;
                     align-items: center;
                     padding-right: 40px;
+                    @include BootstrapMaxWidthResponsive(sm){
+                        padding-right: 0;
+                    }
+                  
                     p,.search-reviews{
                         flex-grow: 1.75;
                     }
@@ -364,6 +506,9 @@
                         color: black;
                         font-weight: bold;
                         justify-content: flex-end;
+                        @include BootstrapMaxWidthResponsive(sm){
+                           display: none;
+                        }
                         svg:first-child{
                             margin-right: 5px;
                         }
@@ -382,12 +527,26 @@
                     border-radius: 20px;
                     box-shadow: 0px -2px 17px -7px rgba(0,0,0,0.45);
                     margin-bottom: 25px;
+                    @include BootstrapMaxWidthResponsive(lg){
+                        padding: 20px 40px;
+                    }
+                    @include BootstrapMaxWidthResponsive(md_h){
+                        padding: 10px 30px;
+                    }
+                    @include BootstrapMaxWidthResponsive(sm){
+                        padding: 10px 15px;
+                    }
                     & > .info{
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         padding-bottom: 25px;
                         border-bottom: 2px solid #efefef;
+                        @include BootstrapMaxWidthResponsive(xs){
+                           flex-wrap: wrap;
+                           gap: 20px;
+                           padding-top: 10px;
+                        }
                         p,a{
                             font-weight: bold;
                             span{
@@ -411,19 +570,48 @@
                                 margin-right: 10px;
                             }
                         }
+                        @include BootstrapMaxWidthResponsive(xs){
+                            p:nth-child(2){
+                                display: none;
+                            }
+                        }
                     }
                     .productt{
                         margin-top: 40px;
                         &__detail{
                             display: flex;
                             padding: 25px 25px;
-
+                            @include BootstrapMaxWidthResponsive(md_h){
+                                padding: 0;
+                            }
+                            @include BootstrapMaxWidthResponsive(sm){
+                                flex-direction: column;
+                                align-items: center;
+                            }
                             .product__img{
                                 width: 12%;
+                                @include BootstrapMaxWidthResponsive(sm){
+                                    width: 100%;
+                                    text-align: center;
+                                    img{
+                                        max-width: 150px;
+                                        max-height: 150px;
+                                        width: 150px;
+                                        height: 150px;
+                                        object-fit: contain;
+                                    }
+                                }
                                 img{
                                     max-width: 74px;
                                     min-height: 72px;
                                     object-fit: cover;
+                                    @include BootstrapMaxWidthResponsive(sm){
+                                        max-width: 150px;
+                                        max-height: 150px;
+                                        width: 150px;
+                                        height: 150px;
+                                        object-fit: contain;
+                                    }
                                 }
                             }
                             .name{
@@ -432,14 +620,23 @@
                                 .title{
                                     display: flex;
                                     justify-content: space-between;
-                                    
                                     margin-bottom: 30px;
+                                    @include BootstrapMaxWidthResponsive(xm){
+                                        flex-direction: column;
+                                      
+                                    }
                                     &__info{
+                                        @include BootstrapMaxWidthResponsive(xm){
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: flex-start;
+                                        }
                                         h4{
                                             font-size: 1.5rem;
                                             font-weight: bold;
                                             margin-bottom: 6px;
                                             text-align: end;
+                                            white-space: nowrap;
                                         }
                                         a{
                                             display: flex;
@@ -468,11 +665,16 @@
                                     align-items: flex-start;
                                     gap: 100px;
                                     margin: 30px 0;
+                                    
+                                    @include BootstrapMaxWidthResponsive(sm){
+                                        flex-direction: column;
+                                        gap: 10px;
+                                        margin: 20px 0;
+                                    }
                                     .info{
                                         display: flex;
                                         align-items: flex-start;
                                         gap: 40px;
-                                       
                                         ul{
                                             list-style: circle;
                                             li{

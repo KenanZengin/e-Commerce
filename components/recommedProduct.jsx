@@ -30,8 +30,16 @@ const RecommedProduct = () => {
         }}
         breakpoints={{
             769: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            1050: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1400: {
                 slidesPerView: 4,
-                slidesPerGroup: 4,
+                spaceBetween: 50,
             },
         }}
         scrollbar={false}
