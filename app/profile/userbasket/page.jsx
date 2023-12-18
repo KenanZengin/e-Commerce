@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import { redirect } from "next/navigation"
 import { useState } from "react"
 import { useSession } from "next-auth/react"
 import { useRevlyContenxt } from "@/context/context"
@@ -10,7 +11,12 @@ import BasketItemList from "@/components/basketItemList"
 const UserBasket = () => {
 
     const {items,removeFromBasket,increasingProduct,creasingProduct} = useRevlyContenxt()
-    const {data} = useSession()
+    const {data: session} = useSession({
+        required : true,
+        onUnauthenticated(){
+            redirect("http://localhost:3000/membership/signin")
+        }
+    })
     
     const total_price = items?.reduce((acc,obj) => Number(acc) + (Number(obj.price) * obj.count),0)
 

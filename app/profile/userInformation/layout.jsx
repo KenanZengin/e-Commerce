@@ -1,17 +1,19 @@
 "use client"
 import { useSession } from 'next-auth/react'
 import Information from '@/components/information'
-import {BiUser} from "react-icons/bi"
-import {GrMapLocation} from "react-icons/gr"
-import {FaRegCreditCard,FaRegUser,FaMapLocation} from "react-icons/fa6"
-import {FiHelpCircle} from "react-icons/fi"
+import { redirect } from 'next/navigation'
 
 
 
 
 const UserLayout =  ({children}) => {
 
-    const session =  useSession()
+    const session =  useSession({
+        required : true,
+        onUnauthenticated(){
+            redirect("http://localhost:3000/membership/signin")
+        }
+    })
 
   return (
     <div className='user__info'>

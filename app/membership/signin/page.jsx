@@ -9,7 +9,6 @@ import { useFormik } from 'formik'
 import { signIn_validate } from '@/lib/validate'
 import {MdAlternateEmail} from "react-icons/md"
 import {FaFingerprint,FaGithub} from "react-icons/fa"
-import {FcGoogle} from "react-icons/fc"
 import mainLogo from 'public/img/header/mainLogo.png'
 import Loading from '@/components/loading'
 

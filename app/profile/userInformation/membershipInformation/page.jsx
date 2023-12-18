@@ -1,13 +1,12 @@
 "use client"
 import { useSession } from 'next-auth/react'
+import { redirect } from 'next/navigation'
 
 
 const UserInformation =  () => {
 
   const session =  useSession()
-  // if(!session){
-  //   redirect("/membership/signin")
-  // }
+ 
   //onsole.log("session : ",session);
   //if(status == "loading") return <>loading</>
   return (
