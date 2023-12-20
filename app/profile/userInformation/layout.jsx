@@ -11,7 +11,7 @@ const UserLayout =  ({children}) => {
     const session =  useSession({
         required : true,
         onUnauthenticated(){
-            redirect("http://localhost:3000/membership/signin")
+            redirect("/membership/signin")
         }
     })
 
