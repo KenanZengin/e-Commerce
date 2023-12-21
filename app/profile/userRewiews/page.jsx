@@ -34,7 +34,7 @@ const userProfil = async () => {
 
     const session = await getServerSession(authOptions)
     const user = await getUserData(session?.user?.name)
-    console.log("user data = " , user);
+ 
   return (
     <>
         <div className="user-profile">
