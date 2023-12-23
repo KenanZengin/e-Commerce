@@ -50,8 +50,8 @@ const BasketFavoriteTooltip = () => {
                             ?
                            <>
                                 <div className="products">
-                                    {items.map((item)=>(
-                                        <div className="item" key={item._id}>
+                                    {items.map((item,i)=>(
+                                        <div className="item" key={i}>
                                             <Image src={item.img} alt="product" height={90} width={134} />
                                             <div className="left">
                                                 <p>{item.name}</p>

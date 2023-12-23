@@ -8,12 +8,7 @@ import { redirect } from 'next/navigation'
 
 const UserLayout =  ({children}) => {
 
-    const session =  useSession({
-        required : true,
-        onUnauthenticated(){
-            redirect("/membership/signin")
-        }
-    })
+    const session =  useSession()
 
   return (
     <div className='user__info'>
