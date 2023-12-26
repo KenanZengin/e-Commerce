@@ -8,7 +8,7 @@ export function middleware(request){
 
     const isPublicPath = path === '/membership/signin'  ||  path === '/membership/signup'
     
-    const token = request.cookies.get('next-auth.session-token')?.value
+    const token = request.cookies.get('__Secure-next-auth.session-token')?.value
     
     if(isPublicPath && token){
         return NextResponse.redirect(new URL("/",request.nextUrl))
