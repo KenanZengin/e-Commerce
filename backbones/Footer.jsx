@@ -5,8 +5,6 @@ import { useSession } from "next-auth/react"
 import mainLogo from 'public/img/header/mainLogo.png'
 import { usePathname } from "next/navigation"
 
-
-
 const Footer = () => {
 
     const pathname = usePathname()
