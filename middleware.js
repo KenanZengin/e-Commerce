@@ -17,7 +17,6 @@ export function middleware(request){
     if(!isPublicPath && !token){
         return NextResponse.redirect(new URL("/membership/signin",request.nextUrl))
     }
-
 }
 
 export const config = {
