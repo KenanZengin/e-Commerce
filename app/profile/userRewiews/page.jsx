@@ -24,7 +24,7 @@ import RecommedProduct from "@/components/recommedProduct"
 
 
 async function getUserData(name){
-    const res = await fetch(`http://localhost:3000/api/auth/singleuser?user_name=${name}`)
+    const res = await fetch(`https://e-commerce-kenanzengin.vercel.app/api/auth/singleuser?user_name=${name}`)
     const data = await res.json()
 
     return data
