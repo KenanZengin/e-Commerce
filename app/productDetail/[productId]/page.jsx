@@ -20,7 +20,7 @@ import BasketBtn from "@/components/basketbtn"
 
 const getSingleProduct = async (id) => {
 
-    const res = await fetch(`http://localhost:3000/api/product/singleproduct?id=${id}`)
+    const res = await fetch(`https://e-commerce-kenanzengin.vercel.app/api/product/singleproduct?id=${id}`)
     const data = await res.json()
 
     return data
