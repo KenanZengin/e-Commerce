@@ -44,7 +44,7 @@ const SignUp = () => {
     if(env == "development"){
       url = "http://localhost:3000"
     }else{
-      url = "https://e-commerce-lyart-eight.vercel.app"
+      url = "https://e-commerce-kenanzengin.vercel.app"
     }
 
  
